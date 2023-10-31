@@ -1,0 +1,605 @@
+<section class="section">
+  <div class="container content address">
+    {% comment %}
+    <div class="one-half column medium-down--one-whole">
+    <h1>{{ 'customer.addresses.title' | t }}</h1>
+    </div>
+    {% endcomment %}
+
+
+    <div class="
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            one-half
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            column
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            medium-down--one-whole
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            account-title
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            address-titlt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ">
+
+      <h1>
+        My
+        <span>Account</span>
+      </h1>
+    </div>
+
+
+    <div class="address-back-btn">
+      <a href="{{ routes.account_url }}" role="button">
+        <span>
+          <svg
+            width="8"
+            height="12"
+            viewBox="0 0 8 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 11.5L1 6.5L7 1"
+              stroke="#EB1676"
+              stroke-width="1.3" />
+          </svg>
+        </span>
+        <p>Back</p>
+      </a>
+    </div>
+    {% comment %}
+    <div class="one-whole column one-column-future-driver">
+    <div class="feature-divider"></div>
+    </div>
+    {% endcomment %}
+    <div class="Address-mob-title">
+      <h1>Saved
+        <span>Addresses</span>
+      </h1>
+    </div>
+    {% render 'account-sidebar' %}
+
+    <div class="two-thirds columns medium-down--one-whole account-main">
+      <div
+        id="add_address"
+        class="customer_address edit_address CCA-input custome_esc_close"
+        style="display:none;" role="dialog" aria-label="Add New Address">
+        {% form 'customer_address', customer.new_address %}
+          <div class="add-address-title-cross-container add-address-desk-title">
+            <h2 id="add_address_title_a">{{ 'customer.addresses.add_new' | t }}</h2>
+
+            <a
+              href="#"
+              onclick="Shopify.CustomerAddress.toggleNewForm(); return false;"
+              class="add-address-close-btn add_address_btn" aria-label="Close modal" role="button">x</a>
+          </div>
+          <div class="add-address-mob-title">
+            <div class="address-back-btn">
+              <a href="#" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">
+                <span>
+                  <svg
+                    width="8"
+                    height="12"
+                    viewBox="0 0 8 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7 11.5L1 6.5L7 1"
+                      stroke="#EB1676"
+                      stroke-width="1.3" />
+                  </svg>
+                </span>
+                <p>Back</p>
+              </a>
+            </div>
+            <h4 id="add_address_title_b">Add
+              <span>new Address</span>
+            </h4>
+          </div>
+          <!--  -->
+          <div class="add-address-input-field">
+            <div class="label-input">
+              <label for="address_first_name_new">{{ 'customer.addresses.first_name' | t }}</label>
+              <input
+                type="text"
+                id="address_first_name_new"
+                placeholder="Enter your First Name"
+                class="address_form"
+                name="address[first_name]"
+                value="{{ form.first_name }}"
+                autocapitalize="words"
+                >
+                <span class="edit_error add_first_name hidden" role="alert">Only  letters, spaces, apostrophes, and hyphens allowed.</span>
+            <span class="edit_error first_name_required hidden" role="alert">Please fill out this field.</span>
+              </div>
+            <div class="label-input">
+              <label for="address_last_name_new">{{ 'customer.addresses.last_name' | t }}</label>
+              <input
+                type="text"
+                id="address_last_name_new"
+                placeholder="Enter your Last Name"
+                class="address_form"
+                name="address[last_name]"
+                value="{{ form.last_name }}"
+                autocapitalize="words"
+                >
+                  <span class="edit_error add_last_name hidden" role="alert">Only  letters, spaces, apostrophes, and hyphens allowed.</span>
+                  <span class="edit_error last_name_required hidden" role="alert">Please fill out this field.</span>
+                </div>
+          </div>
+          <!--  -->
+
+          <!--  -->
+          <div class="add-address-input-field">
+            <div class="label-input">
+              <label for="address_company_new">{{ 'customer.addresses.company' | t }}</label>
+              <input
+                type="text"
+                id="address_company_new"
+                placeholder="Enter your Company"
+                class="address_form"
+                name="address[company]"
+                value="{{ form.company }}"
+                autocapitalize="words">
+            </div>
+            <div class="label-input">
+              <label for="address_address1_new">{{ 'customer.addresses.address1' | t }}</label>
+              <input
+                type="text"
+                id="address_address1_new"
+                placeholder="Enter your Apartment, Suite, etc."
+                class="address_form"
+                name="address[address1]"
+                value="{{ form.address1 }}"
+                autocapitalize="words">
+                <span class="edit_error address_first_required hidden" role="alert">Please fill out this field.</span>
+            </div>
+          </div>
+          <!--  -->
+
+          <!--  -->
+          <div class="add-address-input-field">
+            <div class="label-input">
+              <label for="address_address2_new">{{ 'customer.addresses.address2' | t }}</label>
+              <input
+                type="text"
+                id="address_address2_new"
+                placeholder="Enter your Address Line 2."
+                class="address_form"
+                name="address[address2]"
+                value="{{ form.address2 }}"
+                autocapitalize="words">
+            </div>
+            <div class="label-input">
+              <label for="address_city_new">{{ 'customer.addresses.city' | t }}</label>
+              <input
+                type="text"
+                id="address_city_new"
+                placeholder="Enter your City"
+                class="address_form"
+                name="address[city]"
+                value="{{ form.city }}"
+                autocapitalize="words">
+                <span class="edit_error add_city_required hidden" role="alert">Please fill out this field.</span>
+            </div>
+          </div>
+          <!--  -->
+
+
+
+          <!--  -->
+          <div class="add-address-input-field">
+            <div class="label-input">
+              <label for="address_country_new">{{ 'customer.addresses.country' | t }}</label>
+              <select
+                id="address_country_new"
+                name="address[country]"
+                data-default="{{ form.country }}">{{ country_option_tags }}</select>
+            </div>
+            {% comment %}
+            <div class="label-input">
+            <div id="address_province_container_new" style="display:none">
+            <label for="address_province_new">{{ 'customer.addresses.province' | t }}</label>
+            <select id="address_province_new" class="address_form" name="address[province]" data-default="{{ form.province }}"></select>
+            </div>
+            </div>
+            {% endcomment %}
+            <div class="label-input">
+              <label for="address_zip_new">{{ 'customer.addresses.zip' | t }}</label>
+              <input
+                type="text"
+                id="address_zip_new"
+                placeholder="Enter your Zip Code"
+                class="address_form"
+                name="address[zip]"
+                value="{{ form.zip }}"
+                autocapitalize="characters"
+              >
+              <span class="edit_error add_zip hidden" role="alert">Only numbers Allowed.</span>
+              <span class="edit_error zip_code_required hidden" role="alert">Please fill out this field.</span>
+            </div>
+          </div>
+          <!--  -->
+
+
+          <!--  -->
+          <div class="add-address-input-field">
+
+
+            <div class="label-input">
+              <label for="address_phone_new">{{ 'customer.addresses.phone' | t }}</label>
+              <input
+                type="tel"
+                id="address_phone_new"
+                class="address_form CCA-placeholder-color"
+                name="address[phone]"
+                value="{{ form.phone }}"
+                placeholder="Enter your Phone Number"
+                title="only number allowed">
+                <span class="edit_error add_phone hidden" role="alert">Only digits, plus sign, hyphens, and letter 'x' are allowed.</span>
+                <span class="edit_error phone_code_required hidden" role="alert">Please fill out this field.</span>
+              </div>
+
+            
+
+          </div>
+          <!--  -->
+          
+          <div class="add-address-input-field set-default-box-add-button">
+
+            <div class="label-input">
+              {% comment %}
+              <label for="address_zip_new">{{ 'customer.addresses.zip' | t }}</label>
+              <input type="text" id="address_zip_new" class="address_form" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters">
+              {% endcomment %}
+              <legend>
+              <p class="set-defalit-text-checkbox">
+                {{ form.set_as_default_checkbox }}
+                <label for="address_default_address_new" class="inline">{{ 'customer.addresses.set_default' | t }}</label>
+              </p>
+              </legend>
+            </div>
+
+
+            <div class="label-input">
+              {% comment %}
+              <label for="address_zip_new">{{ 'customer.addresses.zip' | t }}</label>
+              <input type="text" id="address_zip_new" class="address_form" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters">
+              {% endcomment %}
+              
+              <p class="action_bottom add-address-btn-cancle-btn">
+                <input
+                  class="global-button global-button--primary"
+                  type="submit"
+                  value="{{ 'customer.addresses.add' | t }}" />
+                <a href="#" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;" role="button">{{ 'customer.addresses.cancel' | t }}</a>
+              </p>
+            </div>
+
+
+          </div>
+
+        <!--  -->
+          {% comment %}
+          <div class="add-address-input-field">
+          <div class="label-input">
+          <p>
+          {{ form.set_as_default_checkbox }}
+          <label for="address_default_address_new" class="inline">{{ 'customer.addresses.set_default' | t }}</label>
+          </p>
+          </div>
+
+          <div class="label-input">
+          <p class="action_bottom">
+          <input class="global-button global-button--primary" type="submit" value="{{ 'customer.addresses.add' | t }}" />
+          <span class="note"> {{ 'customer.addresses.or' | t }} <a href="#" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">{{ 'customer.addresses.cancel' | t }}</a></span>
+          </p>
+          </div>
+          </div>
+          {% endcomment %}
+          <!--  -->
+        {% endform %}
+      </div>
+
+      <div class="address-heading desk">
+        <div class="saved-address">
+          <p role="heading" aria-level="2">Saved Addresses</p>
+        </div>
+        <div class="action_link action_add note">
+          <a
+            href="#"
+            class="global-button global-button--primary"
+            role="button"
+            onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">{{ 'customer.addresses.add_new' | t }}</a>
+        </div>
+      </div>
+
+
+      <div id="address_tables">
+        {% paginate customer.addresses by 10 %}
+          {% if customer.addresses.size > 0 %}
+            {% assign edit_count = 0 %}
+            {% for address in customer.addresses %}
+              {% assign edit_count = edit_count | plus: 1 %}
+              <div class="address_table">
+                <div id="view_address_{{ address.id }}" class="customer_address custome_address_block {% if address == customer.default_address %}default_address{%endif%}">
+                  {% comment %}
+                  <h2 class="address_title ada-address_title">{{ address.first_name | capitalize }} {{address.last_name | capitalize }} {% if address == customer.default_address %}({{ 'customer.addresses.default' | t }}){% endif %}
+                  </h2>
+                  {% endcomment %}
+                   
+                  <p class="view_address">
+                    <span>
+                    {{ address.first_name | capitalize }} {{ address.last_name | capitalize }},
+                    {% if address.company != blank %}
+                      {{ address.company }},
+                    {% endif %}
+                    {% if address.street != blank %}
+                      {{ address.street }},
+                    {% endif %}
+                    {% if address.city != blank %}
+                      {{ address.city | capitalize }}{% if address.province_code %}, {{ address.province_code | upcase }}{% endif %}
+                      {{ address.zip | upcase }},
+                    {% endif %}
+                    {{ address.country }},
+                    {{ address.phone }}
+                  </span>
+                  </p>
+
+                  <div class="address_actions">
+                    {% if address == customer.default_address %}<div class="default_address_text"><p>{{ 'customer.addresses.default' | t }}</p></div>{% endif %}
+                    <div class="address_edit_remove_btn">
+                    <a
+                      href="#"
+                      class="global-button global-button--primary address__action edit-address-action"
+                      role="button"
+                      aria-label="Edit {{customer.first_name}} {{customer.last_name}} Address"
+                      onclick="Shopify.CustomerAddress.toggleForm({{ address.id }}); return false">{{ 'customer.addresses.edit' | t }}</a>
+                      <a
+                      href="#"
+                      class="global-button global-button--secondary address__action"
+                      role="button"
+                      aria-label="Remove {{customer.first_name}} {{customer.last_name}} Address"
+                      onclick="Shopify.CustomerAddress.destroy({{ address.id }}, &quot;Are you sure you wish to delete this address?&quot;); return false">{{ 'customer.addresses.delete' | t }}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div
+                  id="edit_address_{{ address.id }}"
+                  class="customer_address edit_address custome_esc_close"
+                  style="display:none;" role="dialog"
+                  aria-label="Edit Address">
+                  {% form 'customer_address', address %}
+                    {% comment %}
+                    <h4>{{ 'customer.addresses.edit_address' | t }}</h4>
+                    {% endcomment %}
+                    <div class="add-address-title-cross-container add-address-desk-title">
+                      <h2 id="add_address_title_c {{ foorloop.index }}">{{ 'customer.addresses.edit_address' | t }}</h2>
+
+                      <a
+                        href="#"
+                        onclick="Shopify.CustomerAddress.toggleForm({{form.id}}); return false;"
+                        class="add-address-close-btn edit_address_btn" aria-label="Close modal" role="button">x</a>
+                    </div>
+
+                    <div class="add-address-mob-title">
+                      <div class="address-back-btn">
+                        <a href="#" onclick="Shopify.CustomerAddress.toggleForm({{form.id}}); return false;" role="button">
+                          <span>
+                            <svg
+                              width="8"
+                              height="12"
+                              viewBox="0 0 8 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M7 11.5L1 6.5L7 1"
+                                stroke="#EB1676"
+                                stroke-width="1.3" />
+                            </svg>
+                          </span>
+                          <p>Back</p>
+                        </a>
+                      </div>
+                      <h4 id="add_address_title {{ foorloop.index }}">Edit
+                        <span>Address</span>
+                      </h4>
+                    </div>
+
+                    <!--  -->
+                    <div class="add-address-input-field">
+                      <div class="label-input">
+                        <label for="address_first_name_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
+                        <input
+                          type="text"
+                          id="address_first_name_{{ form.id }}"
+                          class="address_form edit_address_form edit_address_first_name"
+                          name="address[first_name]"
+                          value="{{ form.first_name }}"
+                          autocapitalize="words">
+                          <span class="edit_error edit_first_name hidden" role="alert">Only  letters, spaces, apostrophes, and hyphens allowed.</span>
+                      <span class="edit_error edit_first_empty hidden">Please fill out this field.</span>
+                        </div>
+                      <div class="label-input">
+                        <label for="address_last_name_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</label>
+                        <input
+                          type="text"
+                          id="address_last_name_{{ form.id }}"
+                          class="address_form edit_address_last_name"
+                          name="address[last_name]"
+                          value="{{ form.last_name }}"
+                          autocapitalize="words">
+                          <span class="edit_error edit_last_name hidden" role="alert">Only  letters, spaces, apostrophes, and hyphens allowed.</span>
+                          <span class="edit_error edit_last_empty hidden" role="alert">Please fill out this field.</span>
+                        </div>
+                    </div>
+                    <!--  -->
+
+
+                    <!--  -->
+                    <div class="add-address-input-field">
+                      <div class="label-input">
+                        <label for="address_company_{{ form.id }}">{{ 'customer.addresses.company' | t }}</label>
+                        <input
+                          type="text"
+                          id="address_company_{{ form.id }}"
+                          class="address_form"
+                          name="address[company]"
+                          value="{{ form.company }}"
+                          autocapitalize="words">
+                      </div>
+                      <div class="label-input">
+                        <label for="address_address1_{{ form.id }}">{{ 'customer.addresses.address1' | t }}</label>
+                        <input
+                          type="text"
+                          id="address_address1_{{ form.id }}"
+                          class="address_form edit_address_first_address"
+                          name="address[address1]"
+                          value="{{ form.address1 }}"
+                          autocapitalize="words">
+                          <span class="edit_error edit_address_empty hidden" role="alert">Please fill out this field.</span>
+                      </div>
+                    </div>
+                    <!--  -->
+
+
+                    <!--  -->
+                    <div class="add-address-input-field">
+                      <div class="label-input">
+                        <label for="address_address2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label>
+                        <input
+                          type="text"
+                          id="address_address2_{{ form.id }}"
+                          class="address_form"
+                          name="address[address2]"
+                          value="{{ form.address2 }}"
+                          autocapitalize="words">
+                      </div>
+                      <div class="label-input">
+                        <label for="address_city_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
+                        <input
+                          type="text"
+                          id="address_city_{{ form.id }}"
+                          class="address_form edit_city"
+                          name="address[city]"
+                          value="{{ form.city }}"
+                          autocapitalize="words">
+                          <span class="edit_error edit_city_empty hidden" role="alert">Please fill out this field.</span>
+                      </div>
+                    </div>
+                    <!--  -->
+
+                    <!--  -->
+                    <div class="add-address-input-field">
+
+                      <div class="label-input">
+                        <label for="address_country_{{ form.id }}">{{ 'customer.addresses.country' | t }}</label>
+                        <select
+                          id="address_country_{{ form.id}}"
+                          name="address[country]"
+                          data-default="{{ form.country }}">{{ country_option_tags }}</select>
+
+                        {% comment %}
+                        <div id="address_province_container_{{ form.id }}" style="display:none">
+                        <label for="address_province_{{ form.id }}">{{ 'customer.addresses.province' | t }}</label>
+                        <select id="address_province_{{ form.id }}" class="address_form" name="address[province]" data-default="{{ form.province }}"></select>
+                        </div>
+                        {% endcomment %}
+                      </div>
+                      <div class="label-input">
+                        <label for="address_zip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
+                        <input
+                          type="text"
+                          id="address_zip_{{ form.id }}"
+                          class="address_form edit_address_zip"
+                          name="address[zip]"
+                          value="{{ form.zip }}"
+                          autocapitalize="characters">
+                          <span class="edit_error edit_zip hidden" role="alert">Only numbers allowed.</span>
+                          <span class="edit_error edit_zip_empty hidden" role="alert">Please fill out this field.</span>
+                        </div>
+                    </div>
+                    <!--  -->
+
+
+                    <!--  -->
+                    <div class="add-address-input-field">
+                      <div class="label-input">
+                        <label for="address_phone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
+                        <input
+                          type="tel"
+                          id="address_phone_{{ form.id }}"
+                          class="address_form edit_address_phone"
+                          name="address[phone]"
+                          value="{{ form.phone }}"
+                          placeholder="555-555-1234">
+                          <span class="edit_error edit_phone hidden" role="alert">Only digits, plus sign, hyphens, and letter 'x' are allowed.</span>
+                          <span class="edit_error edit_phone_empty hidden" role="alert">Please fill out this field.</span>
+                        </div>
+                      
+                    </div>
+                    <!--  -->
+
+                    <div class="add-address-input-field">
+                      <div class="label-input">
+                        
+                        <p class="set-defalit-text-checkbox">
+                          {% comment %} {{ form.set_as_default_checkbox | replace: '<input', '<input id="address_default_address_new_edit {{ edit_count }} ' }} {% endcomment %}
+                            <input type="checkbox" id="address_default_address_new_edit_{{ edit_count }}" name="address[default]" value="1">
+                            <label for="address_default_address_new_edit_{{ edit_count }}" class="inline">{{ 'customer.addresses.set_default' | t }}</label>
+                        </p>
+                      </div>
+
+                      <div class="label-input">
+                      
+
+                        <p class="action_bottom add-address-btn-cancle-btn">
+                          <input
+                            type="submit"
+                            class="global-button global-button--primary edit-address-update-btn"
+                            value="{{ 'customer.addresses.update' | t }}">
+
+                          <span class="note">
+
+                            <a href="#" onclick="Shopify.CustomerAddress.toggleForm({{form.id}}); return false;" role="button"aria-label="Cancel modal">{{ 'customer.addresses.cancel' | t }}</a>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                  {% endform %}
+                </div>
+              </div>
+            {% endfor %}
+
+            <br/>
+          {% else %}
+            <p>{{ 'customer.addresses.no_addresses' | t }}</p>
+          {% endif %}
+
+
+          <div id="action" class="action_link action_add note mob">
+            <a
+              href="#"
+              class="global-button global-button--primary"
+              onclick="Shopify.CustomerAddress.toggleNewForm(); return false;" role="button">{{ 'customer.addresses.add_new' | t }}</a>
+          </div>
+
+          <div id="address_pagination">
+            {%
+               render 'pagination',
+             paginate: paginate, %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %}
+{% section 'newsletter' %}
+{% endcomment %}<script
+  type="text/javascript"
+  charset="utf-8"
+  data-no-instant>
+  // initialize observers on address selectors
+  new Shopify.CountryProvinceSelector('address_country_new', 'address_province_new', {hideElement: 'address_province_container_new'});
+
+  {% for address in customer.addresses %}
+    new Shopify.CountryProvinceSelector('address_country_{{ address.id }}', 'address_province_{{ address.id }}', {hideElement: 'address_province_container_{{ address.id }}'});
+  {% endfor %}
+</script>

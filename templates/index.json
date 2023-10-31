@@ -1,0 +1,1046 @@
+{
+  "sections": {
+    "165456568060eafab8": {
+      "type": "slideshow",
+      "blocks": {
+        "311637a5-2e2c-4167-a056-80f2dffdd609": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SusanGKomen_OatsandHoney_BOGO_1800x540_a25eac90-f078-49cf-9fe3-b35f650be154.jpg",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "Oats & Honey BOGO50% OFF",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/collections\/oats-honey",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/New_Mobile_742x814_2.png",
+            "mobile_image_crop": "none"
+          }
+        },
+        "6caffde4-109b-414d-96c0-08d36668de11": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mielle_Flash40Bundle_1800x540px.png",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "40% off Bundles",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/collections\/bundles",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/Mielle_Flash40Bundle_782x814_127c1b4a-5b92-4ec7-9a27-6d0b466011a4.png",
+            "mobile_image_crop": "none"
+          }
+        },
+        "518c6a93-42a5-40c9-82e8-6317e99d8f4d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UpdatedAngelReese_1080x540px_v1.png",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "Shop Queen Of The Court Bundle",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/products\/queen-of-the-court-bundle",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/New_Mobile_742x814_1.png",
+            "mobile_image_crop": "none"
+          }
+        },
+        "26b5da3f-4d1d-44f0-b8f1-deff5223f85f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/RM_Extensions_1440x432_2.jpg",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "New Rosemary Mint Products",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/collections\/rosemary-mint-hair-products",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/RM_Extensions_375x390_2.jpg",
+            "mobile_image_crop": "none"
+          }
+        },
+        "946b6c91-c10c-4d17-9d90-a08715bd88c9": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FOQTA-Desktop-Banner_1_1.png",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "From One Queen To Another",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/collections\/pomegranate-honey",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/FOQTA_mobile.png",
+            "mobile_image_crop": "none"
+          }
+        },
+        "534340bd-ceca-43cf-9d67-8fe561aa62d1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/AppPromo_1440x432_c2671fa6-633d-4915-8bb5-61c9e93e5a94.jpg",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "Download APP and Get 20% OFF",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/pages\/download-our-app",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/AppPromo_375x390_8087419a-dfb1-4ffe-94d7-2856fae0bdb1.jpg",
+            "mobile_image_crop": "none"
+          }
+        },
+        "3acf3203-93c0-4493-87ca-406d389e18e5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FOQTA-Desktop-Banner_2_1.png",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "Angel Reese - Edge Control Gel",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/products\/pomegranate-hold-blend-super-hold-edge-gel",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/Mielle_Homepage_Queen_1_Banner_1000x1000_12bdd847-3999-4a4a-93f8-9b1bfb6e3862.jpg",
+            "mobile_image_crop": "none"
+          }
+        },
+        "17dd9b5c-ff0d-4f36-a27a-463ce36b54ad": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MangoTulsi_CollectionBannerSpring2023_1.jpg",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "Mango & Tulsi Collection",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/collections\/mango-tulsi-hair-products",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/MangoTulsi_CollectionBannerSpring2023_Mobile_2.jpg",
+            "mobile_image_crop": "none"
+          }
+        },
+        "561dd44c-f1ff-483b-b7f5-59a6dd2d5228": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/RW_20PercentPromo_1440x432_49853263-73bf-4247-9914-e36222f33c19.jpg",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "Rice Water Collection",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/collections\/rice-water-hair-products",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/RW_Mobile.jpg",
+            "mobile_image_crop": "none"
+          }
+        }
+      },
+      "block_order": [
+        "311637a5-2e2c-4167-a056-80f2dffdd609",
+        "6caffde4-109b-414d-96c0-08d36668de11",
+        "518c6a93-42a5-40c9-82e8-6317e99d8f4d",
+        "26b5da3f-4d1d-44f0-b8f1-deff5223f85f",
+        "946b6c91-c10c-4d17-9d90-a08715bd88c9",
+        "534340bd-ceca-43cf-9d67-8fe561aa62d1",
+        "3acf3203-93c0-4493-87ca-406d389e18e5",
+        "17dd9b5c-ff0d-4f36-a27a-463ce36b54ad",
+        "561dd44c-f1ff-483b-b7f5-59a6dd2d5228"
+      ],
+      "settings": {
+        "wide_display": true,
+        "slideshow_text_animation": "fadeInDown",
+        "slideshow_animation": "fade",
+        "slideshow_speed": 7,
+        "activate_adaptiveHeight": false,
+        "mobile_text_below_image": true,
+        "mobile_text_color": "rgba(0,0,0,0)",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "frontpage-nosto-2": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "frontpage-nosto-2"
+      }
+    },
+    "c62944ea-bd84-4008-acd3-29ca5e50e69a": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<marquee width=\"100%\" direction=\"left\" height=\"auto\" scrollamount=\"5\" behavior=\"scroll\">\n<ul class=\"mar-list\">\n<li>Sulfate - Free<\/li>\n<li>Parben - Free<\/li>\n<li>100% Vegan<\/li>\n<li>Dermatologist tested<\/li>\n<li>Cruelty -  free<\/li>\n<li>Sulfate - Free<\/li>\n<li>Parben - Free<\/li>\n<li>100% Vegan<\/li>\n<li>Dermatologist tested<\/li>\n<li>Cruelty -  free<\/li>\n<\/ul>\n<\/marquee>",
+        "css_class": "marque-wr",
+        "custom_css": ""
+      }
+    },
+    "dd90464c-9f35-4fd7-ad13-8d69f9b7387c": {
+      "type": "collection-list",
+      "blocks": {
+        "template--14602706714737__dd90464c-9f35-4fd7-ad13-8d69f9b7387c-168484961460029142-0": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "natural-hair-shampoo",
+            "image": "shopify:\/\/shop_images\/rice_water_shampoo_lifestyle.png"
+          }
+        },
+        "template--14602706714737__dd90464c-9f35-4fd7-ad13-8d69f9b7387c-168484961460029142-1": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "hair-conditioners",
+            "image": "shopify:\/\/shop_images\/sea_moss_conditioner_lifestyle.png"
+          }
+        },
+        "template--14602706714737__dd90464c-9f35-4fd7-ad13-8d69f9b7387c-168484961460029142-2": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "leave-in-conditioners",
+            "image": "shopify:\/\/shop_images\/rosemary_mint_conditioner_lifestyle.png"
+          }
+        },
+        "88987208-568d-44d2-87f3-d125037f53b9": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "hair-styling-products",
+            "image": "shopify:\/\/shop_images\/mango_tulsi_whipping_creme_ingredient_1.jpg"
+          }
+        },
+        "865f46b4-689e-45f7-afb9-84b7b318b2d4": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "hair-oils",
+            "image": "shopify:\/\/shop_images\/RM_Hair_Oil_-_Lifestyle_ce37313d-d8e9-4097-b185-894328d0ec6a.png"
+          }
+        },
+        "d0e0845d-3a15-4ba2-95d7-3ba7191b2a28": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "hair-moisturizers",
+            "image": "shopify:\/\/shop_images\/pom_honey_curl_smoothie_texture_1.png"
+          }
+        },
+        "fad7c784-ffc4-4917-8896-8d6dfdcef666": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "scalp-treatment",
+            "image": "shopify:\/\/shop_images\/Sea_Moss_Oil_-_4.png"
+          }
+        },
+        "9e245307-0cfb-466b-83e8-39759eb541ab": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "skin-care",
+            "image": "shopify:\/\/shop_images\/Face_Mask_-_Lifestyle_58cbcc4d-5e3d-48ed-a139-61c50ce74094.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--14602706714737__dd90464c-9f35-4fd7-ad13-8d69f9b7387c-168484961460029142-0",
+        "template--14602706714737__dd90464c-9f35-4fd7-ad13-8d69f9b7387c-168484961460029142-1",
+        "template--14602706714737__dd90464c-9f35-4fd7-ad13-8d69f9b7387c-168484961460029142-2",
+        "88987208-568d-44d2-87f3-d125037f53b9",
+        "865f46b4-689e-45f7-afb9-84b7b318b2d4",
+        "d0e0845d-3a15-4ba2-95d7-3ba7191b2a28",
+        "fad7c784-ffc4-4917-8896-8d6dfdcef666",
+        "9e245307-0cfb-466b-83e8-39759eb541ab"
+      ],
+      "settings": {
+        "title": "SHOP BY <font color=\"#EB1676\">CATEGORY<\/font>",
+        "align_height": false,
+        "collection_height": 200,
+        "frontpage_collections_per_row": 4,
+        "css_class": "shop-by-collection-wr",
+        "custom_css": ""
+      }
+    },
+    "30ddba0a-1969-42c5-b5be-575f5c62c8f0": {
+      "type": "image-text",
+      "blocks": {
+        "5ef0b5a7-7581-4939-b87e-0a324db860a3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair_Care_Blog_Module.png",
+            "image_crop": "none",
+            "title": "Texture <font color=\"#EB1676\">Toolkit<\/font>",
+            "adaDescriptiveText": "Learn More Texture Toolkit",
+            "text": "<p>This toolkit will inspire you to embrace your unique strands and maintain healthy hair by providing expert styling tips, product recommendations, tutorials, and more!<\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Learn More",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/mielleorganics.com\/blogs\/mi-university",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "929a582a-68ab-433b-b230-4439336d10d3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WNBA_PartnershipAnnouncement.jpg",
+            "image_crop": "none",
+            "title": "WNBA <font color=\"#EB1676\">x Mielle<\/font>",
+            "adaDescriptiveText": "Learn More about WNBA x Mielle",
+            "text": "<p>Mielle becomes the <strong>OFFICIAL TEXTURED HAIR CARE PARTNER <\/strong>of the WNBA!<\/p><p>We are dedicated to the empowerment of women and enabling beauty on and off the court. This multi-year partnership with the league allows us to stay true to our commitment. We can't wait for you to see what we have in store! <\/p><p><strong>Game on, Mavens!<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Learn More",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/www.businessoffashion.com\/news\/beauty\/mielle-organics-becomes-wnbas-first-textured-hair-care-partner\/",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "6894289b-a6b8-482d-8cbe-9eb434db8784": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FOQTA_CampaignLaunch_2.png",
+            "image_crop": "none",
+            "title": "From One Queen <font color=\"#EB1676\">To Another<\/font>",
+            "adaDescriptiveText": "From one Queen To Another",
+            "text": "<p>When you discover hair products that treat your locks like royalty – as if they were custom-made for you – that's your Queen moment. At Mielle, we believe in sharing secrets with our sisters, not hoarding them. We spill the tea on natural haircare with products that deliver the goods.<\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "View More",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/pages\/from-one-queen",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "5ef0b5a7-7581-4939-b87e-0a324db860a3",
+        "929a582a-68ab-433b-b230-4439336d10d3",
+        "6894289b-a6b8-482d-8cbe-9eb434db8784"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "unique-wr",
+        "custom_css": ""
+      }
+    },
+    "4538858f-0360-4b0a-b8aa-d7b609b1f472": {
+      "type": "collection-tabs-slider",
+      "blocks": {
+        "13c93959-5aee-4417-b2c4-830198d6adc5": {
+          "type": "tab-products",
+          "settings": {
+            "title": "Bundle & Save",
+            "collection": "bundles",
+            "nosto_id": ""
+          }
+        },
+        "48d2114d-c5a8-4d32-9237-ab83224c1e27": {
+          "type": "tab-products",
+          "settings": {
+            "title": "",
+            "collection": "new-arrivals",
+            "nosto_id": ""
+          }
+        },
+        "fcc04e14-486c-42bc-bd3c-302667ed346f": {
+          "type": "tab-products",
+          "settings": {
+            "title": "",
+            "collection": "award-winners",
+            "nosto_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "13c93959-5aee-4417-b2c4-830198d6adc5",
+        "48d2114d-c5a8-4d32-9237-ab83224c1e27",
+        "fcc04e14-486c-42bc-bd3c-302667ed346f"
+      ],
+      "settings": {
+        "title": "DISCOVER OUR <font color=\"#EB1676\">PRODUCTS<\/font>"
+      }
+    },
+    "16566942796cf30c68": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Shop By <font color=\"#EB1676\">Hair Texture<\/font>",
+        "heading_type": "h2",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656603732805eae4f": {
+      "type": "featured-promotions",
+      "blocks": {
+        "165660373262bfafb8-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair_Type_Coily_3a.jpg",
+            "link": "shopify:\/\/collections\/type-4-coily-hair-products",
+            "title": "COILY",
+            "text": "<p>Products made for Type 4 Hair<\/p>",
+            "button_label": "Shop Coily"
+          }
+        },
+        "165660373262bfafb8-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair_Type_curly_3A_3.jpg",
+            "link": "shopify:\/\/collections\/type-3-curly-hair-products",
+            "title": "CURLY",
+            "text": "<p>Products made for Type 3 hair<\/p>",
+            "button_label": "Shop Curly"
+          }
+        },
+        "165660373262bfafb8-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair_Type_Wavy_1000x1000_10f2c86c-ba41-4808-9c07-75b359690d82.jpg",
+            "link": "shopify:\/\/collections\/type-2-wavy-hair-products",
+            "title": "WAVY",
+            "text": "<p>Products made for Type 2 hair<\/p>",
+            "button_label": "Shop Wavy"
+          }
+        },
+        "b9cd688d-9e69-4510-be21-ef2328c38d92": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SilkPress_Model_1000x1000_v2_1_1.jpg",
+            "link": "shopify:\/\/collections\/straightened",
+            "title": "STRAIGHTENED",
+            "text": "<p>Products to help straighten hair<\/p>",
+            "button_label": "Shop Straightened"
+          }
+        }
+      },
+      "block_order": [
+        "165660373262bfafb8-0",
+        "165660373262bfafb8-1",
+        "165660373262bfafb8-2",
+        "b9cd688d-9e69-4510-be21-ef2328c38d92"
+      ],
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 4,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "square",
+        "css_class": "featured-promotions-hair-type-module",
+        "custom_css": ""
+      }
+    },
+    "frontpage-nosto-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "frontpage-nosto-1"
+      }
+    },
+    "16566069276104a17f": {
+      "type": "collection-list",
+      "blocks": {
+        "1656606927b91f3603-0": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "hair-essentials",
+            "image": "shopify:\/\/shop_images\/Essentials.jpg"
+          }
+        },
+        "822cfa0e-bcfd-45e2-b7f3-b16e99c7ea3b": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "mango-tulsi-hair-products",
+            "image": "shopify:\/\/shop_images\/mango_tulsi_group_1.jpg"
+          }
+        },
+        "2d44b1f3-8434-42ca-8bee-ecfde4d587ed": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "hawaiian-ginger",
+            "image": "shopify:\/\/shop_images\/Moisture_Rx_d42fc778-4044-4542-b60c-a04e147a9fdd.jpg"
+          }
+        },
+        "1656606927b91f3603-1": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "oats-honey",
+            "image": "shopify:\/\/shop_images\/1_f1af45f5-bdba-47d0-a068-43b68181bff1.jpg"
+          }
+        },
+        "1656606927b91f3603-2": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "pomegranate-honey",
+            "image": "shopify:\/\/shop_images\/20230531-Mielle_StylizedPhotographyResize_PH-E_64909643-568e-4700-88c5-57ae4bba447a.jpg"
+          }
+        },
+        "f246d467-eca9-4b03-ac9a-8cfe076c6bc0": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "rice-water-hair-products",
+            "image": "shopify:\/\/shop_images\/20230607-Mielle_StylizedPhotographyResize_A_1.jpg"
+          }
+        },
+        "c841983e-d3ea-48b3-ab83-bf667099b8cf": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "rosemary-mint-hair-products",
+            "image": "shopify:\/\/shop_images\/20230613-Mielle_StylizedPhotographyResize-RM_H_1_7d3b3632-f5c7-4742-b712-46fdbe731d68.jpg"
+          }
+        },
+        "32f2db33-a32f-4643-9dae-b4be63e89d27": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "sea-moss-anti-shedding",
+            "image": "shopify:\/\/shop_images\/20230529-Mielle_StylizedPhotographyResize_SM-O_0a4ab8b9-7d6f-46e0-95a1-7d6ea7708263.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1656606927b91f3603-0",
+        "822cfa0e-bcfd-45e2-b7f3-b16e99c7ea3b",
+        "2d44b1f3-8434-42ca-8bee-ecfde4d587ed",
+        "1656606927b91f3603-1",
+        "1656606927b91f3603-2",
+        "f246d467-eca9-4b03-ac9a-8cfe076c6bc0",
+        "c841983e-d3ea-48b3-ab83-bf667099b8cf",
+        "32f2db33-a32f-4643-9dae-b4be63e89d27"
+      ],
+      "settings": {
+        "title": "Shop By <font color=\"#EB1676\">Collection<\/font>",
+        "align_height": false,
+        "collection_height": 200,
+        "frontpage_collections_per_row": 4,
+        "css_class": "shop-by-collection-wr",
+        "custom_css": ""
+      }
+    },
+    "featured-collection-1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Silk Press Season",
+        "collection_description": false,
+        "collection": "hair-straightening-products",
+        "collection_style": "slider",
+        "products_per": 5,
+        "products_limit": 5,
+        "css_class": "sale_slider",
+        "custom_css": ""
+      }
+    },
+    "f877593c-7623-4adc-afe5-2df772c1abe0": {
+      "type": "image-products",
+      "blocks": {
+        "template--14584507564145__f877593c-7623-4adc-afe5-2df772c1abe0-16784314994a3f711f-0": {
+          "type": "image",
+          "settings": {
+            "image_crop": "none",
+            "title": "Your headline",
+            "text": "<p>Promotion description appears here.<\/p>",
+            "button_label": "View all",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14584507564145__f877593c-7623-4adc-afe5-2df772c1abe0-16784314994a3f711f-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "title": " #1 For Strengthening Hair",
+        "title2": "Rosemary Mint Collection",
+        "svg_image": "<svg width=\"137\" height=\"137\" viewbox=\"0 0 137 137\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M94.268 120.775C87.7568 124.91 80.3571 127.077 72.9184 127.187C69.4743 127.248 65.9662 126.852 62.5522 126.035C61.8026 125.923 61.1292 125.717 60.5612 125.535C60.2568 125.412 59.9405 125.341 59.6888 125.23C59.4253 125.171 59.1617 125.112 58.8982 125.053C57.4225 124.724 55.9529 124.119 54.729 123.902C54.1492 123.772 53.1008 123.759 52.6203 123.929L53.0537 123.97C54.1139 123.93 55.1737 124.388 56.128 124.822C56.7251 125.122 57.2813 125.356 57.8903 125.603C58.7509 125.961 59.4069 125.997 59.606 126.097C55.8245 129.9 53.4425 127.93 50.2868 126.451C48.2436 125.442 47.5288 125.67 47.2126 125.599C48.485 124.112 50.7235 123.007 52.3112 122.587C55.9317 121.735 58.6766 124.063 62.3423 124.992C65.7972 125.874 69.358 126.281 72.9075 126.244C78.1322 126.137 85.1616 125.382 94.268 120.775ZM61.2478 124.195C60.6106 122.835 58.7024 121.469 57.8314 119.67C58.6563 120.684 58.2817 120.379 59.4873 121.422C60.1311 122.009 60.6402 122.454 61.155 123.123C61.2901 122.765 61.3498 121.506 61.3032 121.219C61.147 119.192 60.3743 118.688 58.7762 117.667C57.8981 117.139 57.5353 116.782 56.9504 115.932C56.4869 116.769 56.374 118.514 56.6192 119.399C56.9458 120.911 57.6653 121.901 58.9354 122.904C59.4153 123.232 60.7734 124.089 61.2478 124.195Z\" fill=\"#17130F\"><\/path>\n<path d=\"M35.6611 19.2484C36.0262 20.8645 37.6323 21.8787 39.2484 21.5136C40.8646 21.1485 41.8787 19.5424 41.5136 17.9263C41.1485 16.3101 39.5424 15.296 37.9263 15.6611C36.3102 16.0262 35.296 17.6323 35.6611 19.2484Z\" fill=\"#17130F\"><\/path>\n<path d=\"M111.661 32.2484C112.026 33.8645 113.632 34.8787 115.248 34.5136C116.865 34.1485 117.879 32.5424 117.514 30.9263C117.149 29.3101 115.542 28.296 113.926 28.6611C112.31 29.0262 111.296 30.6323 111.661 32.2484Z\" fill=\"#17130F\"><\/path>\n<path d=\"M28.5757 119.994L29.7787 120.896L37.0198 111.247L35.8168 110.345L28.5757 119.994Z\" fill=\"black\"><\/path>\n<path d=\"M30.3655 105.923L29.4198 104.754L22.4277 110.407L24.1113 97.3998L14.3448 105.297L15.2905 106.467L22.2203 100.863L20.5367 113.871L30.3655 105.923Z\" fill=\"black\"><\/path>\n<path d=\"M8.23242 90.1813L6.96309 90.7125L9.2176 96.0998L20.3464 91.4425L19.7658 90.0551L14.3047 92.3405L12.6864 88.4735L11.4171 89.0047L13.0354 92.8717L9.90632 94.1812L8.23242 90.1813Z\" fill=\"black\"><\/path>\n<path d=\"M4.22453 81.3699L11.7911 80.3729C14.4244 80.0259 16.2237 78.1266 15.8621 75.3823C15.5005 72.638 13.2706 71.2696 10.6374 71.6166L3.07078 72.6136L3.26725 74.1047L10.3262 73.1746C12.2774 72.9175 14.1631 73.2661 14.4661 75.5663C14.7692 77.8664 13.0382 78.6916 11.087 78.9487L4.02806 79.8788L4.22453 81.3699Z\" fill=\"black\"><\/path>\n<path d=\"M5.75134 56.1097C4.50154 56.5919 3.69443 57.5908 3.50225 58.921C3.24145 60.7262 4.15037 62.6035 6.08231 62.8826C7.74505 63.1228 8.69944 61.9997 9.48211 60.7225L9.94945 59.9494C10.5257 58.9818 11.2287 58.0326 12.5114 58.2179C13.7624 58.3986 14.7065 59.4727 14.5212 60.7554C14.3359 62.038 13.2347 62.9459 11.9227 62.7402L12.0221 64.2903C13.9748 64.3138 15.6173 63.0153 15.8964 61.0834C16.2053 58.9456 14.8959 57.0428 12.7264 56.7294C10.7311 56.4411 9.6138 57.573 8.70391 59.1713L8.24782 59.9784C7.85526 60.6815 7.23166 61.529 6.29736 61.394C5.25221 61.243 4.75395 60.1041 4.89121 59.154C5.02161 58.2513 5.48403 57.7362 6.29236 57.4003L5.75134 56.1097Z\" fill=\"black\"><\/path>\n<path d=\"M18.0059 50.842L20.5273 44.8726L19.2597 44.3372L17.3235 48.9211L13.1229 47.1467L15.0031 42.6955L13.7355 42.1601L11.8553 46.6113L8.7454 45.2977L10.6816 40.7138L9.41403 40.1784L6.89262 46.1478L18.0059 50.842Z\" fill=\"black\"><\/path>\n<path d=\"M23.9247 38.8053L25.4528 36.8928C27.8299 33.9179 28.1576 30.3294 24.9451 27.7626C21.8077 25.2557 18.3651 26.4372 16.0579 29.3246L14.4998 31.2746L23.9247 38.8053ZM16.5137 30.9585L16.8433 30.5461C18.7609 28.1461 21.3063 26.7802 24.0563 28.9775C26.7938 31.1648 26.0358 33.9589 24.1182 36.3589L23.7886 36.7714L16.5137 30.9585Z\" fill=\"black\"><\/path>\n<path d=\"M49.3116 5.71843L47.7068 6.01541L54.9138 17.4387L56.6548 8.11824L61.616 16.1984L64.2578 2.95249L62.653 3.24946L60.9056 12.3595L55.9357 4.23222L54.2034 13.5999L49.3116 5.71843Z\" fill=\"black\"><\/path>\n<path d=\"M75.2207 3.73837L73.7243 3.58726L72.5122 15.5902L74.0086 15.7413L75.2207 3.73837Z\" fill=\"black\"><\/path>\n<path d=\"M87.3889 7.72191L90.1234 8.57356L90.5325 7.25981L83.6277 5.10926L83.2185 6.42301L85.953 7.27467L82.7747 17.4792L84.2107 17.9264L87.3889 7.72191Z\" fill=\"black\"><\/path>\n<path d=\"M97.8969 16.0362L100.51 11.934L99.2421 11.1259L92.7597 21.3003L94.0281 22.1085L97.1404 17.2237L101.985 20.3101L98.8725 25.1949L100.141 26.0031L106.623 15.8286L105.355 15.0205L102.741 19.1226L97.8969 16.0362Z\" fill=\"black\"><\/path>\n<path d=\"M126.901 43.9057L127.049 44.2946C127.549 45.6108 127.689 46.79 126.103 47.3923C124.488 48.006 123.804 47.0164 123.298 45.6852L123.162 45.3263L126.901 43.9057ZM122.04 45.7524L122.37 46.6199C122.847 47.8763 123.132 49.6167 121.546 50.219C119.946 50.827 119.04 49.6137 118.546 48.3124L118.136 47.2355L122.04 45.7524ZM116.346 46.3068L117.346 48.9393C118.102 50.9286 119.732 52.5171 121.991 51.6591C123.307 51.159 124.256 49.7373 123.989 48.3152L124.019 48.3039C124.668 48.9303 125.796 49.0154 126.618 48.7028C129.161 47.7369 128.953 45.5224 128.146 43.3985L127.623 42.0224L116.346 46.3068Z\" fill=\"black\"><\/path>\n<path d=\"M132.433 59.0771L132.204 57.5906L120.28 59.4247L120.509 60.9112L132.433 59.0771Z\" fill=\"black\"><\/path>\n<path d=\"M133.041 74.7332C133.398 71.2957 130.878 68.1543 127.44 67.7971C123.875 67.4266 120.893 69.9639 120.533 73.4332C120.172 76.9025 122.569 79.9989 126.134 80.3693C129.571 80.7266 132.684 78.1707 133.041 74.7332ZM121.933 73.5787C122.203 70.9847 124.547 69.0085 127.285 69.293C129.927 69.5676 131.934 71.7708 131.641 74.5877C131.348 77.4045 128.931 79.148 126.289 78.8734C123.552 78.5889 121.663 76.1728 121.933 73.5787Z\" fill=\"black\"><\/path>\n<path d=\"M126.632 93.2956L125.527 95.9376L126.796 96.4688L129.588 89.7975L128.319 89.2663L127.213 91.9082L117.353 87.7822L116.773 89.1696L126.632 93.2956Z\" fill=\"black\"><\/path>\n<path d=\"M121.485 105.444L122.332 104.201L112.359 97.4125L111.512 98.6559L121.485 105.444Z\" fill=\"black\"><\/path>\n<path d=\"M107.347 104.305L106.222 105.304L112.193 112.028L99.1215 110.946L107.461 120.338L108.586 119.339L102.668 112.675L115.74 113.757L107.347 104.305Z\" fill=\"black\"><\/path>\n<\/svg>",
+        "left_image": "shopify:\/\/shop_images\/RM_Hair_Oil_-_Lifestyle.png",
+        "right_image": "shopify:\/\/shop_images\/rosemarymintoil-reviews_1.jpg",
+        "collection": "rosemary-mint-hair-products",
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "c1341fb7-4772-4995-8fc4-07ec065ac167": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Shop By <font color=\"#EB1676\">Hair Style<\/font>",
+        "heading_type": "h2",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1652555468c662a858": {
+      "type": "featured-promotions",
+      "blocks": {
+        "1652555468658e50a4-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wash_N_Go.png",
+            "mobile_image": "shopify:\/\/shop_images\/Wash_N_Go.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/for-wash-go-styles",
+            "title": "Wash-N-Go Styles",
+            "text": "<p>Perfect Your Wash-N-Go<\/p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "1652555468658e50a4-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Twist_1.png",
+            "mobile_image": "shopify:\/\/shop_images\/Twist_1.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/flat-twists-2-strand-twist",
+            "title": "Twist Styles",
+            "text": "<p>Master the 2 strand twist<\/p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "1652555468658e50a4-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Locs.png",
+            "mobile_image": "shopify:\/\/shop_images\/Locs.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/locs-starter-locs-maintenance",
+            "title": "Loc Styles",
+            "text": "<p>Start or maintain your locs<\/p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "3e763120-36cb-479d-9840-5bbbcec978f6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Braids.png",
+            "mobile_image": "shopify:\/\/shop_images\/Braids.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/braids-braid-outs",
+            "title": "Braid Styles",
+            "text": "<p>Get Frizz-Free Braids<\/p>",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "1652555468658e50a4-0",
+        "1652555468658e50a4-1",
+        "1652555468658e50a4-2",
+        "3e763120-36cb-479d-9840-5bbbcec978f6"
+      ],
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 4,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "square",
+        "css_class": "shop-by-type-wr",
+        "custom_css": ""
+      }
+    },
+    "frontpage-nosto-3": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "frontpage-nosto-3"
+      }
+    },
+    "frontpage-nosto-4": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "frontpage-nosto-4"
+      }
+    },
+    "banner-2nd-slider": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "banner-2nd-slider"
+      }
+    },
+    "best-sellers": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "best-sellers"
+      }
+    },
+    "best-sellers-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "best-sellers-2"
+      }
+    },
+    "frontpage-nosto-dynamic-1": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "frontpage-nosto-dynamic-1"
+      }
+    },
+    "nosto-4-blocks-hp-promotion": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "nosto-4-blocks-hp-promotion"
+      }
+    },
+    "7e7193ba-4817-4208-a812-7664417dc216": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "21764c03-bb11-4d33-9aab-6135a5b69382": {
+          "type": "testimonial-slider",
+          "disabled": true,
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/RM_Oil_Review.png",
+            "title": "A Gem!",
+            "description": "<p>My hair growth is amazing! I use this because I keep a protective style and it keeps my scalp healthy and nourished.<\/p>",
+            "rating_stars": "five",
+            "author_name": "- Shandell L.",
+            "bottom_image": "shopify:\/\/shop_images\/4_4.png",
+            "product_handle": "rosemary-mint-oil"
+          }
+        },
+        "4b1db2a4-6d69-4eea-a5a8-7d27f9b10f11": {
+          "type": "testimonial-slider",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/PH_LeaveIn_Review.png",
+            "title": "Amazing!!!",
+            "description": "<p>Definitely my go to for detangles and leaves my hair feeling soft and manageable!!<\/p>",
+            "rating_stars": "five",
+            "author_name": "- Tamara C.",
+            "bottom_image": "shopify:\/\/shop_images\/1_1.png",
+            "product_handle": "pomegranate-honey-leave-in-conditioner"
+          }
+        },
+        "134ae0a5-6dd9-4013-afc1-e0a400ccfbfe": {
+          "type": "testimonial-slider",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Mint_Deep_Conditioner_Review.png",
+            "title": "Like A Spa For My Scalp!",
+            "description": "<p>Love this deep conditioner! It smell really good & it leaves my scalp feeling fresh & clean! Hair feels amazingly soft afterwards & my curls are left popping!<\/p>",
+            "rating_stars": "five",
+            "author_name": "- Glynis K.",
+            "bottom_image": "shopify:\/\/shop_images\/2_2.png",
+            "product_handle": "babassu-oil-and-mint-deep-conditioning-protein-moisture-replenisher"
+          }
+        },
+        "bbfd8b6a-fefc-43f1-97de-524b99cc9a81": {
+          "type": "testimonial-slider",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Mint_Almond_Oil_Review.png",
+            "title": "Great Oil",
+            "description": "<p>Love this oil. Smells great. They keep my twists looking healthy and moisturized.<\/p>",
+            "rating_stars": "five",
+            "author_name": "- Jolie D.",
+            "bottom_image": "shopify:\/\/shop_images\/3_3.png",
+            "product_handle": "mint-almond-hair-oil"
+          }
+        },
+        "fcf22a91-2c34-4e7f-a1da-d2ef5abcb092": {
+          "type": "testimonial-slider",
+          "disabled": true,
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Hair_Type_curly_3A_3_1600x_43e2a69d-b60f-4559-b4fc-a86e3c60e36a.jpg",
+            "title": "LOVE, LOVE, LOVE",
+            "description": "<p>Curl refreshing stray is the ONLY product I’ve found that leaves my son’s hair looking moisturized and nice.<\/p>",
+            "rating_stars": "four",
+            "author_name": "-- Taylor A.",
+            "bottom_image": "shopify:\/\/shop_images\/image_15_a2cd421c-069b-4ec9-b227-9554a69d4e33.png",
+            "product_handle": ""
+          }
+        },
+        "8745a8bb-166d-47e5-930e-abc90700935e": {
+          "type": "testimonial-slider",
+          "disabled": true,
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Selling_Products_Image_1.jpg",
+            "title": "LOVE IT!",
+            "description": "<p>Curl refreshing stray is the ONLY product I’ve found that leaves my son’s hair looking moisturized and nice.<\/p>",
+            "rating_stars": "four",
+            "author_name": "Raya",
+            "bottom_image": "shopify:\/\/shop_images\/image_15_a2cd421c-069b-4ec9-b227-9554a69d4e33.png",
+            "product_handle": ""
+          }
+        },
+        "2cae6f08-44bb-4598-b3a6-cc16a42fde9a": {
+          "type": "testimonial-slider",
+          "disabled": true,
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Hair_Type_curly_3A_3_1600x_43e2a69d-b60f-4559-b4fc-a86e3c60e36a.jpg",
+            "title": "AWESOME PRODUCT",
+            "description": "<p>Curl refreshing stray is the ONLY product I’ve found that leaves my son’s hair looking moisturized and nice.<\/p>",
+            "rating_stars": "five",
+            "author_name": "Jessica",
+            "bottom_image": "shopify:\/\/shop_images\/image_15_a2cd421c-069b-4ec9-b227-9554a69d4e33.png",
+            "product_handle": ""
+          }
+        }
+      },
+      "block_order": [
+        "21764c03-bb11-4d33-9aab-6135a5b69382",
+        "4b1db2a4-6d69-4eea-a5a8-7d27f9b10f11",
+        "134ae0a5-6dd9-4013-afc1-e0a400ccfbfe",
+        "bbfd8b6a-fefc-43f1-97de-524b99cc9a81",
+        "fcf22a91-2c34-4e7f-a1da-d2ef5abcb092",
+        "8745a8bb-166d-47e5-930e-abc90700935e",
+        "2cae6f08-44bb-4598-b3a6-cc16a42fde9a"
+      ],
+      "settings": {
+        "title": "PERSONAL + PROVEN <font color=\"#EB1676\">RESULTS<\/font>",
+        "enable_ratings": true
+      }
+    },
+    "86cd169e-3ec0-4184-9c0e-91b243e9b5dd": {
+      "type": "custom-blogs",
+      "blocks": {
+        "8dfc06a3-0247-4975-9f1e-7616a5dac11e": {
+          "type": "custom-blogs",
+          "settings": {
+            "title": "Your Guide To Hair Texture Types",
+            "image": "shopify:\/\/shop_images\/texture_hair_992a4f75-50a1-4f5d-a0be-971b70abbe40-1-webp-1000x1000.png",
+            "link": "https:\/\/mielleorganics.com\/blogs\/mi-university\/different-types-of-hair-textures?_pos=1&_psq=hair%20texture&_ss=e&_v=1.0"
+          }
+        },
+        "4e62dc4c-da7c-4ee9-9e6e-ca9c0f6896ce": {
+          "type": "custom-blogs",
+          "settings": {
+            "title": "Best Products For Coily (Type 4) Hair",
+            "image": "shopify:\/\/shop_images\/Coily_Type_4_4bc4096f-ae7d-4e53-969d-dbfe1e505c09-2-webp-1000x1000-_1.png",
+            "link": "https:\/\/mielleorganics.com\/blogs\/mi-university\/best-products-for-4c-hair?_pos=1&_psq=best%20products&_ss=e&_v=1.0"
+          }
+        },
+        "1ad41a71-db91-4e8c-8f5e-4bd696f39520": {
+          "type": "custom-blogs",
+          "settings": {
+            "title": "10 Low Porosity Hair Care Tips",
+            "image": "shopify:\/\/shop_images\/Type_3_hair_f7f05598-4353-401e-9a95-9165c9087da3-3-webp-1000x1000.png",
+            "link": "https:\/\/mielleorganics.com\/blogs\/mi-university\/10-low-porosity-hair-care-tips?_pos=2&_psq=low%20&_ss=e&_v=1.0"
+          }
+        },
+        "d4c6fe0d-6ea7-463e-99fd-9a669aac76c3": {
+          "type": "custom-blogs",
+          "disabled": true,
+          "settings": {
+            "title": "10 Low Porosity Hair Care Tips",
+            "link": "shopify:\/\/blogs\/mielle-blog\/10-low-porosity-hair-care-tips"
+          }
+        },
+        "9a7de43d-ce14-4d63-a385-e9a1219d9576": {
+          "type": "custom-blogs",
+          "disabled": true,
+          "settings": {
+            "title": "Your Guide To Hair Texture Types",
+            "link": "shopify:\/\/blogs\/mielle-blog\/different-types-of-hair-textures"
+          }
+        }
+      },
+      "block_order": [
+        "8dfc06a3-0247-4975-9f1e-7616a5dac11e",
+        "4e62dc4c-da7c-4ee9-9e6e-ca9c0f6896ce",
+        "1ad41a71-db91-4e8c-8f5e-4bd696f39520",
+        "d4c6fe0d-6ea7-463e-99fd-9a669aac76c3",
+        "9a7de43d-ce14-4d63-a385-e9a1219d9576"
+      ],
+      "settings": {
+        "title": "MIELLE HAIR <font color=\"#EB1676\">Blog<\/font>"
+      }
+    },
+    "1652834666ef013eee": {
+      "type": "logo-bar",
+      "blocks": {
+        "1398f36d-eccf-4e67-8000-98f87182918e": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Walmart-logo-home.png",
+            "link": ""
+          }
+        },
+        "16528346668eb905a7-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Target-logo-home.png",
+            "link": ""
+          }
+        },
+        "9873e3b3-5680-4f8b-844d-7488d4ecc93a": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Walgreens-logo-home.png",
+            "link": ""
+          }
+        },
+        "628468a6-9494-4896-a93b-4d7f4bb1bba0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SallyBeauty-logo-home.png",
+            "link": ""
+          }
+        },
+        "16528346668eb905a7-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CVS-logo-home.png",
+            "link": ""
+          }
+        },
+        "16528346668eb905a7-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rite-Aid-logo-new.png",
+            "link": ""
+          }
+        },
+        "fbed5964-8fb9-43d5-babd-814f48ef68dd": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UB_Logo_Orange_NoBkgd_1.png",
+            "link": ""
+          }
+        },
+        "0849521c-d49c-4a83-9104-57c3f30d2df4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/heb_logo__2.png",
+            "link": ""
+          }
+        },
+        "30d6a532-5afe-453d-9942-4e6858e5a3e4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Family_Dollar_logo_800_x_400_px_1_-min.png",
+            "link": ""
+          }
+        },
+        "e457f452-75a7-4ae3-9444-f81b777e4c96": {
+          "type": "logo_image",
+          "disabled": true,
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1398f36d-eccf-4e67-8000-98f87182918e",
+        "16528346668eb905a7-3",
+        "9873e3b3-5680-4f8b-844d-7488d4ecc93a",
+        "628468a6-9494-4896-a93b-4d7f4bb1bba0",
+        "16528346668eb905a7-1",
+        "16528346668eb905a7-0",
+        "fbed5964-8fb9-43d5-babd-814f48ef68dd",
+        "0849521c-d49c-4a83-9104-57c3f30d2df4",
+        "30d6a532-5afe-453d-9942-4e6858e5a3e4",
+        "e457f452-75a7-4ae3-9444-f81b777e4c96"
+      ],
+      "settings": {
+        "title": "Our <font color=\"#EB1676\">Partners<\/font>",
+        "layout": "slider",
+        "css_class": "partner-wr",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "165456568060eafab8",
+    "frontpage-nosto-2",
+    "c62944ea-bd84-4008-acd3-29ca5e50e69a",
+    "dd90464c-9f35-4fd7-ad13-8d69f9b7387c",
+    "30ddba0a-1969-42c5-b5be-575f5c62c8f0",
+    "4538858f-0360-4b0a-b8aa-d7b609b1f472",
+    "16566942796cf30c68",
+    "1656603732805eae4f",
+    "frontpage-nosto-1",
+    "16566069276104a17f",
+    "featured-collection-1",
+    "f877593c-7623-4adc-afe5-2df772c1abe0",
+    "c1341fb7-4772-4995-8fc4-07ec065ac167",
+    "1652555468c662a858",
+    "frontpage-nosto-3",
+    "frontpage-nosto-4",
+    "banner-2nd-slider",
+    "best-sellers",
+    "best-sellers-2",
+    "frontpage-nosto-dynamic-1",
+    "nosto-4-blocks-hp-promotion",
+    "7e7193ba-4817-4208-a812-7664417dc216",
+    "86cd169e-3ec0-4184-9c0e-91b243e9b5dd",
+    "1652834666ef013eee"
+  ]
+}

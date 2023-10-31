@@ -1,0 +1,100 @@
+{% if context == 'top_bar_menu' %}
+  {% for link in linklists[menu].links %}
+    <li role="listitem">
+      {% if link.url == 'http://' or link.url == '' or link.url == '/' or link.url == 'https://' or link.url == '#' %}
+        <a data-no-instant href="{{ link.url }}" class="parent-link--false">
+          {{ link.title }}
+        </a>
+      {% else %}
+        <a data-no-instant href="{{ link.url }}" class="parent-link--true">
+          {{ link.title }}
+        </a>
+      {% endif %}
+    </li>
+  {% endfor %}
+{% else %}
+  <template data-nav-parent-template>
+    <li class="sublink" role="listitem">
+      <a href="#" data-no-instant class="parent-link--true"><div class="mobile-menu-item-title" data-nav-title></div>
+      </a>
+      <span class="right icon-down-arrow" data-menu-tab aria-expanded="false" aria-label=" submenu" role="button" tabindex="0">
+        <span class="visually-hidden"> submenu</span>
+      </span>
+      <ul class="mobile-mega-menu" data-meganav-target-container>
+      </ul>
+    </li>
+  </template>
+  {% for link in linklists[menu].links %}
+    {% if linklists[link.handle] == empty %}
+      <li data-mobile-dropdown-rel="{{ link.handle }}" data-meganav-mobile-target="{{ link.title | handle }}" role="listitem">
+        {% if link.url == 'http://' or link.url == '' or link.url == '/' or link.url == 'https://' or link.url == '#' %}
+          <a data-nav-title data-no-instant href="{{ link.url }}" class="parent-link--false">
+            {{ link.title }}
+          </a>
+        {% else %}
+          <a data-nav-title data-no-instant href="{{ link.url }}" class="parent-link--true">
+            {{ link.title }}
+          </a>
+        {% endif %}
+      </li>
+    {% else %}
+      <li data-mobile-dropdown-rel="{{ link.handle }}" class="sublink" data-meganav-mobile-target="{{ link.title | handle }}" role="listitem">
+        {% if link.url == 'http://' or link.url == '' or link.url == '/' or link.url == 'https://' or link.url == '#' %}
+          <a data-no-instant href="{{ link.url }}" class="parent-link--false">
+            <div class="mobile-menu-item-title" data-nav-title>{{ link.title | remove: "-mobile" }}</div>
+            </a>
+            <span class="right icon-down-arrow" data-menu-tab aria-expanded="false" role="button" tabindex="0" aria-label=" {{ link.title | remove: "-mobile" }} sub menu">
+              <span class="visually-hidden"> {{ link.title | remove: "-mobile" }} sub menu</span>
+            </span>
+        {% else %}
+          <a data-no-instant href="{{ link.url }}" class="parent-link--true">
+            <div class="mobile-menu-item-title" data-nav-title>{{ link.title | remove: "-mobile" }}</div>
+            </a>
+            <span class="right icon-down-arrow" data-menu-tab aria-expanded="false" role="button" tabindex="0" aria-label=" {{ link.title | remove: "-mobile" }} sub menu">
+              <span class="visually-hidden"> {{ link.title | remove: "-mobile" }} sub menu</span>
+            </span>
+        {% endif %}
+        <ul>
+          {% for link in linklists[link.handle].links %}
+            {% if linklists[link.handle] == empty %}
+              <li role="listitem"><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% else %}
+              <li class="sublink test" role="listitem">
+                {% if link.url == 'http://' or link.url == '' or link.url == '/' or link.url == 'https://' or link.url == '#' %}
+                  <a data-no-instant href="{{ link.url }}" class="parent-link--false">
+                  </a>
+                    {{ link.title }} <span class="right icon-down-arrow" data-menu-tab aria-expanded="false" role="button" tabindex="0" aria-label="{{ link.title }} sub menu"></span>
+                {% else %}
+                  <a data-no-instant href="{{ link.url }}" class="parent-link--true">
+                  </a>
+                    {{ link.title }} 
+                    <span class="right icon-down-arrow" data-menu-tab aria-expanded="false" role="button" tabindex="0" aria-label=" {{ link.title }} sub menu">
+                      <span class="visually-hidden"> {{ link.title }} sub menu</span>
+                    </span>
+                {% endif %}
+                <ul role="list">
+                  {% for link in linklists[link.handle].links %}
+                    <li role="listitem"><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<style>
+#mobile_menu li a span.icon-down-arrow:before{
+      font-size:8px;
+      color: #000;
+      font-weight: 600;
+}
+
+#mobile_menu li a span.icon-down-arrow.active:before{
+color:#DD136E;
+}
+
+</style>

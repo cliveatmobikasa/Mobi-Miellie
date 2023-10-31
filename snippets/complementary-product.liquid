@@ -1,0 +1,151 @@
+{% if product.compare_at_price_min > product.price_min %}
+  {%- capture price -%}
+    {%- if product.price_varies -%}
+      <p
+        class="
+          complementary-product__price-text
+          complementary-product__price-text--from
+        "
+      >
+        {{ 'sections.complementary_product_block.from' | t }}
+      </p>
+    {%- else -%}
+      <p
+        class="
+          complementary-product__price-text
+          complementary-product__price-text--now
+        "
+      >
+        {{ 'sections.complementary_product_block.now' | t }}
+      </p>
+    {%- endif -%}
+    <span class="complementary-product__price money">
+      {% if format_currency %}
+        {{ product.price_min | money_with_currency }}
+      {% else %}
+        {{ product.price_min | money }}
+      {% endif %}
+    </span>
+    <span class="complementary-product__price-compare money compare-at-price-value-added">
+      {% if format_currency %}
+        {{ product.compare_at_price_min | money_with_currency }}
+      {% else %}
+        {{ product.compare_at_price_min | money }}
+      {% endif %}
+    </span>
+  {%- endcapture -%}
+{% else %}
+  {%- capture price -%}
+    {%- if product.price_varies -%}
+      <p class="complementary-product__price-text">{{ 'sections.complementary_product_block.from' | t }}</p>
+    {%- endif -%}
+    <span class="complementary-product__price money">
+      {% if format_currency %}
+        {{ product.price_min | money_with_currency }}
+      {% else %}
+        {{ product.price_min | money }}
+      {% endif %}
+    </span>
+  {%- endcapture -%}
+{% endif %}
+
+{% assign variant_for_unit_price = product.variants | sort: 'price' | first %}
+{% if variant_for_unit_price.unit_price_measurement %}
+  {%- capture total_quantity -%}
+    <span>
+      {{ variant_for_unit_price.unit_price_measurement.quantity_value }}{{ variant_for_unit_price.unit_price_measurement.quantity_unit }}
+    </span>
+  {%- endcapture -%}
+  {%- capture unit_price -%}
+    <span>
+      {{ variant_for_unit_price.unit_price | money }}
+    </span>
+  {%- endcapture -%}
+  {%- capture unit_measure -%}
+    <span>
+      {%- if variant_for_unit_price.unit_price_measurement.reference_value != 1 -%}
+        {{ variant_for_unit_price.unit_price_measurement.reference_value }}
+      {%- endif %}
+      {{ variant_for_unit_price.unit_price_measurement.reference_unit }}
+    </span>
+  {%- endcapture -%}
+
+  {%- capture unit_price -%}
+    <div class="complementary-product__unit-price">
+      {{ 'sections.complementary_product_block.price_per_unit_html' | t: total_quantity: total_quantity, unit_price: unit_price, unit_measure: unit_measure | strip_newlines }}
+    </div>
+  {%- endcapture -%}
+{% endif %}
+
+
+<div
+  class="
+    complementary-product
+    {% if product.compare_at_price_min > product.price_min %}
+      complementary-product--on-sale
+    {% endif %}
+  "
+  data-complementary-product
+>
+  <div class="complementary-product__image">
+    <div
+      class="complementary-product__image-link" 
+      data-url="{{ product.url }}"
+    >
+      {% liquid
+        assign thumb_size = 'x500'
+        assign thumb_crop = false
+
+        if crop_thumbnails
+          assign thumb_size = '500x500'
+          assign thumb_crop = 'center'
+        endif
+      %}
+      {% if product.featured_media %}
+        {%
+          render 'rimg',
+          img: product.featured_media.preview_image,
+          size: thumb_size,
+          crop: thumb_crop,
+          lazy: true,
+          class: 'complementary-product__image-element',
+        %}
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'complementary-product__image-placeholder placeholder-svg' }}
+      {% endif %}
+    </div>
+  </div>
+  <div class="complementary-product__details">
+    <p class="complementary-product__name">
+      <a
+        class="complementary-product__name-link"
+        href="{{ product.url }}"
+        aria-label="{{ product.title | escape }}"
+      >
+        {{ product.title | escape | truncate: 20 }}
+      </a>
+    </p>
+    <div class="complementary-product__price-wrapper">
+      {{ price }}
+      {{ unit_price }}
+    </div>
+
+    <a
+      class="complementary-product__link"
+      href="{{ product.url }}"
+      aria-label="View product {{ product.title | escape }}"
+    >
+      {{ 'sections.complementary_product_block.view_details' | t }}
+    </a>
+  </div>
+  <form method="post" action="/cart/add"  accept-charset="UTF-8" data-productid="{{ product.id }}">
+  <input aria-label="quantity" type="hidden" class="quantity" name="quantity" value="1" tabindex="-1">
+  <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}" tabindex="-1">
+  <button type="button" name="add" class="add_to_cart ajax-submit complementary-product-icon-plus" data-label="Add to Cart" aria-label="Add {{ product.title }} product to cart">
+       <span class="text">+</span>
+       <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
+        <path fill="none" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"></path>
+       </svg>
+  </button>
+</form>
+</div>

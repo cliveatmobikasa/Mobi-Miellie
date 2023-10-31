@@ -1,0 +1,41 @@
+{% case icon %}
+    {% when 'arrow-left' %}
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+    {% when 'eye' %}
+        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="12" fill="#D2D2D2"/>
+            <g clip-path="url(#clip0_496_489)">
+                <rect width="1440" height="1563" transform="translate(-900 -609)" fill="white"/>
+                <rect x="-394.5" y="-17.5" width="433" height="47" rx="23.5" stroke="#C0C0C0"/>
+                <path d="M2.96434 8.77052C5.30607 10.5587 7.7328 11.4954 9.9893 11.4954C12.2458 11.4954 14.6726 10.5587 17.0143 8.77052C18.7599 7.45072 19.8243 6.1308 19.8882 6.06694C20.0373 5.87538 20.0373 5.59861 19.8882 5.38565C19.8242 5.36457 18.7598 4.04464 17.0143 2.72483C14.6725 0.9367 12.2458 0 9.9893 0C7.7328 0 5.30599 0.9367 2.96434 2.72483C1.21882 4.04464 0.154428 5.36455 0.111815 5.40705C-0.0372716 5.59861 -0.0372716 5.87538 0.111815 6.08834C0.154432 6.13081 1.21882 7.45075 2.96434 8.77056V8.77052ZM9.9893 1.06435C14.1404 1.06435 17.7168 4.61941 18.7599 5.74766C17.7168 6.87591 14.1404 10.431 9.9893 10.431C5.83819 10.431 2.26184 6.87591 1.21874 5.74766C2.26177 4.61941 5.83819 1.06435 9.9893 1.06435Z" fill="#8C8C8C"/>
+                <path d="M9.98902 9.68702C12.1604 9.68702 13.9273 7.92014 13.9273 5.74878C13.9273 3.57743 12.1604 1.81055 9.98902 1.81055C7.81767 1.81055 6.05078 3.57743 6.05078 5.74878C6.05078 7.92014 7.81767 9.68702 9.98902 9.68702ZM9.98902 2.87494C11.5644 2.87494 12.8629 4.17349 12.8629 5.74886C12.8629 7.32423 11.5644 8.62279 9.98902 8.62279C8.41365 8.62279 7.11509 7.32423 7.11509 5.74886C7.11509 4.17349 8.41365 2.87494 9.98902 2.87494Z" fill="#8C8C8C"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_496_489">
+                    <rect width="1440" height="1563" fill="white" transform="translate(-900 -609)"/>
+                </clipPath>
+            </defs>
+        </svg>
+    
+    {% when 'play-circle' %}
+        {% comment %} <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon--play">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+        </svg> {% endcomment %}
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon--play" viewBox="0 0 20 20"><g><path d="M5,15.25V4.77A1.44,1.44,0,0,1,6.44,3.15a1.86,1.86,0,0,1,1.11.31l8.53,5c.76.44,1.17.8,1.17,1.51s-.41,1.07-1.17,1.51l-8.53,5a1.86,1.86,0,0,1-1.11.31A1.42,1.42,0,0,1,5,15.25Z"/></g></svg>
+    {% when 'pause-circle' %}
+        {% comment %} <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon--pause">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>           {% endcomment %}
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon--pause" viewBox="0 0 20 20"><g><rect  x="3.75" y="3" width="4.5" height="14" rx="1.5"/><rect  x="11.75" y="3" width="4.5" height="14" rx="1.5"/></g></svg>
+
+    {% when 'recipient-form-disclosure-icon' %}
+        <svg aria-hidden="true" focusable="false" role="presentation" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+            <path fill="none" d="M2.5 7L5.5 10L11.5 4"></path>
+        </svg>
+          
+            
+
+{% endcase %}

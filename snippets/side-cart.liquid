@@ -1,0 +1,193 @@
+<div class="cart-container" data-mini-cart role="dialog" aria-label="Your Cart Modal">
+  {%- liquid 
+    assign render_minicart = false
+    if settings.cart_action == 'ajax'
+      assign render_minicart = true
+    endif
+    if template contains 'cart'
+      assign render_minicart = false
+    endif
+    if is_view_request
+      assign render_minicart = true
+    endif
+  -%}
+
+  {% if render_minicart %}
+    <div class="tos_warning cart_content mini-cart">
+      <div class="minicart-title-close">
+        <div class="minicart-title" role="heading" aria-level="2" side-cart-title>Your cart ({{ cart.item_count  }} {% if cart.item_count > 1 %}Items{% else %}Item{%endif%})</div>
+        <button type="button" aria-label="close cart" class="minicart-close btn-no-style">
+          <span class="visually-hidden">close cart</span>
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.33154 1.16519L14.051 14.215" stroke="#040404"/>
+            <path d="M13.7194 1L1 14.215" stroke="#040404"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="js-empty-cart__message {% if cart.item_count > 0 %}hidden{% endif %}">
+        <p class="empty_cart">{{ 'layout.general.empty_cart' | t }}</p>
+        <a class="cart__continue-shopping global-button global-button--text" href="/collections/all">
+          {{ 'cart.general.continue_shopping' | t }}
+        </a>
+      </div>
+
+      <form action="{{ routes.cart_url }}"
+        method="post"
+        class="{% if cart.item_count == 0 %}hidden{% endif %}"
+        data-total-discount="{{ cart.total_discount }}"
+        data-money-format="{{ shop.money_format | strip_html }}"
+        data-shop-currency="{{ shop.currency }}"
+        data-shop-name="{{ shop.name | escape }}"
+        data-cart-form="mini-cart">
+        
+        <a href="#" class="cart_content__continue-shopping secondary_button">
+          {{ 'cart.general.continue_shopping' | t }}
+        </a>
+        <div class="main-minicart-container">
+          <ul class="cart_items js-cart_items" role="list" tabindex="-1">
+            {%- assign total_saving = 0 -%}
+
+            {% for item in cart.items %}
+              {% assign isFreeProduct = false %}
+              {% if item.properties._smgift != blank %}
+                {% assign isFreeProduct = true %}
+              {% endif %}
+
+              {% if item.variant.compare_at_price > item.variant.price %}
+                {%- assign saving = item.variant.compare_at_price | minus: item.variant.price | times: item.quantity -%}
+                {%- assign total_saving = saving | plus: total_saving -%}
+              {% endif %}
+
+              {%- if isFreeProduct -%}
+                {%- capture free_line_item -%}
+                  {{- free_line_item -}}
+                  {% 
+                    render 'mini-cart-item',
+                    isFreeProduct: isFreeProduct,
+                    forIndex: forloop.index,
+                    item: item
+                  %}
+                {%- endcapture -%}
+              {% else %}
+                {%- capture regular_line_items -%}
+                  {{- regular_line_items -}}
+                  {% 
+                    render 'mini-cart-item',
+                    isFreeProduct: isFreeProduct,
+                    forIndex: forloop.index,
+                    item: item
+                  %}
+                {%- endcapture -%}
+              {%- endif -%}
+
+            {% endfor %}
+
+            {{- free_line_item -}}
+            {{- regular_line_items -}}
+          </ul>
+          {% comment %} nosto block for minicart starts here {% endcomment %}
+          <div class="nosto_element" id="nosto-minicart"></div>
+          {% comment %} nosto block for minicart ends here {% endcomment %}
+        </div>
+
+        <ul class="minicart-bottom-container" role="presentation">
+          <li class="cart_discounts js-cart_discounts sale" role="presentation">
+            {% if cart.cart_level_discount_applications != blank %}
+              {% for discount_application in cart.cart_level_discount_applications %}
+                <span class="cart_discounts--title">{{ discount_application.title }}</span>
+                <span class="cart_discounts--price">
+                  -
+                  <span class="money">
+                    {% render 'price-element', price: discount_application.total_allocated_amount %}
+                  </span>
+                </span>
+              {% endfor %}
+            {% endif %}
+          </li>
+
+          <li class="cart_subtotal js-cart_subtotal" role="presentation">
+            <span>{{ 'layout.general.subtotal' | t }}</span>
+            <span class="right">
+              <span class="money">
+                {% render 'price-element', price: cart.total_price %}
+              </span>
+            </span> 
+          </li>
+         
+          <li class="cart_savings sale js-cart_savings" role="presentation">
+            {% if settings.display_savings and total_saving > 0 or settings.display_savings and cart.total_discount > 0 %}
+            <span class="right">
+              <span class="money">
+                {% assign total_savings = total_saving | plus: cart.total_discount %}
+                {% render 'price-element', price: total_savings %}
+              </span>
+            </span>
+
+            <span>{{ 'layout.general.savings' | t }}</span>
+            {% endif %}
+          </li>
+          
+
+          <li role="presentation">
+            {%- capture taxes_shipping_checkout -%}
+              {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+              {%- elsif cart.taxes_included -%}
+                {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+              {%- elsif shop.shipping_policy.body != blank -%}
+                {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+              {%- else -%}
+                {{ 'cart.general.tax_and_shipping' | t }}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            <p class="cart-message meta">{{ taxes_shipping_checkout }}</p>
+          </li>
+
+
+          <div class="checkout-cart-container">
+            <li class="mini-cart-checkout" role="presentation">
+              {% if settings.display_special_instructions and settings.go_to_checkout %}
+                <textarea id="note" name="note" rows="2" placeholder="{{ 'layout.general.cart_note' | t }}">{{ cart.note }}</textarea>
+              {% endif %}
+
+              {% if settings.display_tos_checkbox and settings.go_to_checkout %}
+                <p class="tos">
+                  <input type="checkbox" class="tos_agree" id="sliding_agree" required />
+
+                  <label class="tos_label">
+                    {{ 'cart.general.agree_to_terms_html' | t }}
+                  </label>
+
+                  {% if settings.tos_page != blank %}
+                  <a href="{{ settings.tos_page }}" target="_blank" class="tos_icon">{{ 'cart.general.view_terms' | t }}</a>
+                  {% endif %}
+                </p>
+              {% endif %}
+
+              {% if settings.cart_message != blank %}
+                <div class="cart_text">{{ settings.cart_message }}</div>
+              {% endif %}
+
+              {% if settings.go_to_checkout %}
+                <button type="submit" name="checkout" class="global-button test global-button--primary add_to_cart" data-minicart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
+              {% else %}
+                <button type="submit" class="global-button global-button--primary add_to_cart" data-minicart-checkout-button>{% if settings.show_lock_icon and settings.go_to_checkout %}<span class="icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
+              {% endif %}
+            </li>
+            <a href="{{ routes.cart_url }}" class="mini-cart-view" aria-label="View cart, Redirecting to cart page">View Cart</a>
+          </div>
+        </ul>
+      </form>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  @media (max-width: 768px){
+    #nosto-minicart {
+      padding: 0 1.5rem!important;
+    }
+  }
+</style>

@@ -1,0 +1,39 @@
+{% if slider_item_count > 1 %}
+    <div class="homepage-slider-play-pause hidden">
+      <button type="button" aria-label="Autoplay slider Pause">
+        <span class="visually-hidden" aria-hidden="true" tabindex="-1">Autoplay slider Play/Pause</span>  
+        {% render 'icon' with 'play-circle' %}
+        {% render 'icon' with 'pause-circle' %}
+      </button>
+      {% comment %} <span class="visually-hidden" id="{{section.id}}-sr-only" aria-live="polite" data-aria-live=""></span> {% endcomment %}
+    </div>
+
+    {%- assign play_pause_left = slider_item_count | times: 12 | plus: 10 -%} 
+    <style>
+      {{ section_id }} .homepage-slider-play-pause button {
+        border: none;
+        background: #424245ed;
+        padding: 5px;
+        border-radius: 211px;
+        display: flex;
+      }
+      {{ section_id }} .homepage-slider-play-pause button svg {
+        width: 15px;
+        fill: {{icon_color}};
+        opacity:0.8;
+      }
+      {{ section_id }} .homepage-slider-play-pause button:hover svg {
+        opacity:1;
+      }
+      {{ section_id }} .homepage-slider-play-pause button:focus svg,
+      {{ section_id }} .homepage-slider-play-pause button:focus-visible svg {
+        fill: {{icon_focus_color}};
+      }
+      {{ section_id }} .homepage-slider-play-pause button:not(.active) .icon--play,
+      {{ section_id }} .homepage-slider-play-pause button.active .icon--pause {
+        display: none;
+      }
+      
+      {{extra_css}}
+    </style>
+{% endif %}

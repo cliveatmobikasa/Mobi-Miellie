@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "search-result",
+      "settings": {
+        "no_result_msg": "No products found, Please check back later",
+        "title": "Trending Products",
+        "view_All_url": "shopify:\/\/collections\/all",
+        "collection": "hair-care-products"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

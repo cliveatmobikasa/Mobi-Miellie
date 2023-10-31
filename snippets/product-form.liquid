@@ -1,0 +1,205 @@
+{% if show_payment_button == false  %}
+  {% assign show_payment_button = false %}
+{% else %}
+  {% assign show_payment_button = true %}
+{% endif %}
+
+{% assign variant = product.selected_or_first_available_variant %}
+
+{%- assign checkout_url = '/checkout' -%}
+  {% for locale in shop.enabled_locales %}
+    {% if locale.primary == true %}
+      {%- assign defaultLocale = locale.iso_code -%}
+      {% if defaultLocale != request.locale.iso_code %}
+        {%- assign checkout_url = request.locale.iso_code | append: '/checkout' -%}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<div
+  class="
+    product_form
+    init
+    smart-payment-button--{{ show_payment_button }} {% if product.available %}{% else %}sold_out_product{% endif %}
+    {% if product.variants.size > 1 or product.options.size > 1 %}product_form_options{% endif %}
+  "
+  {% if product.available %}{% else %} style="min-height:135px;" {% endif %}
+  data-product-form
+  data-money-format="{{ shop.money_format | strip_html }}"
+  data-shop-currency="{{ shop.currency }}"
+  data-options-size="{{ product.options.size }}"
+  data-select-id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}"
+  data-enable-state="{% if template contains 'product' %}true{% else %}false{% endif %}"
+  data-product="{{ product | json | escape }}"
+  data-product-title="{{ product.title | escape }}"
+  {% if settings.limit_quantity or settings.display_inventory_left %}
+    data-variant-inventory='[{%- for v in product.variants -%}{"id":{{v.id}},"inventory_quantity":{{v.inventory_quantity}},"inventory_management":"{{v.inventory_management}}","inventory_policy":"{{v.inventory_policy}}"}{% if forloop.last == false %},{% endif %}{%- endfor -%}]'
+  {% endif %}
+  data-product-id="{{ product.id }}"
+>
+  {% comment %}  {% endcomment %}
+{% if product.available %}
+  {%else%}
+  <div class="outOfStock">
+ <span class="outOfStock_title">Currently Out Of Stock</span><br>
+ <span class="outOfStock_subtitle">You’ll get an email if this item comes back in stock.</span>
+  </div>
+  {%endif%}
+{% comment %}  {% endcomment %}
+  
+  {% form 'product', product, data-productid: product.id %}
+ 
+
+  <!-- Begin ReCharge code -->
+  
+{% if product.available %}{% render 'subscription-product' %}{% endif %}
+  
+<!-- End ReCharge code -->
+
+  <div
+    class="
+      select
+      {% if product.has_only_default_variant %}default_select{% endif %}
+    "
+  >
+
+    {% if product.options.size == 1 and settings.product_form_style == 'select' %}
+      <label>{{ product.options[0] }}</label>
+    {% endif %}
+
+    <select
+      id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}"
+      name="id"
+      data-productid="{{product.id}}"
+      class="{% if product.options.size > 1 %}multi_select{% endif %}"
+      data-variants
+    >
+      {% for v in product.variants %}
+        <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-featured-image="{{ v.featured_media }}" data-image="{{ v.featured_media | product_img_url: '600x' }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  {% if settings.product_form_style == "radio" and product.variants.size > 1 or settings.product_form_style == "radio" and product.options[0] != "Title" %}
+    <div class="swatch_options">
+      {% for option in product.options %}
+        {%
+          render 'product-swatch',
+          option: option,
+          product: product
+        %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if product.available %}
+    {% if settings.display_inventory_left %}
+      <div class="items_left">
+        {% if variant.inventory_management != blank and variant.inventory_quantity > 0 %}
+          {% capture items_left_text %}
+            {% if variant.inventory_quantity == 1 %}
+              {{ 'products.product.items_left_count.one' | t }}
+            {% else %}
+              {{ 'products.product.items_left_count.other' | t }}
+            {% endif %}
+          {% endcapture %}
+          {% if variant.inventory_quantity <= settings.inventory_threshold %}
+            {{ variant.inventory_quantity }} {{ items_left_text }}
+          {% endif %}
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {% render 
+    'giftcard-recipient-form', 
+    section: section, 
+    product: product,
+    show_recipient_form: show_recipient_form,
+    gift_card_msg_char_limit: gift_card_msg_char_limit
+  %}
+
+
+{% if show_qty_input_label %}
+    <label for="purchase-details__quantity-input" class="purchase-details__quantity-label" style="{% if product.available %}{% else %}display:none;{%endif%}">Quantity:</label>
+    {% endif %}
+  <div class="purchase-details" style="{% if product.available %}{% else %}display:none;{%endif%}">  
+    {% if settings.display_product_quantity %}
+      <div class="purchase-details__quantity product-quantity-box">
+<!--         <label for="quantity">{{ 'products.product.quantity' | t }}</label> -->
+        <button type="button" aria-label="Decrease Quantity" class="ss-icon product-minus js-change-quantity" data-func="minus">
+            <span class="icon-minus"></span>
+        </button>
+        <input {% if show_qty_input_label %}id="purchase-details__quantity-input"{% endif %} aria-label="quantity" type="number" min="1" size="2" class="quantity" name="quantity"  value="1" {% if settings.limit_quantity and variant.inventory_management != blank and variant.inventory_policy == "deny" %}max="{{ variant.inventory_quantity }}"{% endif %}  
+oninput="this.value = !!this.value && Math.abs(this.value) > 0 ? Math.abs(this.value) : null" readonly />
+        <button type="button" aria-label="Increase Quantity" class="ss-icon product-plus js-change-quantity" data-func="plus">
+            <span class="icon-plus"></span>
+        </button>
+      </div>
+    {% endif %}
+    <div class="purchase-details__buttons purchase-details__spb--{{ show_payment_button }} {% if product.available == false %}product-is-unavailable{% endif %}">
+      {% if settings.cart_action == 'reload_page' %}
+        <input type="hidden" name="return_to" value="back" />
+      {% elsif settings.cart_action == 'redirect_checkout' %}
+        <input type="hidden" name="return_to" value="{{ checkout_url }}" />
+      {% endif %}
+
+      {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
+      {% if product.available %}
+      <button
+        type="{% if settings.cart_action == 'ajax' %}button{% else %}submit{% endif %}"
+        name="add"
+        aria-controls="cart-sr-only"
+        class="
+          add_to_cart
+          global-button
+          {% if show_payment_button %}
+            global-button--primary
+          {% else %}
+            global-button--secondary
+          {% endif %}
+          {% if settings.cart_action == 'ajax' %}
+            ajax-submit
+          {% endif %}
+          {% if product.available == false %}
+            disabled
+          {% endif %}
+        "
+        data-label={{ add_to_cart_label | json }}
+        {% if product.available %}
+        aria-label="Add to cart {{ product.title }}"
+        {% else %}
+        aria-label="{{ settings.sold_out_text }}"
+        {% endif %}
+      >
+      {% comment %} <p role="alert" aria-live="polite"></p> {% endcomment %}
+<!--         <span class="text">
+          {% if product.available %}{{ add_to_cart_label }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}
+        </span> -->
+        <span class="text">
+          {% if product.available %}{{ add_to_cart_label }}{% else %}{{ settings.sold_out_text }}{% endif %}
+        </span>
+        <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
+          <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+        </svg>
+      </button>
+{%endif%}
+    </div>
+  </div>
+{% endform %}
+
+  <div class="surface-pick-up surface-pick-up--loading" data-surface-pick-up></div>
+  <div class="surface-pick-up__modal" data-surface-pick-up-modal></div>
+</div>
+
+{% comment %}  {% endcomment %}
+{% if product.available %}
+  {% else %}
+  <style>
+    .product-block.product-block--form {
+      border-bottom: 1px solid #D9D9D9;
+      padding-bottom: 20px;
+    }
+  </style>
+{% endif %}
+{% comment %}  {% endcomment %}

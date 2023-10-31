@@ -1,0 +1,36 @@
+<script>
+    window._theme = window._theme || {};
+    window._theme.gwp = window._theme.gwp || {};
+    window._theme.cartjson = {{- cart | json -}};
+    window._theme.gwp.enable = {{- settings.gwp_enable | json -}};
+    {%- if settings.gwp_enable -%}
+        window._theme.gwp.freeProducts = [
+            {%- assign index_count = 0 -%}
+            {%- for i in (1..3) -%}
+                {%- assign settings_amt_key = 'gwp_min_amt_' | append: i | strip -%}
+                {%- assign settings_product_key = 'gwp_product_' | append: i | strip -%}
+                {%- assign selected_amt = settings[settings_amt_key] -%}
+                {%- assign selected_product = settings[settings_product_key] -%}
+                {%- if selected_product != blank and selected_amt != 0 -%}
+                {%- if index_count > 0 -%},{%- endif -%}{ 
+                    "product_vid": {{- selected_product.first_available_variant.id | json -}},
+                    "min_amt": {{- selected_amt | json -}}
+                }
+                {%- assign index_count = index_count | plus: 1 -%}
+                {%- endif -%}
+            {%- endfor -%}
+        ];
+    {%- endif -%}
+    {%- if customer and customer.tags -%}
+        {%- assign customer_tags = customer.tags | join: ' ' | strip -%}
+        {%- if customer_tags contains 'free_gift' -%}
+            {% comment %} console.log('customer has free gift tag'); {% endcomment %}
+            //window._theme.gwp.enable = false;
+        {%- endif -%}
+    {%- endif -%}
+    window._theme.gwp = Object.freeze(_theme.gwp);
+</script>
+
+{%- if settings.gwp_enable -%}
+    <script src="{{ 'gwp.js' | asset_url }}" defer></script>
+{% endif %}

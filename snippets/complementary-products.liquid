@@ -1,0 +1,148 @@
+<script
+  type="application/json"
+  data-complementary-products-data
+>
+  {
+    "sectionId": {{ section.id | json }},
+    "productId": {{ product.id | json }},
+    "productRecommendationLimit": {{ block.settings.product_recommendation_limit | json }}
+  }
+</script>
+
+<style>
+  .complementary-products .complementary-products__slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .complementary-products .complementary-product {
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    justify-content: start;
+    border: 1px solid #D7D7D7;
+    border-radius: 6px;
+    padding: 0 12px 9px;
+  }
+  .complementary-products .complementary-product__details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .complementary-products .complementary-product-icon-plus {
+    height: 20px;
+    width: 20px;
+    background: #17130F;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0 0 3px;
+  }
+
+  .complementary-products .complementary-product-icon-plus .checkmark-active {
+    width: 20px;
+  }
+  .complementary-products .flickity-page-dots {
+    display: none;
+  }
+  .complementary-products .complementary-products__slider .flickity-prev-next-button {
+    top: 50%;
+    bottom: auto;
+    height: 32px;
+    transform: translateY(-50%);
+  }
+  .complementary-products .complementary-products__slider .flickity-prev-next-button svg {
+    width: auto;
+    height: auto;
+  }
+
+  @media(min-width: 799px){
+  }
+
+  @media (max-width: 767px){
+    .complementary-products .complementary-product {
+      --slide-item-inner-gap: 4px;
+    }
+    .complementary-products .complementary-product__link {
+      margin-top: 2px;
+      font-family: Futura PT;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0em;
+    }
+  }
+</style>
+
+{% liquid
+  assign heading = block.settings.heading
+%}
+
+{% comment %}Inject @pixelunion/pxs-complementary-products/complementary-product-block begin{% endcomment %}
+{% comment %}
+  @param block {Object}
+  @param wrapper_class {String}
+  @param heading {String}
+  @param products_per_slide {Integer}
+  @param format_currency {Boolean}
+  @param crop_thumbnails {Boolean}
+  @param wrap_heading {Boolean}
+{% endcomment %}
+
+{% liquid
+  assign format_currency = format_currency | default: false
+  assign wrap_heading = wrap_heading | default: false
+  assign crop_thumbnails = crop_thumbnails | default: false
+%}
+
+<div
+  class="
+    complementary-products
+    {{ wrapper_class }}
+  "
+  {{ block.shopify_attributes }}
+  data-complementary-products
+  data-html
+>
+{% if recommendations.performed and recommendations.products_count > 0 %}
+    
+    {% if heading != blank %}
+      {%- if wrap_heading -%}
+        <div class="complementary-products__title-wrapper">
+      {%- endif -%}
+      <p class="complementary-products__title" role="heading" aria-level="2">
+        {{ heading | escape }}
+      </p>
+      {%- if wrap_heading -%}
+        </div>
+      {%- endif -%}
+    {% endif %}
+
+    <div class="complementary-products__container">
+      <div class="complementary-products__slider_pdp is-flex is-flex-wrap">
+      {% for product in recommendations.products %}
+          <div class="complementary-single-product">
+            {%
+              render 'complementary-product',
+              product: product,
+              format_currency: format_currency,
+              crop_thumbnails: crop_thumbnails,
+            %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>
+<script>
+  console.log('qqqqqq');
+</script>
+
+{% comment %}Inject @pixelunion/pxs-complementary-products/complementary-product-block end{% endcomment %}

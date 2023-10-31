@@ -1,0 +1,57 @@
+<style>
+  .customers-login form .oxi_social_wrapper,
+  .customers-register form .oxi_social_wrapper {
+    display: none;
+  }
+  form .oxi-social-login {
+    width: 100%;
+  }
+  form .oxi-login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .customers-login form .oxi-login-wrapper {
+    margin-top: 20px;
+  }
+  .customers-register form .oxi-login-wrapper {
+    margin-bottom: 30px;
+  }
+  form .oxi-login-wrapper .oxi-login--text {
+    margin-bottom: 30px;
+  }
+  form .oxi-login-wrapper .oxi-login--text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+    color: #17130f;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  form .oxi-login-wrapper .oxi-login--text > span {
+    padding: 0 1.875rem;
+  }
+  form .oxi-login-wrapper .oxi-login--text::before,
+  form .oxi-login-wrapper .oxi-login--text::after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+</style>
+
+<div class="oxi-login-wrapper">
+  {% unless or_text == blank %}
+    <span class="oxi-login--text">
+      <span>{{ or_text }}</span>
+    </span>
+  {% endunless %}
+  <div class="oxi-social-login"></div>
+</div>

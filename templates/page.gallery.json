@@ -1,0 +1,143 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-gallery-template",
+      "disabled": true,
+      "blocks": {
+        "block-1": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-2": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-3": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-4": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-5": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-6": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-7": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-8": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-9": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "block-10": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        },
+        "c90dc5b1-db30-4db8-af5f-79ecbf348301": {
+          "type": "image",
+          "settings": {
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3",
+        "block-4",
+        "block-5",
+        "block-6",
+        "block-7",
+        "block-8",
+        "block-9",
+        "block-10",
+        "c90dc5b1-db30-4db8-af5f-79ecbf348301"
+      ],
+      "settings": {
+        "show_divider": false,
+        "wide_display": false,
+        "gallery_type": "horizontal",
+        "grid-size": 4,
+        "enable_lightbox": true
+      }
+    },
+    "1659579085346c0682": {
+      "type": "featured-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/mi-university-min.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/events.png",
+        "title": "#MiUniversity Learning Mi Hair Series with Jatina",
+        "content": "<p><strong>DATE | <\/strong>Multiple<\/p><p><strong>Location | <\/strong>Live on Instagram <a href=\"https:\/\/www.instagram.com\/mielleorganics\" target=\"_blank\">@mielleorganics<\/a><\/p><p><strong>Time | <\/strong>12pm CST<\/p><p>Join us for <a href=\"https:\/\/www.instagram.com\/explore\/tags\/miuniversity\/\">#MiUniversity<\/a> Learning MiHair with Monique's talented healthy hair stylist <a href=\"https:\/\/www.instagram.com\/JayRenee_Styles\/\">@JayRenee_Styles<\/a>! Each IG Live session will be informative, interactive and may even include a giveaway or two. Mark your calendars and set your notifications on Instagram now!<\/p>",
+        "button_label": "Follow On Instagram",
+        "button_link": "https:\/\/www.instagram.com\/mielleorganics\/",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1659578231e9de0dc6": {
+      "type": "apps",
+      "blocks": {
+        "6a606f33-38ef-4ac9-84cb-8db9ebf9c79a": {
+          "type": "shopify:\/\/apps\/youtube-vimeo-video-gallery\/blocks\/video\/2c28645e-c942-4c26-a297-9a0eb611a6a1",
+          "settings": {
+            "video_heading": "Tutorials",
+            "video_code": "<div id=\"evm-video-gallery-963\"><\/div>\n      <script src=\"https:\/\/apps.expertvillagemedia.com\/shopify\/evm-gallery\/embed.php?shop=mielleorganics.myshopify.com&amp;gid=963\"><\/script>"
+          }
+        }
+      },
+      "block_order": [
+        "6a606f33-38ef-4ac9-84cb-8db9ebf9c79a"
+      ],
+      "settings": {}
+    },
+    "16595813155e863c73": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_max_display": 5,
+        "rv_per": 5,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1659579085346c0682",
+    "1659578231e9de0dc6",
+    "16595813155e863c73"
+  ]
+}

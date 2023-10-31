@@ -1,0 +1,119 @@
+{% assign is_gift_card = item.gift_card | default: false %}
+
+<li class="mini-cart__item" data-cart-item data-line-id="{{ forIndex }}" data-variant-id="{{ item.id }}" role="listitem">
+    <div>
+      {% if item.image %}
+        {% if item.product.type == 'Free_Gift' %}
+      <div class="cart_image mini-cart__item-image" style="pointer-events: none">
+      <a href="#">
+        <img src="{{ item.image | img_url: '320x' }}" alt="{{ item.title | escape }}" class="lazyload" />
+      </a>
+      </div>
+      {% else %}
+      <div class="cart_image mini-cart__item-image">
+        <a href="{{ item.url }}">
+          <img src="{{ item.image | img_url: '320x' }}" alt="{{ item.title | escape }}" class="lazyload" />
+        </a>
+        </div>
+    {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="mini-cart__item-content">
+      <div class="mini-cart__item-title">
+        {% if item.product.type == 'Free_Gift' %}
+          <a href="#" style="pointer-events: none;color:black !important">
+            {{ item.product.title }}
+          </a>
+          {% else %}
+        <a href="{{ item.url }}">
+          {{ item.product.title }}
+        </a>
+        {%endif%}
+
+        {% if item.selling_plan_allocation.selling_plan %}
+          <p class="meta">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+        {% endif %}
+
+        {% if item.properties %}
+          {% for p in item.properties %}
+            {% unless p.first.first == "_" %}
+            {% if p.last != blank and p.first != '_smgift' %}
+              {% assign prop_class = '' %}
+              {% assign prop_size = p.last | strip | size %}
+              {% assign is_gift_msg = false %}
+              {% if is_gift_card and prop_size > 15 %}
+                {% assign is_gift_msg = true %}
+                {% assign prop_class = 'line-item-property-tooltip' %}
+              {% endif %}
+
+              <div 
+                class="line-item line-item-property {{ prop_class }}" 
+                data-txt="{{ p.last | strip | escape }}"
+              >
+                <span class="line-item-property-key">{{ p.first | strip }}:</span> 
+                <span class="line-item-property-value">{{ p.last | strip }}</span>
+              </div>
+            {% endif %}
+            {%endunless%}
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <div class="mini-cart__item-price">
+        {% if item.price > 0 %}
+          <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %} sale {% endif %}" role="text">
+            {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
+              <span class="visually-hidden">Sale Price</span>
+            {% endif %}
+            {% render 'price-element', price: item.final_price %}
+          </span>
+
+          {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
+            <span class="money was_price compare-at-price-value-added">
+              <span class="visually-hidden">Regular Price</span>
+              {% render 'price-element', price: item.variant.compare_at_price %}
+            </span>
+          {% endif %}
+        {% else %}
+          {{ settings.free_price_text }}
+        {% endif %}
+      </div>
+
+      {% render 'unit-price', 
+        item: item,
+        variant: item.variant,
+        product: item.product,
+        class: 'mini-cart__unit-price'
+      %}
+
+      {% if item.line_level_discount_allocations.size > 0 %}
+        {% for discount_allocation in item.line_level_discount_allocations %}
+          <p class="notification-discount meta">
+            {{ discount_allocation.discount_application.title }}
+          </p>
+        {% endfor %}
+      {% endif %}
+
+      {% unless isFreeProduct %}
+        <div class="Qty-box-remove-container">
+          <div class="product-quantity-box">
+            <button class="ss-icon product-minus js-change-quantity btn-no-style" type="button" aria-controls="cart-sr-only" data-func="minus" role="button" tabindex="0" aria-label="decrease quantity by 1">
+              <span class="visually-hidden">decrease quantity by 1</span>
+              <span class="icon-minus"></span>
+            </button>
+            <label for="updates_{{ item.id }}" class="visually-hidden">Quantity</label>    
+            <input type="number" min="0" size="2" class="quantity" aria-controls="cart-sr-only" name="updates[]" id="updates_{{ item.id }}" readonly="readonly" value="{{ item.quantity }}" data-cart-quantity-input="mini-cart" {% if settings.limit_quantity and item.variant.inventory_management != blank and item.variant.inventory_quantity > 0 and item.variant.inventory_policy == "deny" %}max="{{ item.variant.inventory_quantity }}"{% endif %}/>
+            <button class="ss-icon product-plus js-change-quantity btn-no-style" aria-controls="cart-sr-only" type="button" data-func="plus" role="button" tabindex="0" aria-label="increase quantity by 1">
+              <span class="visually-hidden">increase quantity by 1</span>
+              <span class="icon-plus"></span>
+            </button>
+          </div>
+          <a href="{{ routes.cart_change_url }}?line={{ forIndex }}&amp;quantity=0" class="cart__remove-btn" aria-label="remove product from the cart" data-line-id="{{ forIndex }}" data-remove-item="mini-cart" role="button">
+            <span style="color: transparent;" data-text>Remove</span>
+            <span class="remove-icon"></span>
+          </a>
+        <div>
+      {% endunless %}
+    </div>
+  </li>

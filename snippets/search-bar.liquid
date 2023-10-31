@@ -1,0 +1,40 @@
+{% liquid 
+  assign isSearchResultPage = false
+  if request.page_type == 'page' and request.path contains '/search-results-page'
+    assign isSearchResultPage = true
+  endif
+%}
+
+<div class="search-form" data-ajax-search>
+  <div class="header-search">
+    <div class="header-search__form">
+      <form action="/search" method="get" class="search-bar" id="header-search-form">
+        {% comment %} <input type="hidden" name="q" value="product"> {% endcomment %}
+        {% comment %} name="q" {% endcomment %}
+        <label class="visually-hidden" for="header_search">Search Site</label>
+        <input 
+          id="header_search"
+          type="search" 
+          name="q"
+          placeholder="Search for products or blog content..."
+          class="input-group-field header-search__input" 
+          autocomplete="off" 
+          data-header-search 
+           />
+
+          <span class="search-ic">
+            <svg aria-hidden="true" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.6875 28.125C13.1636 28.125 7.875 22.8364 7.875 16.3125C7.875 9.78864 13.1636 4.5 19.6875 4.5C26.2114 4.5 31.5 9.78864 31.5 16.3125C31.5 22.8364 26.2114 28.125 19.6875 28.125Z" stroke="#191919" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.334 24.6653L4.49961 31.4997" stroke="#191919" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+          <div class="loading-overlay__spinner">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+            </svg>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

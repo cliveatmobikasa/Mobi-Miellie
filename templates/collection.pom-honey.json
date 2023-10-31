@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "05d36c87-6c0a-4181-9677-e209573dabaa": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "{{ collection.image }}",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "collection-template",
+      "blocks": {
+        "d5747fa2-864a-4b71-8add-28a13210e417": {
+          "type": "filter",
+          "disabled": true,
+          "settings": {
+            "filter_name": "",
+            "filter_tags": "",
+            "enable_filter_swatches": false
+          }
+        },
+        "f7c643e9-7e52-41df-84ca-8e6239a323a3": {
+          "type": "faceted_filtering",
+          "settings": {
+            "show_filter_product_count": true
+          }
+        }
+      },
+      "block_order": [
+        "d5747fa2-864a-4b71-8add-28a13210e417",
+        "f7c643e9-7e52-41df-84ca-8e6239a323a3"
+      ],
+      "settings": {
+        "featured_collection_image": false,
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "display_collection_title": true,
+        "collection_breadcrumb": true,
+        "collection_tags": false,
+        "collection_sort": true
+      }
+    },
+    "072afc12-612d-4c03-9d05-40052e01a4b8": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "rv_title": "Recently <font color=\"#eb1676\">viewed<\/font>",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "338d82c2-bb6e-4c3c-98fc-a25ed36f2dc3": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/Gallery_Graphic.png",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "shopify:\/\/pages\/from-one-queen",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify:\/\/shop_images\/Mobile_Gallery.png",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "categorypage-nosto-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "categorypage-nosto-1"
+      }
+    },
+    "categorypage-nosto-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "categorypage-nosto-2"
+      }
+    },
+    "categorypage-nosto-dynamic-1": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "categorypage-nosto-dynamic-1"
+      }
+    }
+  },
+  "order": [
+    "05d36c87-6c0a-4181-9677-e209573dabaa",
+    "main",
+    "072afc12-612d-4c03-9d05-40052e01a4b8",
+    "338d82c2-bb6e-4c3c-98fc-a25ed36f2dc3",
+    "categorypage-nosto-1",
+    "categorypage-nosto-2",
+    "categorypage-nosto-dynamic-1"
+  ]
+}

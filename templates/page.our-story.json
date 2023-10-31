@@ -1,0 +1,158 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "1664579622fcd26d23": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/main-banner_52343ed5-5fd1-4c30-ac88-2c3fb619ef50.jpg",
+        "pretext": "",
+        "title": "Our Story",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "left",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "166457973558b33742": {
+      "type": "featured-text",
+      "settings": {
+        "title": "MIELLE ORGANICS IS A HAIR CARE AND BEAUTY BRAND THAT BELIEVES HEALTHIER INGREDIENTS ENCOURAGE HEALTHIER HAIR AND SKIN.",
+        "content": "<p>Since inception, Mielle Organics products have taken the hair care market by storm!<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664579629e43beda9": {
+      "type": "image-text",
+      "blocks": {
+        "1664579629f3ee1512-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/monique-holding-product.jpg",
+            "image_crop": "none",
+            "title": "Meet Our Founder & CEO, Monique Rodriguez",
+            "text": "<p>Monique Rodriguez founded MIELLE in 2014 after her healthy, hair care regimen for her tailbone-length hair became somewhat of a craze among her social media followers. The company began on the back of one product, the Advanced Hair Formula, a unique proprietary blend of herbs, amino acids and minerals to support healthy hair, skin, nails, and immune system.<\/p><p>Since then, MIELLE has expanded to 10 collections under Monique’s direction, including products for skin and children. MIELLE has been distributed in more than 87 countries and can be found in more than 100,000 stores across the U.S. in retailers such as Sally Beauty, Target, CVS, Walgreens, Kroger, JC Penny, and Walmart. In 2021, Monique became the first black woman to raise a non-controlling nine-figure investment in a deal with Berkshire Partners.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "1664579629f3ee1512-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ssp_5127-min.jpg",
+            "image_crop": "none",
+            "title": "",
+            "text": "<p>In addition to her work with MIELLE, Monique is recognized as a leader in the business community as well as a role model among adult women and girls. She has been recognized in publications such as Allure, Black Enterprise, Sophisticate’s Black Hair, and Essence.com, in addition to popular, national daytime television talk shows – The Steve Harvey Show, The Real, and The Wendy Williams Show. Monique has also been endorsed by the celebrity community, a known favorite of “Black-ish” actress, Yara Shahidi.<\/p><p>With more than 1 million followers, Monique and MIELLE have an extremely engaged social media community. Monique is committed to inspiring women around the world through her beauty solutions, business savvy and her Secret Sauce to Success podcast and academy. Additionally, MIELLE’S<em>More Than A Strand<\/em>program aims to empower communities and women of color through strengthening relationships between mothers and daughters across the United States, Caribbean and Africa. Monique travels nationally and internationally to empower and equip women to be the best version of themselves.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664579629f3ee1512-0",
+        "1664579629f3ee1512-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "defdf94c-5ccd-4396-990a-5dd72cb79666": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Monique's Favorites",
+        "collection_description": true,
+        "collection": "moniques-favorite-items",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 9,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16645798589c6c18f1": {
+      "type": "featured-text",
+      "settings": {
+        "title": "TODAY, MIELLE ORGANICS IS A GLOBAL AND VIRAL SENSATION, WITH ORDERS IN OVER 87 COUNTRIES AROUND THE WORLD.",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16645799533debf5e3": {
+      "type": "video",
+      "settings": {
+        "wide_display": false,
+        "aspect_ratio": "16:9",
+        "autoplay": false,
+        "autoloop": true,
+        "mute_video": false,
+        "show_controls": true,
+        "video_dark_overlay": false,
+        "iframe_video": "https:\/\/youtu.be\/meHYppUFgwo",
+        "html5_video": "",
+        "display_text_over_video": false,
+        "preheading": "",
+        "heading": "",
+        "subheading": "",
+        "button1_label": "Play Video",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1664579622fcd26d23",
+    "166457973558b33742",
+    "1664579629e43beda9",
+    "defdf94c-5ccd-4396-990a-5dd72cb79666",
+    "16645798589c6c18f1",
+    "16645799533debf5e3"
+  ]
+}

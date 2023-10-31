@@ -1,0 +1,341 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "166481300074312df2": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Key Ingredients",
+        "content": "<p>We believe <strong>healthy ingredients<\/strong> allow you to experience <strong>healthy hair<\/strong>. That's why we've created natural hair products specific to your hair type! From moisturizing shampoo to hair oil, each natural ingredient used in our hair care products is chosen with delicate care to meet your needs.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664812381815e3201": {
+      "type": "image-text",
+      "blocks": {
+        "166481238110a61df3-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Babassu_Oil.webp",
+            "image_crop": "none",
+            "title": "Babassu Oil",
+            "text": "<p>Babassu Oil is derived from an Amazonian palm fruit that consists of high sterols and tocopherols. A naturally derived surfactant from corn starch glucose which contains naturally fatty alcohol for moisture. It yields a high foaming power which improves the conditioning of the shampoo without stripping the hair, leaving it soft and moisturized.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "166481238110a61df3-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16648123303088afba": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Products With Babassu Oil",
+        "collection_description": false,
+        "collection": "babassu-oil",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 8,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16648130047ecb1719": {
+      "type": "image-text",
+      "blocks": {
+        "1664813004b415a34d-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Honey.webp",
+            "image_crop": "none",
+            "title": "Honey",
+            "text": "<p>Honey is an emollient (a natural softener) and a great hair conditioner. It is a natural antioxidant that improves scalp health and stimulates hair growth. It strengthens the hair follicle and encourages hair growth. Honey also has antiseptic and antibacterial properties that prevents some scalp infections and alleviate symptoms associated with dandruff, psoriasis and eczema.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664813004b415a34d-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row-reverse",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664813089514bacff": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Products With Honey",
+        "collection_description": false,
+        "collection": "honey",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 8,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16648133997ebd28fc": {
+      "type": "image-text",
+      "blocks": {
+        "166481339828a5c997-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ginger.webp",
+            "image_crop": "none",
+            "title": "Ginger",
+            "text": "<p>Ginger is a hair conditioner that is rich in minerals and essential oils. It makes hair more manageable, softer and shinier. Ginger improves blood circulation and helps combat dandruff and dry, itchy scalp. It contains natural anti-inflammatory and antiseptic properties that help keep scalp healthy and clean. Rich in minerals, it makes hair more manageable, softer and shinier.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "166481339828a5c997-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664813826def94cd4": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Products With Ginger",
+        "collection_description": false,
+        "collection": "ginger",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 9,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16648138668a9ed3b3": {
+      "type": "image-text",
+      "blocks": {
+        "1664813866950dbfdd-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Avocado.webp",
+            "image_crop": "none",
+            "title": "Avocado",
+            "text": "<p>Avocado is a fruit that is rich in healthy fats and it’s pulp produces an oil. Avocado oil is good for moisturizing dry, brittle or damaged hair. It is a lightweight oil that easily absorbs into the hair is is packed with vitamins and nutrients.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664813866950dbfdd-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row-reverse",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664814110fabc8688": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Products With Avocado",
+        "collection_description": false,
+        "collection": "avocado",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 8,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664814161a7a3b26b": {
+      "type": "image-text",
+      "blocks": {
+        "1664814161850e17f0-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mint.webp",
+            "image_crop": "none",
+            "title": "Mint",
+            "text": "<p>Mint is a fragrant natural conditioner that adds shine and prevents dandruff.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664814161850e17f0-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664814383d967000a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Products With Mint",
+        "collection_description": false,
+        "collection": "mint",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 8,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664814387ba1629e8": {
+      "type": "image-text",
+      "blocks": {
+        "16648143875a35aa0a-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mongongo-oil-img_272cfa06-6025-4f38-bad3-2c8fea357fa5.jpg",
+            "image_crop": "none",
+            "title": "Mongongo Oil",
+            "text": "<p>A large, spreading tree, the mongongo reaches 15–20 metres tall. It is found on wooded hills and among sand dunes, and is associated with the Kalahari sand soil-types. The oil from the nuts has also been traditionally used as a body rub in the dry winter months, to clean and moisten the skin.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16648143875a35aa0a-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row-reverse",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664814675fded84ec": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Products With Mongongo Oil",
+        "collection_description": false,
+        "collection": "mongongo",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 9,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664814720972e9653": {
+      "type": "image-text",
+      "blocks": {
+        "1664814720f9dd628c-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Almond.webp",
+            "image_crop": "none",
+            "title": "Almond Oil",
+            "text": "<p>Almond oil is a protein that oil binds to the hair sealing it and locking in moisture preventing breakage and shedding.<\/p>",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664814720f9dd628c-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664814854c0756f23": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Products With Almond Oil",
+        "collection_description": false,
+        "collection": "almond",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 8,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166481300074312df2",
+    "1664812381815e3201",
+    "16648123303088afba",
+    "16648130047ecb1719",
+    "1664813089514bacff",
+    "16648133997ebd28fc",
+    "1664813826def94cd4",
+    "16648138668a9ed3b3",
+    "1664814110fabc8688",
+    "1664814161a7a3b26b",
+    "1664814383d967000a",
+    "1664814387ba1629e8",
+    "1664814675fded84ec",
+    "1664814720972e9653",
+    "1664814854c0756f23"
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "sections": {
+    "sidebar": {
+      "type": "product-sidebar",
+      "disabled": true,
+      "settings": {
+        "toggle": false
+      }
+    },
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "032dd6d3-139c-4f33-98ba-8d35bd509c43": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "0daa732e-a022-4744-90c4-42a40711dba3": {
+          "type": "shopify:\/\/apps\/bazaarvoice-reviews-photos\/blocks\/rating-summary-block\/766ed9d3-b120-48f3-8444-448f45152f47",
+          "settings": {}
+        },
+        "d6ec6f6c-6742-433b-878d-f3f12023084d": {
+          "type": "text",
+          "settings": {
+            "text": "<p><\/p><p><\/p>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        },
+        "afterpay": {
+          "type": "afterpay",
+          "settings": {}
+        },
+        "788c948d-253d-463a-b961-0b08a844d801": {
+          "type": "complementary_products",
+          "settings": {
+            "heading": "Pairs well with",
+            "product_recommendation_limit": 5
+          }
+        },
+        "493a6f1b-8b8b-422e-9c30-7933d780b159": {
+          "type": "tabs",
+          "settings": {
+            "show_product_description": true,
+            "show_tabs_below_product_gallery": true,
+            "tab_heading_1": "Reviews",
+            "tab_text_1": "<p>&lt;!----&gt;<\/p>",
+            "tab_heading_2": "Ingredients",
+            "tab_text_2": "<p>{{ product.metafields.custom.ingredients_complete.value }}<\/p>",
+            "tab_heading_3": "How To Use",
+            "tab_text_3": "<p>{{ product.metafields.custom.how_to_use.value }}<\/p>"
+          }
+        },
+        "3a5b0996-d265-4183-b390-f15ee70ccc2a": {
+          "type": "product-characteristics",
+          "disabled": true,
+          "settings": {
+            "product_characteristics_pos_below": true,
+            "image_1": "shopify:\/\/shop_images\/Group_5492_3477125f-4219-4321-ae59-9a260d467ed3.png",
+            "title_1": "Cruelty Free",
+            "copy_1": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+            "image_2": "shopify:\/\/shop_images\/Group_5495_2e120c3b-83f0-464b-90c0-5fb4b72f8c62.png",
+            "title_2": "Natural Ingredients",
+            "copy_2": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+            "image_3": "shopify:\/\/shop_images\/Group_5494_bc987180-53c6-4f57-a4f1-1358591681f4.png",
+            "title_3": "Sulfate Free",
+            "copy_3": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "032dd6d3-139c-4f33-98ba-8d35bd509c43",
+        "0daa732e-a022-4744-90c4-42a40711dba3",
+        "d6ec6f6c-6742-433b-878d-f3f12023084d",
+        "price",
+        "form",
+        "afterpay",
+        "788c948d-253d-463a-b961-0b08a844d801",
+        "493a6f1b-8b8b-422e-9c30-7933d780b159",
+        "3a5b0996-d265-4183-b390-f15ee70ccc2a"
+      ],
+      "settings": {
+        "product_breadcrumb": true,
+        "media_position": "is-flex-row",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": true,
+        "enable_product_lightbox": true,
+        "activate_zoom": true,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "left",
+        "enable_thumbnail_slider": true,
+        "icon_title1": "",
+        "icon_desc1": "",
+        "icon_title2": "",
+        "icon_desc2": "",
+        "icon_title3": "",
+        "icon_desc3": "",
+        "video": "",
+        "left_section_title": "",
+        "left_section_para": "",
+        "right_section_title": "",
+        "right_section_para": ""
+      }
+    },
+    "165256137395660db5": {
+      "type": "apps",
+      "blocks": {
+        "9acfb434-f621-4c0c-a14f-2c681023968a": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "9acfb434-f621-4c0c-a14f-2c681023968a"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "wide_display": false,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You may also <font color=\"#eb1676\">like<\/font>",
+        "products_per_row": 4,
+        "recommended_products_limit": 4
+      }
+    },
+    "1661286714f9d577ad": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "rv_title": "Recently <font color=\"#eb1676\">viewed<\/font>",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "productpage-nosto-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-2"
+      }
+    },
+    "productpage-nosto-3": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-3"
+      }
+    },
+    "productpage-nosto-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "productpage-nosto-1"
+      }
+    },
+    "productpage-nosto-dynamic-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "productpage-nosto-dynamic-1"
+      }
+    },
+    "productpage-nosto-dynamic-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-dynamic-2"
+      }
+    }
+  },
+  "order": [
+    "sidebar",
+    "main",
+    "165256137395660db5",
+    "recommendations",
+    "1661286714f9d577ad",
+    "productpage-nosto-2",
+    "productpage-nosto-3",
+    "productpage-nosto-1",
+    "productpage-nosto-dynamic-1",
+    "productpage-nosto-dynamic-2"
+  ]
+}

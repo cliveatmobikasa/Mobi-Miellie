@@ -1,0 +1,163 @@
+<!-- Begin Recharge code -->
+{% include 'subscription-cart-footer' %}
+<!-- End Recharge code -->
+<style>
+  body.cart--updating .icartShopifyCartContent [data-cart-form]{
+    opacity: 0.7;
+    pointer-events: none;
+  }
+</style>
+<script
+  type="application/json"
+  data-section-type="cart-template"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+{% liquid
+  assign continue_url = routes.all_products_collection_url
+
+  if section.settings.continue_shopping_url != blank
+    assign continue_url = section.settings.continue_shopping_url
+  endif
+%}
+
+<section class="section cart_section">
+  <div class="container content cart_container">
+    <div class="one-whole column cart_title">
+      <h1><span role="text">{{ section.settings.cart_title }}</span></h1>
+      <div class="feature-divider"></div>
+    </div>
+
+    {% if cart.item_count == 0 %}
+      {% render 'cart-empty', cart_count: cart.item_count, continue_url: continue_url %}
+      <br />
+    {% else %}
+      {% render 'cart-empty', cart_count: cart.item_count, continue_url: continue_url %}
+      <br />
+
+      <form action="{{ routes.cart_url }}" method="post" id="cart_form" data-cart-form="cart-template" data-total-discount="{{ cart.total_discount }}">
+        <div class="cart__wrapper is-flex is-flex-wrap">
+        <div class="two-thirds columns medium-down--one-whole cart_product_listing">
+          <div class="" data-cart-items>
+            {%- assign total_saving = 0 -%}
+            {% for item in cart.items %}
+              {% assign isFreeProduct = false %}
+              {% if item.properties._smgift != blank %}
+                {% assign isFreeProduct = true %}
+              {% endif %}
+
+              {%- if isFreeProduct -%}
+                {%- capture free_line_item -%}
+                  {{- free_line_item -}}
+                  {% render 'cart-item', 
+                    item: item,
+                    total_saving: total_saving,
+                    forloopIndex: forloop.index,
+                    cart: cart, 
+                    section: section
+                  %}
+                {%- endcapture -%}
+              {% else %}
+                {%- capture regular_line_items -%}
+                  {{- regular_line_items -}}
+                  {% render 'cart-item', 
+                    item: item,
+                    total_saving: total_saving,
+                    forloopIndex: forloop.index,
+                    cart: cart, 
+                    section: section
+                  %}
+                {%- endcapture -%}
+              {%- endif -%}
+            {% endfor %}
+
+            {{- free_line_item -}}
+            {{- regular_line_items -}}
+            
+          </div>
+          {% comment %} :: Continue Shopping Link :: {% endcomment %}
+            <a class="continue_shooping" href="{{ continue_url }}">
+              <div>
+                  <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.693871">
+                        <path d="M11 1L1 9L11 17" stroke="#020302"/>
+                        <path d="M1 8.75L27.5 8.5" stroke="#020302"/>
+                    </g>
+                  </svg>
+              </div>
+              <div class="continue_shopping_text">
+                {{ 'cart.general.continue_shopping' | t }}
+              </div>
+            </a>
+          </div>
+          <div class="one-third column medium-down--one-whole cart_total_payment" data-cart-summary>
+            {% render 'cart-summary', cart: cart, section: section %}
+          </div>
+        </div>
+      </form>
+    {% endif %}
+
+  </div>
+</section>
+
+{% comment %} snap pixel add cart add starts here {% endcomment %}
+<script>
+  (function (e, t, n) {
+    if (e.snaptr) return; var a = e.snaptr = function () { a.handleRequest ? a.handleRequest.apply(a, arguments) : a.queue.push(arguments) };
+    a.queue = []; var s = 'script'; r = t.createElement(s); r.async = !0;
+    r.src = n; var u = t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r, u);
+    })(window, document,
+    'https://sc-static.net/scevent.min.js');
+    snaptr('init', '5f6ccc2a-14d0-4cd3-a1d9-286c47ac8233', {
+    'user_email': '{{ customer.email | default: "" }}'
+    });
+    snaptr('track', 'ADD_CART');
+</script>
+{% comment %} snap pixel add cart code ends here {% endcomment %}
+
+
+{% render 'cart-shipping-calculator' %}
+
+{% schema %}
+{
+  "name": "Cart page",
+  "class": "shopify-section--cart-template",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_special_instructions",
+      "label": "Show \"note\" text box"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_savings",
+      "label": "Show total savings",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "cart_message",
+      "label": "Cart message"
+    },
+    {
+      "type": "url",
+      "id": "continue_shopping_url",
+      "label": "Continue shopping link",
+      "info": "Where to direct customers after clicking \"Continue shopping\""
+    },
+    {
+      "type": "text",
+      "id": "cart_title",
+      "label": "Cart Title"
+    },
+    {
+      "type":"text",
+      "id":"pay_with",
+      "label":"Title for pay more",
+      "default":"or pay with"
+    }
+  ]
+}
+{% endschema %}

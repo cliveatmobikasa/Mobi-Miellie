@@ -1,0 +1,30 @@
+{% unless content_for_header contains 'front-icart.min.js' and 'front-icart.js' %}
+{% assign icart_placeholder_png = "https://icart.identixweb.com/icart/icart_cdn/assets/img/placeholder.png" %}
+<script type="text/javascript" id="icartCommonScriptJs">
+  var icartProductObj = {};
+  var icartNodeCallToken = eval({{ shop.metafields.icartCallToken | json }});
+  var icart_cart_arr = {{ cart | json }};
+  var icartScid = 'ZjhjMmNkYjEyNjI4YTBmZTc5MDNkMDdhMzQ4YzMyMWUuYmZkZTBhMzViOGQ1YTg1ODA5YTAzMjE1MmVkMTUwNWQ=';
+  var icartCurrencyWihoutFormat = "{{ shop.money_format | escape }}";
+  var [cart_prod_coll_id_arr, cart_prod_id_arr, cart_prod_wise_coll_id_arr, cart_prod_wise_tag_arr, icartLineItemData] = [[], [], [], [], {}];
+  {%- for item in cart.items -%}
+    icartLineItemData[{{item.id}}] = {{item.product | json}} {% if forloop.index != forloop.length %} , {% endif %}
+    cart_prod_id_arr.push('{{ item.product.id }}');
+  	cart_prod_wise_tag_arr[{{ forloop.index | minus: 1 }}] = {{ item.product.tags | json }};
+	var icartCollectionIds = [];
+  	{% for collection in item.product.collections %}
+  	  icartCollectionIds.push('{{ collection.id }}');
+      cart_prod_coll_id_arr.push('{{ collection.id }}');
+  	{% endfor %}
+  	icartCollectionIds.length && cart_prod_wise_coll_id_arr.push(icartCollectionIds);
+  {%- endfor -%}
+</script>
+{% assign icart_page_type = "1" %}
+{% if request.page_type == "cart" and icart_page_type != '1' %}
+    <!-- Full cart content -->
+    {% include 'icart-full-page' %}
+{% elsif icart_page_type != '2' %}
+    <!-- iCart drawer content -->
+    {% include 'icart-drawer' %}
+{% endif %}
+{% endunless %}

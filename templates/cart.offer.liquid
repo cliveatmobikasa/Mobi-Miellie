@@ -1,0 +1,10 @@
+{%- layout none -%}
+
+{
+    "cart": {{- cart | json -}},
+    "gwp_enable": {{- settings.gwp_enable | json -}},
+    {%- if settings.gwp_enable -%}
+    "gwp_min_amt": {{- settings.gwp_min_amt | json -}},
+    "gwp_product_vid": {{- settings.gwp_product.first_available_variant.id | json -}}
+    {%- endif -%}
+}

@@ -1,0 +1,138 @@
+<script
+  type="application/json"
+  data-section-type="registration-form"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+<span class="visually-hidden" id="account-sr-only" role="region" aria-live="polite" data-aria-live=""></span>
+
+<section class="section">
+  <div class="container content">
+    <div class="one-whole column collection_nav">
+      <h1>{{ 'customer.register.title' | t }}</h1>
+      <div class="feature-divider"></div>
+    </div>
+
+    <div class="three-eighths columns medium-down--one-whole offset-by-five is-hidden-offset-mobile-only">
+      <br />
+
+      <div id="customer">
+        <div id="create-customer">
+          {% form 'create_customer' %}
+
+            {% if form.errors %}
+              <div class="alert-wrapper">
+                {% if form.errors %}
+                  {%- for field in form.errors -%}
+                    {% capture register_password_error %}
+                      {{- form.errors.messages[field] -}}
+                    {% endcapture %}
+                  {%- endfor -%}
+                {% endif %}
+              </div>
+              <div data-announce-get>
+                <p>{{ register_password_error }}</p>
+              </div>
+              <div class="visually-hidden" data-announce-set role="alert" aria-atomic="true"></div>
+            {% endif %}
+
+            <div id="first_name" class="form--input input-placeholder">
+              <label for="first_name_inp" class="login">{{ 'customer.register.first_name' | t }}</label>
+              <input required placeholder="Enter your First Name" class="form--input" type="text" value="" name="customer[first_name]" id="first_name_inp" size="30" aria-required="true" />
+            </div>
+
+            <div id="customer_last_name" class="form--input input-placeholder">
+              <label for="last_name" class="login">{{ 'customer.register.last_name' | t }}</label>
+              <input required placeholder="Enter your Last Name" class="form--input" type="text" value="" name="customer[last_name]" id="last_name" size="30" aria-required="true"  />
+            </div>
+
+            <div id="email" class="form--input input-placeholder">
+              <label for="email_inp" class="login">{{ 'customer.register.email' | t }}</label>
+              <input required placeholder="Enter your Email ID" class="form--input" type="email" value="" name="customer[email]" id="email_inp" size="30" aria-required="true"  />
+            </div>
+
+            <div class="form--input input-placeholder">
+              <label for="phone_inp" class="login">{{ 'customer.register.phone' | t }}</label>
+              <input placeholder="Enter your Phone Number" class="form--input" type="tel" value="" name="customer[note][phone]" id="phone_inp" size="10"  aria-required="true" />
+            </div>
+
+            <div id="password" class="form--input form--input-pswd input-placeholder">
+              <label for="password_inp" class="login">{{ 'customer.register.password' | t }}</label>
+              <div class="relative">
+                <input required placeholder="Enter your Password" type="password" value="" name="customer[password]" id="password_inp" class="password" size="30" aria-required="true"  />
+                <button type="button" class="view-pswd" data-view-pswd aria-label="show password">
+                  {% comment %}
+                  <span class="visually-hidden">View Password</span>
+                  {% render 'icon' with 'eye' %}
+                  {% endcomment %}
+                  <div class="view-password">
+                    <span class="visually-hidden">View Password</span>  
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.96434 8.77052C5.30607 10.5587 7.7328 11.4954 9.9893 11.4954C12.2458 11.4954 14.6726 10.5587 17.0143 8.77052C18.7599 7.45072 19.8243 6.1308 19.8882 6.06694C20.0373 5.87538 20.0373 5.5986 19.8882 5.38565C19.8242 5.36456 18.7598 4.04464 17.0143 2.72483C14.6725 0.9367 12.2458 0 9.9893 0C7.7328 0 5.30599 0.9367 2.96434 2.72483C1.21882 4.04464 0.154428 5.36455 0.111815 5.40705C-0.0372716 5.59861 -0.0372716 5.87538 0.111815 6.08834C0.154432 6.13081 1.21882 7.45075 2.96434 8.77056V8.77052ZM9.9893 1.06435C14.1404 1.06435 17.7168 4.61941 18.7599 5.74766C17.7168 6.87591 14.1404 10.431 9.9893 10.431C5.83819 10.431 2.26184 6.87591 1.21874 5.74766C2.26177 4.61941 5.83819 1.06435 9.9893 1.06435Z" fill="#8C8C8C"/>
+                    <path d="M9.98853 9.68702C12.1599 9.68702 13.9268 7.92014 13.9268 5.74878C13.9268 3.57743 12.1599 1.81055 9.98853 1.81055C7.81718 1.81055 6.05029 3.57743 6.05029 5.74878C6.05029 7.92014 7.81718 9.68702 9.98853 9.68702ZM9.98853 2.87494C11.5639 2.87494 12.8625 4.17349 12.8625 5.74886C12.8625 7.32423 11.5639 8.62279 9.98853 8.62279C8.41316 8.62279 7.11461 7.32423 7.11461 5.74886C7.11461 4.17349 8.41316 2.87494 9.98853 2.87494Z" fill="#8C8C8C"/>
+                    </svg>
+                  </div>
+                  <div class="hide-password">
+                    <span class="visually-hidden">Hide Password</span>              
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.48853 12.5718C11.6599 12.5718 13.4268 10.8049 13.4268 8.63355C13.4268 6.4622 11.6599 4.69531 9.48853 4.69531C7.31718 4.69531 5.55029 6.4622 5.55029 8.63355C5.55029 10.8049 7.31718 12.5718 9.48853 12.5718ZM9.48853 5.7597C11.0639 5.7597 12.3625 7.05826 12.3625 8.63363C12.3625 10.209 11.0639 11.5076 9.48853 11.5076C7.91316 11.5076 6.61461 10.209 6.61461 8.63363C6.61461 7.05826 7.91316 5.7597 9.48853 5.7597Z" fill="#8C8C8C"/>
+                    <path d="M1.59082 1L16.669 16.0782" stroke="#8C8C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.56049 5.17399C3.36126 5.31306 3.1625 5.45828 2.96434 5.6096C1.37913 6.80819 0.355683 8.00688 0.149148 8.24878C0.128261 8.27324 0.115729 8.28792 0.111815 8.29182C-0.0372716 8.48338 -0.0372716 8.76015 0.111815 8.9731C0.115737 8.97701 0.128311 8.99174 0.149273 9.01629C0.356098 9.25851 1.37945 10.457 2.96434 11.6553V11.6553C5.30607 13.4434 7.7328 14.3801 9.9893 14.3801C10.783 14.3801 11.5979 14.2642 12.4226 14.0361L11.5419 13.1554C11.0364 13.2582 10.5175 13.3157 9.9893 13.3157C5.83819 13.3157 2.26184 9.76068 1.21874 8.63242C1.72777 8.0818 2.8402 6.95317 4.32834 5.94185L3.56049 5.17399ZM14.6027 11.9735C16.613 10.843 18.1375 9.30567 18.7599 8.63242C17.7168 7.50417 14.1404 3.94912 9.9893 3.94912C8.98844 3.94912 8.02099 4.15578 7.1144 4.48526L6.29214 3.663C7.54703 3.14842 8.79213 2.88477 9.9893 2.88477C12.2458 2.88477 14.6725 3.82147 17.0143 5.6096C18.3669 6.63231 19.3105 7.6551 19.6965 8.07355C19.8087 8.19511 19.8738 8.26567 19.8882 8.27042C20.0373 8.48337 20.0373 8.76015 19.8882 8.9517C19.8813 8.95857 19.8629 8.97994 19.8333 9.01427C19.5876 9.29931 18.5723 10.4773 17.0143 11.6553C16.4744 12.0675 15.9301 12.4345 15.3843 12.7552L14.6027 11.9735Z" fill="#8C8C8C"/>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="form--input">
+              <p class="form--input-info" data-pswd-error-alert>{{- 'customer.register.password_error_msg' | t -}}</p>
+            </div>
+
+            {% if section.settings.text %}
+              {{ section.settings.text }}
+            {% endif %}
+
+            <div class="acceptsMarketing">
+              <input type="checkbox" id="customer[accepts_marketing]" name="customer[accepts_marketing]" required aria-required="true" />
+              <label for="customer[accepts_marketing]">
+                I accept 
+                <a href="/pages/terms-conditions" class="accepts-links">Terms & Conditions</a>
+                 and 
+                 <a href="/pages/privacy-policy" class="accepts-links">Privacy Policy</a>
+              </label>
+            </div>
+
+            {% render 'oxi-social-login', or_text: 'or signup with' %}
+
+            <div class="action_bottom">
+              <input class="global-button global-button--primary" type="submit" value="{{ 'customer.register.sign_up' | t }}" />
+              <p class="account-extra-info">
+                {{ 'customer.register.new_customer_label' | t }}
+                <a href="{{ routes.account_login_url }}" id="new_customer_login_link" aria-label="Login">  
+                  {{ 'customer.register.sign_in_html' | t }}
+                </a>
+              </p>
+            </div>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Register",
+  "class": "shopify-section--registration-form",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ]
+}
+
+{% endschema %}

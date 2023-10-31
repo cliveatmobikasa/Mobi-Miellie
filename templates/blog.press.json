@@ -1,0 +1,187 @@
+{
+  "sections": {
+    "165953719000189447": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/Mi_University.png",
+        "pretext": "<p>Haircare 101<\/p>",
+        "title": "Mi University",
+        "subtitle": "<p>This self-guided course will inspire you to embrace your curls, while learning ways to keep your hair healthy using products that work best for your hair type.<\/p>",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--primary",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner-text",
+        "text_position": "right",
+        "text_align": "center",
+        "caption_content_background": "darken_bg",
+        "mobile_image_crop": "center",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "blocks": {
+        "4ac98ba7-6058-454f-86f9-d3cedd17fe6b": {
+          "type": "search",
+          "settings": {}
+        },
+        "aaa57450-9dd8-4248-80f6-a967c18803ad": {
+          "type": "recent_posts",
+          "settings": {
+            "blog_post_count": "10"
+          }
+        },
+        "42526877-e781-4165-9569-3086438db897": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_title": "Subscribe",
+            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4ac98ba7-6058-454f-86f9-d3cedd17fe6b",
+        "aaa57450-9dd8-4248-80f6-a967c18803ad",
+        "42526877-e781-4165-9569-3086438db897"
+      ],
+      "settings": {
+        "wide_display": false,
+        "mobile_image_crop": "center",
+        "subtitle": "",
+        "caption_content_background": "original",
+        "blog_posts_per_row": 3,
+        "blog_posts_per_page": 6,
+        "blog_tags": false,
+        "blog_author": false,
+        "read_time": true,
+        "blog_date": false,
+        "blog_comment_count": true,
+        "read_more_link": true,
+        "excerpt_display": "full_excerpt",
+        "toggle": false
+      }
+    },
+    "16581882495493d9ea": {
+      "type": "featured-promotions",
+      "blocks": {
+        "1658188249835ff265-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair_type_wavy_1.png",
+            "link": "shopify:\/\/pages\/quiz",
+            "title": "Hair Quiz",
+            "text": "<p>Not sure which product is right for you? Take our hair quiz!<\/p>",
+            "button_label": "Take quiz"
+          }
+        },
+        "1658188249835ff265-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/About_US.png",
+            "link": "shopify:\/\/blogs\/mi-university\/different-types-of-hair-textures",
+            "title": "Hair Type Guide",
+            "text": "<p>Your guide to hair texture types!<\/p>",
+            "button_label": "Learn More"
+          }
+        },
+        "1658188249835ff265-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mielle_tv_840x840_6b2a6c6a-d4c7-4dbe-9b4d-8ef1a2886a90.png",
+            "link": "shopify:\/\/pages\/mielletv",
+            "title": "Mielle TV",
+            "text": "<p>Class is in session! Watch hair tutorials, healthy hairstyling tips, product announcements, and open conversations on natural beauty.<\/p>",
+            "button_label": "Watch Now"
+          }
+        }
+      },
+      "block_order": [
+        "1658188249835ff265-0",
+        "1658188249835ff265-2",
+        "1658188249835ff265-1"
+      ],
+      "settings": {
+        "wide_display": true,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 3,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "square",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1659539080b6158bed": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Back To School Must-Haves",
+        "collection_description": true,
+        "collection": "back-to-school-must-haves",
+        "collection_style": "slider",
+        "products_per": 5,
+        "products_limit": 9,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1659566581a63b256f": {
+      "type": "image-text",
+      "blocks": {
+        "1659566581cb4ed01b-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mango_tulsi_collection.png",
+            "image_crop": "none",
+            "title": "#MiUniversity Learning MiHair Series with Jatina",
+            "text": "<p>Join us for <a href=\"https:\/\/www.instagram.com\/explore\/tags\/miuniversity\/\">#MiUniversity<\/a> Learning MiHair with Monique's talented healthy hair stylist <a href=\"https:\/\/www.instagram.com\/JayRenee_Styles\/\">@JayRenee_Styles<\/a>! Each IG Live session will be informative, interactive and may even include a giveaway or two. Mark your calendars and set your notifications on Instagram now!<\/p>",
+            "button_label": "Watch Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/pages\/mielletv",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1659566581cb4ed01b-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165956909729476ed6": {
+      "type": "apps",
+      "blocks": {
+        "435d0f96-e00b-4044-ac67-c1bb34410be5": {
+          "type": "shopify:\/\/apps\/video-gallery-youtube-vimeo\/blocks\/video\/2c28645e-c942-4c26-a297-9a0eb611a6a1",
+          "settings": {
+            "video_heading": "Hair Tutorials",
+            "video_code": "<div id=\"evm-video-gallery\"><\/div>\n      <script src=\"https:\/\/apps.expertvillagemedia.com\/shopify\/evm-gallery\/embed.php?shop=mielleorganics.myshopify.com\"><\/script>"
+          }
+        }
+      },
+      "block_order": [
+        "435d0f96-e00b-4044-ac67-c1bb34410be5"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "165953719000189447",
+    "main",
+    "16581882495493d9ea",
+    "1659539080b6158bed",
+    "1659566581a63b256f",
+    "165956909729476ed6"
+  ]
+}

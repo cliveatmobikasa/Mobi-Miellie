@@ -1,0 +1,233 @@
+<script
+  type="application/json"
+  data-section-type="testimonial"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+{% assign mobile_text_alpha = section.settings.mobile_text_color | default: 'rgba(0,0,0,0)' | color_extract: 'alpha' %}
+
+{% comment %} Section specific CSS {% endcomment %}
+<style>
+  {%
+    render 'css-loop',
+    css: section.settings.custom_css,
+    id: section.id
+  %}
+
+  {% if section.settings.mobile_text_below_image and mobile_text_alpha != 0 %}
+    @media only screen and (max-width: 480px) {
+      #shopify-section-{{ section.id }} .pretext,
+      #shopify-section-{{ section.id }} .headline,
+      #shopify-section-{{ section.id }} .subtitle {
+        color: {{ section.settings.mobile_text_color }};
+      }
+
+      #shopify-section-{{ section.id }} .feature-divider {
+        border-color: {{ section.settings.mobile_text_color }};
+      }
+    }
+  {% endif %}
+</style>
+
+<section id="testimonial-section">
+
+  {% if section.settings.title != blank %}
+    <div class="section">
+      <h2 class="title center"><span role="text">{{section.settings.title}}</span></h2>
+    </div>
+  {% endif %}
+
+  <div id="testimonial-section-slide-wr" class="section"> 
+    <div class="custom-testimonial-slider">
+      {% for block in section.blocks %}
+        {% if block.settings.title != blank %}
+        <div class="testi-item">
+          <div class="testi-box">       
+            {% if block.settings.author_image != blank %}
+              <img class="testi-user-img" src="{{block.settings.author_image | img_url: '150x150'}}" alt="" loading="lazy">
+            {% endif %}    
+            <div class="testi-box-inner">              
+              {% if block.settings.title != blank %}
+                <p>{{block.settings.title}}</p>
+              {% endif %}  
+              {% if block.settings.description != blank %}
+                <div>{{block.settings.description}}</div>
+              {% endif %} 
+              {% if section.settings.enable_ratings == true %}
+              <p class="visually-hidden">{{ block.settings.rating_stars }} star rating out of 5</p>
+              <div class="ratings-wrapper" tabindex="-1" aria-hidden="true">  
+              {% if block.settings.rating_stars == 'zero' %} 
+                {% render 'testimonial-star-icon-empty.liquid' %}
+                {% render 'testimonial-star-icon-empty.liquid' %}
+                {% render 'testimonial-star-icon-empty.liquid' %}
+                {% render 'testimonial-star-icon-empty.liquid' %}
+                {% render 'testimonial-star-icon-empty.liquid' %}
+              {% elsif block.settings.rating_stars == 'one' %}
+                  {% render 'testimonial-star-icon.liquid' %}  
+                  {% render 'testimonial-star-icon-empty.liquid' %}
+                  {% render 'testimonial-star-icon-empty.liquid' %}
+                  {% render 'testimonial-star-icon-empty.liquid' %}
+                  {% render 'testimonial-star-icon-empty.liquid' %}
+              {% elsif block.settings.rating_stars == 'two' %}
+                  {% render 'testimonial-star-icon.liquid' %}
+                  {% render 'testimonial-star-icon.liquid' %}
+                  {% render 'testimonial-star-icon-empty.liquid' %}
+                  {% render 'testimonial-star-icon-empty.liquid' %}
+                  {% render 'testimonial-star-icon-empty.liquid' %}  
+              {% elsif block.settings.rating_stars == 'three' %}
+                  {% render 'testimonial-star-icon.liquid' %}
+                  {% render 'testimonial-star-icon.liquid' %}
+                  {% render 'testimonial-star-icon.liquid' %}
+                  {% render 'testimonial-star-icon-empty.liquid' %}
+                  {% render 'testimonial-star-icon-empty.liquid' %}    
+              {% elsif block.settings.rating_stars == 'four' %}
+                {% render 'testimonial-star-icon.liquid' %}
+                {% render 'testimonial-star-icon.liquid' %}
+                {% render 'testimonial-star-icon.liquid' %}
+                {% render 'testimonial-star-icon.liquid' %}
+                {% render 'testimonial-star-icon-empty.liquid' %}     
+              {% elsif block.settings.rating_stars == 'five' %}
+                {% render 'testimonial-star-icon.liquid' %}
+                {% render 'testimonial-star-icon.liquid' %}
+                {% render 'testimonial-star-icon.liquid' %}
+                {% render 'testimonial-star-icon.liquid' %}
+                {% render 'testimonial-star-icon.liquid' %}   
+              {% endif %}     
+              </div> 
+              {% endif %}                      
+              {% if block.settings.author_name != blank %}
+                <p>{{block.settings.author_name}}</p> 
+              {% endif %}  
+            </div>
+          </div>
+          {% if block.settings.bottom_image != blank %}
+              <a href="/products/{{ block.settings.product_handle }}" class="testi-item-img desktop_image" aria-label="{{ block.settings.product_handle.title }}">
+                <img src="{{block.settings.bottom_image | img_url: 'large' }}" loading="lazy" alt="" title="{{ block.settings.product_handle.title }}" />
+              </a>
+              {% endif %}
+        </div>
+       {% endif %}
+      {% endfor %}
+    </div>
+{% comment %} :: Slider Play/Pause Button :: {% endcomment %}
+        {%- assign section_id = '#shopify-section-' | append: section.id -%}
+        {%- assign play_pause_left = section.blocks.size | times: 12 | plus: 10 -%} 
+        {%- capture extra_css -%}
+          {{ section_id }} .homepage-slider-play-pause {
+          position: absolute;
+          bottom: 46px;
+          right: 0px;   
+          transform: translateX(-50%);
+        }
+        {%- endcapture -%}
+        {% 
+          render 'slider-play-pause',
+          slider_item_count: section.blocks.size,
+          section_id: section_id,
+          icon_color: '#fff',
+          icon_focus_color: '#fff',
+          extra_css: extra_css
+        %}       
+  </div>
+</section>
+
+<style>
+.testi-box-inner .testi-item-img{
+  right:-40px;
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Testimonial Slider",
+    "class": "shopify-section--testimonials",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_ratings",
+        "label": "Enable Ratings"
+      }
+    ],
+    "blocks": [
+        {
+          "type": "testimonial-slider",
+          "name": "Testimonial Slider",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "author_image",
+              "label": "Author Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Description"
+            },
+            {
+              "type": "select",
+              "id": "rating_stars",
+              "label": "Rating Stars",
+              "options": [
+                {
+                  "value": "zero",
+                  "label": "Zero Star"
+                },
+                {
+                  "value": "one",
+                  "label": "One Star"
+                },
+                {
+                  "value": "two",
+                  "label": "Two Stars"
+                },
+                {
+                  "value": "three",
+                  "label": "Three Stars"
+                },
+                {
+                  "value": "four",
+                  "label": "Four Stars"
+                },
+                {
+                  "value": "five",
+                  "label": "Five Stars"
+                }
+              ],
+              "default": "zero"
+            },            
+            {
+                "type": "text",
+                "id": "author_name",
+                "label": "Author Name"
+            },
+            {
+              "type": "image_picker",
+              "id": "bottom_image",
+              "label": "Bottom Image"
+            },
+            {
+          "type": "product",
+          "id": "product_handle",
+          "label": "Select Product"
+        }  ]
+        }
+      ],
+    "presets": [
+      {
+        "name": "Testimonial Slider"
+      }
+    ]
+  }
+  
+  {% endschema %}

@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "main": {
+      "type": "cart-template",
+      "settings": {
+        "display_special_instructions": false,
+        "display_savings": true,
+        "cart_message": "<p>Limited Time Only! Free Shipping On All US $60+<\/p>",
+        "continue_shopping_url": "shopify:\/\/collections\/all",
+        "cart_title": "Shopping <span style=\"color:#eb1676\">Cart<\/span>",
+        "pay_with": "or pay with"
+      }
+    },
+    "afa2bb82-3804-456a-98da-1fbdc8b531e5": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "rv_title": "you may also <font color=\"#eb1676\">like<\/font>",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "cartpage-nosto-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "cartpage-nosto-1"
+      }
+    },
+    "cartpage-nosto-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "cartpage-nosto-2"
+      }
+    },
+    "cartpage-nosto-3": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "cartpage-nosto-3"
+      }
+    },
+    "cartpage-nosto-dynamic-1": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "cartpage-nosto-dynamic-1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "afa2bb82-3804-456a-98da-1fbdc8b531e5",
+    "cartpage-nosto-1",
+    "cartpage-nosto-2",
+    "cartpage-nosto-3",
+    "cartpage-nosto-dynamic-1"
+  ]
+}

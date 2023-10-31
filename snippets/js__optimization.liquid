@@ -1,0 +1,163 @@
+{%- case js_resource -%}
+    {%- when 'minified' -%}
+        <script>
+            function minifyCSS(e){return(e=(e=(e=(e=(e=e.replace(/\/\*[\s\S]*?\*\//g,"")).replace(/\s+/g," ")).replace(/;}/g,"}")).replace(/\{\s+/g,"{")).replace(/\s+\}/g,"}")).trim()}function minifyJS(e){return e=(e=(e=(e=(e=(e=e.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g,"")).replace(/\s+/g," ")).replace(/;\s*}/g,"}")).replace(/\{\s+/g,"{")).replace(/\s+\}/g,"}")).trim()}window.addEventListener("load",(function(){document.querySelectorAll("script:not([src])").forEach((e=>{const t=minifyJS(e.innerHTML);e.innerHTML=t}));document.querySelectorAll("style").forEach((e=>{const t=minifyCSS(e.innerHTML);e.innerHTML=t}));(()=>{const e=document.querySelector(":scope > img, :scope > video, :scope > iframe");e&&(e.style.height=e.offsetHeight+"px",e.addEventListener("load",(()=>{e.style.height="auto"})))})();if(window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart<3e3)return;const e=document.querySelectorAll('link[rel="stylesheet"], script[src], iframe[src]');for(let t=0;t<e.length;t++){const r=e[t];if("IntersectionObserver"in window){const e=new IntersectionObserver((t=>{t.forEach((t=>{if(t.isIntersecting){if("LINK"===r.tagName){const e=document.createElement("link");e.setAttribute("rel","stylesheet"),e.setAttribute("href",r.getAttribute("href")),document.head.appendChild(e)}else if("SCRIPT"===r.tagName){const e=document.createElement("script");e.setAttribute("src",r.getAttribute("src")),document.body.appendChild(e)}else"IFRAME"===r.tagName&&r.setAttribute("src",r.getAttribute("data-src"));e.unobserve(r)}}))}));e.observe(r)}else if("LINK"===r.tagName){const e=document.createElement("link");e.setAttribute("rel","stylesheet"),e.setAttribute("href",r.getAttribute("href")),document.head.appendChild(e)}else if("SCRIPT"===r.tagName){const e=document.createElement("script");e.setAttribute("src",r.getAttribute("src")),document.body.appendChild(e)}else"IFRAME"===r.tagName&&r.setAttribute("src",r.getAttribute("data-src"))}const t=document.querySelectorAll("script[data-defer]");for(let e=0;e<t.length;e++){const r=t[e],n=document.createElement("script");n.setAttribute("src",r.getAttribute("src")),n.setAttribute("defer",""),document.body.appendChild(n),r.parentNode.removeChild(r)}}));
+        </script>
+    {%- else -%}
+        <script>
+            function minifyCSS(css) {
+                // Remove comments
+                css = css.replace(/\/\*[\s\S]*?\*\//g, "");
+
+                // Remove whitespace
+                css = css.replace(/\s+/g, " ");
+
+                // Remove unnecessary semicolons
+                css = css.replace(/;}/g, "}");
+
+                // Remove whitespace around brackets
+                css = css.replace(/\{\s+/g, "{");
+                css = css.replace(/\s+\}/g, "}");
+
+                return css.trim();
+            }
+
+            function minifyJS(code) {
+                // Remove comments
+                code = code.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '');
+                
+                // Remove whitespace and newlines
+                code = code.replace(/\s+/g, ' ');
+
+                // Remove semicolons before closing braces
+                code = code.replace(/;\s*}/g, '}');
+
+                // Remove whitespace around brackets
+                code = code.replace(/\{\s+/g, "{");
+                code = code.replace(/\s+\}/g, "}");
+
+                // Remove leading/trailing whitespace
+                code = code.trim();
+
+                // Return minified code
+                return code;
+            }
+            
+            /* Wait for the window to load before running any code */
+            window.addEventListener('load', function () {
+
+            // Select all script elements without a src attribute
+            const scripts = document.querySelectorAll('script:not([src])');
+
+            // Loop through each script element and minify its code
+            scripts.forEach((script) => {
+                const code = script.innerHTML;
+
+                // Minify the code using Terser
+                const minifiedCode = minifyJS(code);
+
+                // Replace the original code with the minified code
+                script.innerHTML = minifiedCode;
+            });
+
+            // Select all style elements
+            const styles = document.querySelectorAll('style');
+
+            // Loop through each style element and minify its code
+            styles.forEach((style) => {
+                const code = style.innerHTML;
+
+                // Minify the code using Clean-CSS
+                const minifiedCode = minifyCSS(code);
+
+                // Replace the original code with the minified code
+                style.innerHTML = minifiedCode;
+            });
+
+            // Get the viewport height
+            var windowHeight = window.innerHeight;
+
+            /* LCP image loading */
+            const LCPElementResource = () => {
+                /* Get the largest contentful element on the page */
+                const largestElement = document.querySelector(':scope > img, :scope > video, :scope > iframe');
+                /* If a large element is found on the page */
+                if (largestElement) {
+
+                    /* Set the height of the element to its intrinsic height */
+                    largestElement.style.height = largestElement.offsetHeight + 'px';
+
+                    /* Listen for the load event on the largest element */
+                    largestElement.addEventListener('load', () => {
+                        /* Once the element has loaded, remove the height style to allow it to expand to its full size */
+                        largestElement.style.height = 'auto';
+                    });
+                }
+            }
+
+            LCPElementResource();
+            
+            /* Get the time when the page is finished loading */
+            const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+            
+            /* If the page is fully loaded within 3 seconds, no need to do anything */
+            if (loadTime < 3000) {
+                return;
+            }
+
+            /* If the page takes more than 3 seconds to load */
+
+            /* Lazy load non-critical resources */
+            const nonCriticalResources = document.querySelectorAll('link[rel="stylesheet"], script[src], iframe[src]');
+            for (let i = 0; i < nonCriticalResources.length; i++) {
+                const resource = nonCriticalResources[i];
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                if (resource.tagName === 'LINK') {
+                                    const newLink = document.createElement('link');
+                                    newLink.setAttribute('rel', 'stylesheet');
+                                    newLink.setAttribute('href', resource.getAttribute('href'));
+                                    document.head.appendChild(newLink);
+                                } else if (resource.tagName === 'SCRIPT') {
+                                    const newScript = document.createElement('script');
+                                    newScript.setAttribute('src', resource.getAttribute('src'));
+                                    document.body.appendChild(newScript);
+                                } else if (resource.tagName === 'IFRAME') {
+                                    resource.setAttribute('src', resource.getAttribute('data-src'));
+                                }
+                                observer.unobserve(resource);
+                            }
+                        });
+                    });
+                    observer.observe(resource);
+                } else {
+                    if (resource.tagName === 'LINK') {
+                        const newLink = document.createElement('link');
+                        newLink.setAttribute('rel', 'stylesheet');
+                        newLink.setAttribute('href', resource.getAttribute('href'));
+                        document.head.appendChild(newLink);
+                    } else if (resource.tagName === 'SCRIPT') {
+                        const newScript = document.createElement('script');
+                        newScript.setAttribute('src', resource.getAttribute('src'));
+                        document.body.appendChild(newScript);
+                    } else if (resource.tagName === 'IFRAME') {
+                        resource.setAttribute('src', resource.getAttribute('data-src'));
+                    }
+                }
+            }
+
+            /* Defer non-critical JavaScript */
+            const nonCriticalScripts = document.querySelectorAll('script[data-defer]');
+            for (let i = 0; i < nonCriticalScripts.length; i++) {
+                const script = nonCriticalScripts[i];
+                const newScript = document.createElement('script');
+                newScript.setAttribute('src', script.getAttribute('src'));
+                newScript.setAttribute('defer', '');
+                document.body.appendChild(newScript);
+                script.parentNode.removeChild(script);
+            }
+        });
+    </script>        
+{%- endcase -%}

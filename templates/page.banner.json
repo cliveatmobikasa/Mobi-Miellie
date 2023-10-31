@@ -1,0 +1,244 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner-template",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/AppPromo_1440x432_e2a92e72-ecbe-4287-a113-a91c5a0cdb7f.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Harlem_Teaser_V2_1000x1000_0dba36fe-cb47-489e-922d-a47710f0c843.jpg",
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "text_position": "center",
+        "text_align": "center",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner"
+      }
+    },
+    "d00cc977-3ff6-4166-81ca-e05f96cc11e5": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/Harlem_HairQuiz_1800x720_1.jpg",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "#quiz-0AHxqz",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify:\/\/shop_images\/Harlem_TakeTheQuiz_1000x1000_2.jpg",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "73ce0f4e-4a01-4774-9b17-e97db94626d2": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "title": "Get The Look!",
+        "heading_type": "h2",
+        "content": "<p>To celebrate the Season 2 return of <strong>Harlem on Prime<\/strong>, we’re dropping irresistible bundle discounts that will help you save your coins and your strands. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656736148c5f5b887": {
+      "type": "image-text",
+      "blocks": {
+        "16567361485c8c4485-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harlem_Camielle_1024x1024_60b2e03c-5915-4c66-8e06-1c16019c07cf.jpg",
+            "image_crop": "none",
+            "title": "Classic Camille Protective Bundle",
+            "adaDescriptiveText": "Your headline",
+            "text": "<p>Keep it cute like Camille and strengthen your strands under your protective style with this nourishing and moisturizing bundle. <\/p><p><strong>Includes:<\/strong><\/p><p>Rosemary Mint Scalp & Hair Strengthening Oil, Rosemary Mint Strengthening Edge Gel, Rice Water & Aloe Scalp Relief, Rice Water & Aloe Vera Braid Set Foam, Rice Water & Aloe Vera Braid & Scalp Moisturizer, Rice Water Shine Mist<\/p><p><strong>Limited Time Only!<\/strong><\/p><p><strong> 40% OFF<\/strong><\/p><p><strong>$36 (<\/strong><em><strong>$60 Value<\/strong><\/em><strong>)<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/products\/classic-camille-protective-bundle",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "16567361485c8c4485-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harlem_Angie_1024x1024_cbf639ba-6b43-459c-9aa0-a105a769757c.jpg",
+            "image_crop": "none",
+            "title": "Vibrant Angie Curls Bundle",
+            "adaDescriptiveText": "Your headline",
+            "text": "<p>Like Angie, go big or go home (or to your bestie’s home) with this bundle, which nourishes kinky curls with the natural nutrients it needs.<\/p><p><strong>Includes:<\/strong><\/p><p>Oats & Honey Soothing Shampoo, Oats & Honey Soothing Conditioner, Oats & Honey Soothing Leave-in Conditioner, Oats & Honey Soothing Hair Balm, Pomegranate & Honey Curl Defining Mousse, Pomegranate & Honey Curl Refreshing Spray<\/p><p><strong>Limited Time Only!<\/strong><\/p><p><strong>40% OFF<\/strong><\/p><p><strong>$38 (<\/strong><em><strong>$63 Value<\/strong><\/em><strong>)<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/products\/vibrant-angie-curls-bundle",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "32d8571b-ee4a-4b61-9085-a61ef90f4ecd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harlem_Tye_1024x1024_49d759eb-d42e-493e-be73-134e127c61ae.jpg",
+            "image_crop": "none",
+            "title": "Smooth Tye Short Cut Bundle",
+            "adaDescriptiveText": "Your headline",
+            "text": "<p>Turn heads like Tye with this must-have bundle, which provides vital nourishment for healthy hair and scalp — especially when rocking a short cut or color.<\/p><p><strong>Includes:<\/strong><\/p><p>Mango & Tulsi Nourishing Shampoo, Mango & Tulsi Nourishing Conditioner, Mango & Tulsi Nourishing Styling Gel, Mango & Tulsi Nourishing Instant 3-in-1 Serum<\/p><p><strong>Limited Time Only!<\/strong><\/p><p><strong>40% OFF<\/strong><\/p><p><strong>$36 <\/strong><em><strong>($60 Value)<\/strong><\/em><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/products\/smooth-tye-short-cut-bundle",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "6206a5a1-3b72-4c6b-8b4e-147c1493e1e9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harlem_Quinn_1080x1080_8dd2d17d-20fb-4893-9d7a-4b1da242bbc5.jpg",
+            "image_crop": "none",
+            "title": "Sleek Quinn Silk Press Bundle",
+            "adaDescriptiveText": "Your headline",
+            "text": "<p>Hopeless romantic Quinn wants a love that lasts, and while this bundle can’t protect your heart, it does protect your silky straight strands from heat. <\/p><p><strong>Includes:<\/strong><\/p><p>Mongongo Oil Exfoliating Shampoo, Mongongo Oil Protein-Free Hydrating Conditioner , Mongongo Oil Thermal & Heat Protectant  Spray, Mint Almond Oil , Rosemary Mint Strengthening Edge Gel <\/p><p><strong>Limited Time Only!<\/strong><\/p><p><strong>40% OFF<\/strong><\/p><p><strong>$32<\/strong><em><strong> ($54 Value)<\/strong><\/em><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/products\/sleek-quinn-silk-press-bundle",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16567361485c8c4485-0",
+        "16567361485c8c4485-1",
+        "32d8571b-ee4a-4b61-9085-a61ef90f4ecd",
+        "6206a5a1-3b72-4c6b-8b4e-147c1493e1e9"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row-reverse",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "add39003-bafe-4ccc-aff6-3306bfaf5033": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Best Sellers",
+        "collection_description": true,
+        "collection": "best-selling-hair-care-products",
+        "collection_style": "grid",
+        "products_per": 4,
+        "products_limit": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165673614571dc9754": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Harlem_Teaser_1800x720_3eff01c2-b1eb-426c-940f-baaf39a3c3c8.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Harlem_Teaser_1000x1000_CroppedforWeb.jpg",
+        "title": "SEASON TWO",
+        "heading_type": "h2",
+        "content": "<p><strong>Synopsis:<\/strong><\/p><p>From writer Tracy Oliver (<em>Girls Trip<\/em>), our beloved comedy <em>Harlem<\/em> is back. We continue our journey with our four stylish & ambitious best girlfriends in Harlem NYC, the mecca of Black culture in America. After blowing up her career and disrupting her love life, Camille (Meagan Good) has to figure out how to put the pieces back together; Tye (Jerrie Johnson) considers her future; Quinn (Grace Byers) goes on a journey of self-discovery; and Angie’s (Shoniqua Shandai) career takes a promising turn. Together, they level up into the next phase of their careers, relationships, and big city dreams.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "b405c36f-2dd2-43d5-9ac3-49783fad0b6e": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "aspect_ratio": "16:9",
+        "autoplay": false,
+        "autoloop": true,
+        "mute_video": false,
+        "show_controls": true,
+        "video_dark_overlay": false,
+        "iframe_video": "https:\/\/youtu.be\/1T7GASwtSL8",
+        "html5_video": "",
+        "display_text_over_video": false,
+        "preheading": "",
+        "heading": "",
+        "subheading": "",
+        "button1_label": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656736161c7dea08e": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d00cc977-3ff6-4166-81ca-e05f96cc11e5",
+    "73ce0f4e-4a01-4774-9b17-e97db94626d2",
+    "1656736148c5f5b887",
+    "add39003-bafe-4ccc-aff6-3306bfaf5033",
+    "165673614571dc9754",
+    "b405c36f-2dd2-43d5-9ac3-49783fad0b6e",
+    "1656736161c7dea08e"
+  ]
+}

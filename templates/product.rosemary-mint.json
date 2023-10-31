@@ -1,0 +1,171 @@
+{
+  "sections": {
+    "sidebar": {
+      "type": "product-sidebar",
+      "disabled": true,
+      "settings": {
+        "toggle": false
+      }
+    },
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "032dd6d3-139c-4f33-98ba-8d35bd509c43": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "d6ec6f6c-6742-433b-878d-f3f12023084d": {
+          "type": "text",
+          "settings": {
+            "text": "<p><\/p><p><\/p>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        },
+        "493a6f1b-8b8b-422e-9c30-7933d780b159": {
+          "type": "tabs",
+          "settings": {
+            "show_product_description": true,
+            "show_tabs_below_product_gallery": true,
+            "tab_heading_1": "Ingredients",
+            "tab_text_1": "<p>{{ product.metafields.custom.ingredients_complete.value }}<\/p>",
+            "tab_heading_2": "How To Use",
+            "tab_text_2": "<p>{{ product.metafields.custom.how_to_use.value }}<\/p>",
+            "tab_heading_3": "",
+            "tab_text_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "032dd6d3-139c-4f33-98ba-8d35bd509c43",
+        "d6ec6f6c-6742-433b-878d-f3f12023084d",
+        "price",
+        "form",
+        "description",
+        "share",
+        "493a6f1b-8b8b-422e-9c30-7933d780b159"
+      ],
+      "settings": {
+        "product_breadcrumb": true,
+        "media_position": "is-flex-row",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": true,
+        "enable_product_lightbox": true,
+        "activate_zoom": true,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "left",
+        "enable_thumbnail_slider": true
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "wide_display": false,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You may also like",
+        "products_per_row": 5,
+        "recommended_products_limit": 5
+      }
+    },
+    "productpage-nosto-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "productpage-nosto-1"
+      }
+    },
+    "165256137395660db5": {
+      "type": "apps",
+      "blocks": {
+        "9acfb434-f621-4c0c-a14f-2c681023968a": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "9acfb434-f621-4c0c-a14f-2c681023968a"
+      ],
+      "settings": {}
+    },
+    "1661286714f9d577ad": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "productpage-nosto-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-2"
+      }
+    },
+    "productpage-nosto-dynamic-1": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-dynamic-1"
+      }
+    },
+    "productpage-nosto-dynamic-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-dynamic-2"
+      }
+    },
+    "productpage-nosto-3": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-3"
+      }
+    }
+  },
+  "order": [
+    "sidebar",
+    "main",
+    "recommendations",
+    "productpage-nosto-1",
+    "165256137395660db5",
+    "1661286714f9d577ad",
+    "productpage-nosto-2",
+    "productpage-nosto-dynamic-1",
+    "productpage-nosto-dynamic-2",
+    "productpage-nosto-3"
+  ]
+}

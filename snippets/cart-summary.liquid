@@ -1,0 +1,106 @@
+<div class="subtotal">
+    {% if cart.cart_level_discount_applications != blank %}
+      <p class="cart_discounts js-cart_discounts sale">
+        {% for discount_application in cart.cart_level_discount_applications %}
+          <span class="cart_discounts--title">{{ discount_application.title }}</span>
+          <span class="cart_discounts--price">
+            -
+            <span class="">
+              {% render 'price-element', price: discount_application.total_allocated_amount %}
+            </span>
+          </span>
+        {% endfor %}
+      </p>
+    {% endif %}
+
+    <p class="cart_subtotal js-cart_subtotal">
+      <span>{{ 'cart.general.subtotal' | t }}</span>
+      <span class="right">
+        <span class="">  
+          <span class="saso-cart-original-total">
+            {% render 'price-element', price: cart.total_price %}
+          </span>
+          <span class="saso-cart-total"></span>
+        </span>
+      </span>
+    </p>
+
+    {%- capture taxes_shipping_checkout -%}
+      {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+        {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+      {%- elsif cart.taxes_included -%}
+        {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+      {%- elsif shop.shipping_policy.body != blank -%}
+        {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+      {%- else -%}
+        {{ 'cart.general.tax_and_shipping' | t }}
+      {%- endif -%}
+    {%- endcapture -%}
+
+    <p class="cart-message meta">{{ taxes_shipping_checkout }}</p>
+
+    {% if section.settings.display_savings and total_saving > 0 or section.settings.display_savings and cart.total_discount > 0 %}
+      <p class="cart_savings js-cart_savings sale">
+        <span class="right">
+          <span class="">
+            {% assign total_savings = total_saving | plus: cart.total_discount %}
+            {%
+              render 'price-element',
+              price: total_savings
+            %}
+          </span>
+        </span>
+        <span>{{ 'layout.general.savings' | t }}</span>
+      </p>
+    {% endif %}
+
+    {% comment %}
+      {% unless shop.enabled_currencies.size > 1 %}
+        <p>
+          <small>{{ 'cart.general.orders_processed_in_currency_html' | t: currency: shop.currency }}</small>
+        </p>
+      {% endunless %}
+    {%endcomment%}
+
+    {% if section.settings.display_special_instructions %}
+      <label for="note">{{ 'cart.general.note' | t: shop_name: shop.name }}:</label>
+      <textarea id="note" name="note" rows="2">{{ cart.note }}</textarea>
+    {% endif %}
+
+    {% if settings.display_tos_checkbox %}
+      <p>
+        <input type="checkbox" class="tos_agree" id="cart_agree" required />
+
+        <label class="tos_label" for="cart_agree">
+          {{ 'cart.general.agree_to_terms_html' | t }}
+        </label>
+
+        {% if settings.tos_page != blank %}
+          <a href="{{ settings.tos_page }}" target="_blank" class="tos_icon">{{ 'cart.general.view_terms' | t }}</a>
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {% if section.settings.cart_message != blank %}
+      {{ section.settings.cart_message }}
+    {% endif %}
+
+    <p class="tos_warning checkout_button">
+      <button type="submit" class="global-button global-button--primary add_to_cart" id="checkout" name="checkout">{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'cart.general.checkout' | t }}</button>
+    </p>
+
+    <p class="pay_text">{{ section.settings.pay_with }}</p>
+
+    {% if content_for_additional_checkout_buttons %}
+      <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+        {{ content_for_additional_checkout_buttons }}
+      </div>
+    {% endif %}
+
+    {% if cart.item_count > 0 %}
+      <a class="continue-shopping" href="{{ continue_url }}">
+        {{ 'cart.general.continue_shopping' | t }}
+      </a>
+      <div class="limoniapps-discountninja-cartdiscountfield-placeholder"></div>
+    {% endif %}
+</div>

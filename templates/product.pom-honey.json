@@ -1,0 +1,536 @@
+{
+  "sections": {
+    "sidebar": {
+      "type": "product-sidebar",
+      "disabled": true,
+      "settings": {
+        "toggle": false
+      }
+    },
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "032dd6d3-139c-4f33-98ba-8d35bd509c43": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "0daa732e-a022-4744-90c4-42a40711dba3": {
+          "type": "shopify:\/\/apps\/bazaarvoice-reviews-photos\/blocks\/rating-summary-block\/766ed9d3-b120-48f3-8444-448f45152f47",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "d6ec6f6c-6742-433b-878d-f3f12023084d": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        },
+        "afterpay": {
+          "type": "afterpay",
+          "settings": {}
+        },
+        "788c948d-253d-463a-b961-0b08a844d801": {
+          "type": "complementary_products",
+          "settings": {
+            "heading": "Pairs well with",
+            "product_recommendation_limit": 5
+          }
+        },
+        "493a6f1b-8b8b-422e-9c30-7933d780b159": {
+          "type": "tabs",
+          "settings": {
+            "show_product_description": true,
+            "show_tabs_below_product_gallery": true,
+            "tab_heading_1": "Reviews",
+            "tab_text_1": "<p>&lt;!----&gt;<\/p>",
+            "tab_heading_2": "Ingredients",
+            "tab_text_2": "<p>{{ product.metafields.custom.ingredients_complete.value }}<\/p>",
+            "tab_heading_3": "How To Use",
+            "tab_text_3": "<p>{{ product.metafields.custom.how_to_use.value }}<\/p>"
+          }
+        },
+        "3a5b0996-d265-4183-b390-f15ee70ccc2a": {
+          "type": "product-characteristics",
+          "disabled": true,
+          "settings": {
+            "product_characteristics_pos_below": true,
+            "image_1": "shopify:\/\/shop_images\/Group_5492_3477125f-4219-4321-ae59-9a260d467ed3.png",
+            "title_1": "Cruelty Free",
+            "copy_1": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+            "image_2": "shopify:\/\/shop_images\/Group_5495_2e120c3b-83f0-464b-90c0-5fb4b72f8c62.png",
+            "title_2": "Natural Ingredients",
+            "copy_2": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+            "image_3": "shopify:\/\/shop_images\/Group_5494_bc987180-53c6-4f57-a4f1-1358591681f4.png",
+            "title_3": "Sulfate Free",
+            "copy_3": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "032dd6d3-139c-4f33-98ba-8d35bd509c43",
+        "0daa732e-a022-4744-90c4-42a40711dba3",
+        "price",
+        "d6ec6f6c-6742-433b-878d-f3f12023084d",
+        "form",
+        "afterpay",
+        "788c948d-253d-463a-b961-0b08a844d801",
+        "493a6f1b-8b8b-422e-9c30-7933d780b159",
+        "3a5b0996-d265-4183-b390-f15ee70ccc2a"
+      ],
+      "settings": {
+        "product_breadcrumb": true,
+        "media_position": "is-flex-row",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": true,
+        "enable_product_lightbox": true,
+        "activate_zoom": true,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "left",
+        "enable_thumbnail_slider": true,
+        "icon_title1": "",
+        "icon_desc1": "",
+        "icon_title2": "",
+        "icon_desc2": "",
+        "icon_title3": "",
+        "icon_desc3": "",
+        "video": "",
+        "left_section_title": "",
+        "left_section_para": "",
+        "right_section_title": "",
+        "right_section_para": ""
+      }
+    },
+    "165256137395660db5": {
+      "type": "apps",
+      "blocks": {
+        "9acfb434-f621-4c0c-a14f-2c681023968a": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "9acfb434-f621-4c0c-a14f-2c681023968a"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "d617049d-fe75-4713-a07e-5107325f9c21": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/Corporate_ToolKit_-_Email_Footer12_1.jpg",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify:\/\/shop_images\/Corporate_toolkit_-_Desktop_background10_1.jpg",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "cda9c50f-d7f3-469d-b586-dbe55a91133b": {
+      "type": "featured-text",
+      "settings": {
+        "title": "DEFINE YOUR COILS YOUR WAY",
+        "heading_type": "h2",
+        "content": "<p>Curated with gels, stylers, conditioners and more, our Pomegranate & Honey Collection is specifically chosen for you to achieve <strong>easy detangling<\/strong>, <strong>increased curl elasticity <\/strong>and <strong>definition <\/strong>for more beautiful, natural styles.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "ae1bf49b-12e1-426f-9a44-6c3d4cb89c2d": {
+      "type": "video",
+      "settings": {
+        "wide_display": false,
+        "aspect_ratio": "16:9",
+        "autoplay": false,
+        "autoloop": true,
+        "mute_video": false,
+        "show_controls": true,
+        "video_dark_overlay": false,
+        "iframe_video": "https:\/\/youtu.be\/uTWHlYR3emM",
+        "html5_video": "",
+        "image": "shopify:\/\/shop_images\/PH_Video_Thumbnail.png",
+        "display_text_over_video": false,
+        "preheading": "",
+        "heading": "",
+        "subheading": "",
+        "button1_label": "Play Video",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "bad04d09-d033-4b84-a3f7-cf34c953dc52": {
+      "type": "featured-text",
+      "settings": {
+        "title": "PRIME + DEFINE™ STYLING SYSTEM",
+        "heading_type": "h2",
+        "content": "<p>Our Pomegranate & Honey Collection is a <strong>Prime + Define™ Styling System <\/strong>formulated for thick, curly, Type 4 hair. But don’t get it twisted, it’s perfect for all coils and curls looking to achieve definition. Featuring hero ingredients like pomegranate seed oil and honey, these products deeply condition your strands for added moisture and softer, more manageable curls.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "0aa36381-2d86-4648-9432-c6e1cc092bb4": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": false,
+        "image": "shopify:\/\/shop_images\/ph-slider_copy.jpg",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify:\/\/shop_images\/ph-slider_mobile_copy.jpg",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1587fae9-7b29-4ef8-9bf7-a0259e39cf59": {
+      "type": "shoppable-image",
+      "blocks": {
+        "5e0945f0-ca25-4e34-bbed-76ffb49e16d7": {
+          "type": "shoppable-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Coily_Model_1.png",
+            "card_styling": "square",
+            "elements_outline": true,
+            "hotspot_color": "",
+            "product_1": "",
+            "image_alignment_1": "center-center",
+            "x_axis_1": 50,
+            "y_axis_1": 50,
+            "button_label_1": "View product",
+            "product_2": "",
+            "image_alignment_2": "center-center",
+            "x_axis_2": 25,
+            "y_axis_2": 25,
+            "button_label_2": "View product",
+            "product_3": "",
+            "image_alignment_3": "center-center",
+            "x_axis_3": 75,
+            "y_axis_3": 75,
+            "button_label_3": "View product",
+            "product_4": "",
+            "image_alignment_4": "center-center",
+            "x_axis_4": 20,
+            "y_axis_4": 80,
+            "button_label_4": "View product",
+            "call_to_action": "SHORT STYLES",
+            "subtitle": "",
+            "text_align": "center",
+            "button_label": "View collection",
+            "button_link": "",
+            "button_style": "global-button--banner-text-highlighted",
+            "cta_bg_color": "#f2f2f2"
+          }
+        },
+        "38b82a46-f281-4d47-909b-4ef8043bdd39": {
+          "type": "shoppable-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Coily_Model_3.png",
+            "card_styling": "square",
+            "elements_outline": true,
+            "hotspot_color": "",
+            "product_1": "pomegranate-hold-blend-super-hold-edge-gel",
+            "image_alignment_1": "center-center",
+            "x_axis_1": 16,
+            "y_axis_1": 50,
+            "button_label_1": "View product",
+            "product_2": "pomegranate-honey-curl-sculpting-custard",
+            "image_alignment_2": "center-center",
+            "x_axis_2": 38,
+            "y_axis_2": 77,
+            "button_label_2": "View product",
+            "product_3": "pomegranate-honey-curl-smoothie",
+            "image_alignment_3": "center-center",
+            "x_axis_3": 79,
+            "y_axis_3": 75,
+            "button_label_3": "View product",
+            "product_4": "",
+            "image_alignment_4": "center-center",
+            "x_axis_4": 20,
+            "y_axis_4": 80,
+            "button_label_4": "View product",
+            "call_to_action": "LOOKS FOR THE WHOLE FAMILY",
+            "subtitle": "",
+            "text_align": "center",
+            "button_label": "View collection",
+            "button_link": "",
+            "button_style": "global-button--banner-text-highlighted",
+            "cta_bg_color": "#f2f2f2"
+          }
+        },
+        "template--14653503340657__1587fae9-7b29-4ef8-9bf7-a0259e39cf59-shoppable-image-1": {
+          "type": "shoppable-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Coily_Model_2.png",
+            "card_styling": "square",
+            "elements_outline": true,
+            "hotspot_color": "",
+            "product_1": "pomegranate-honey-moisturizing-and-detangling-shampoo",
+            "image_alignment_1": "center-center",
+            "x_axis_1": 33,
+            "y_axis_1": 12,
+            "button_label_1": "View product",
+            "product_2": "pomegranate-honey-moisturizing-and-detangling-conditioner",
+            "image_alignment_2": "center-center",
+            "x_axis_2": 41,
+            "y_axis_2": 13,
+            "button_label_2": "View product",
+            "product_3": "pomegranate-honey-leave-in-conditioner",
+            "image_alignment_3": "center-center",
+            "x_axis_3": 46,
+            "y_axis_3": 47,
+            "button_label_3": "View product",
+            "product_4": "",
+            "image_alignment_4": "center-center",
+            "x_axis_4": 20,
+            "y_axis_4": 80,
+            "button_label_4": "View product",
+            "call_to_action": "TWIST OUT QUEEN",
+            "subtitle": "",
+            "text_align": "center",
+            "button_label": "View Collection",
+            "button_link": "shopify:\/\/collections\/pomegranate-honey",
+            "button_style": "global-button--banner-text-highlighted",
+            "cta_bg_color": "#f2f2f2"
+          }
+        }
+      },
+      "block_order": [
+        "5e0945f0-ca25-4e34-bbed-76ffb49e16d7",
+        "38b82a46-f281-4d47-909b-4ef8043bdd39",
+        "template--14653503340657__1587fae9-7b29-4ef8-9bf7-a0259e39cf59-shoppable-image-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "slideshow_text_animation": "fadeInDown",
+        "slideshow_animation": "fade",
+        "slideshow_speed": 0,
+        "title": "Coily Hair Style Guide",
+        "quick_view": false,
+        "bottom_bar": true,
+        "product_thumbnails": true,
+        "cta": true,
+        "bottom_bar_image_style": "natural",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "6ea06b9a-f4b1-4649-9d08-0cab34d05419": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Talk about your brand",
+        "heading_type": "h2",
+        "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "15b1090a-a765-4fdd-83ec-7170f118a248": {
+      "type": "testimonial",
+      "blocks": {
+        "template--14653503340657__15b1090a-a765-4fdd-83ec-7170f118a248-image-1": {
+          "type": "image",
+          "settings": {
+            "title": "Customer Testimonial",
+            "testimonial": "<p>Include some of your favorite customer quotes and feedback here as social proof, to build credibility and trust for your services and products.<\/p>",
+            "name": "",
+            "store_name": "",
+            "link": "",
+            "text_position": "center",
+            "text_align": "center",
+            "mobile_image_crop": "none",
+            "caption_content_background": "original"
+          }
+        },
+        "template--14653503340657__15b1090a-a765-4fdd-83ec-7170f118a248-image-2": {
+          "type": "image",
+          "settings": {
+            "title": "Customer Testimonial",
+            "testimonial": "<p>Include some of your favorite customer quotes and feedback here as social proof, to build credibility and trust for your services and products.<\/p>",
+            "name": "",
+            "store_name": "",
+            "link": "",
+            "text_position": "center",
+            "text_align": "center",
+            "mobile_image_crop": "none",
+            "caption_content_background": "original"
+          }
+        },
+        "template--14653503340657__15b1090a-a765-4fdd-83ec-7170f118a248-image-3": {
+          "type": "image",
+          "settings": {
+            "title": "Customer Testimonial",
+            "testimonial": "<p>Include some of your favorite customer quotes and feedback here as social proof, to build credibility and trust for your services and products.<\/p>",
+            "name": "",
+            "store_name": "",
+            "link": "",
+            "text_position": "center",
+            "text_align": "center",
+            "mobile_image_crop": "none",
+            "caption_content_background": "original"
+          }
+        }
+      },
+      "block_order": [
+        "template--14653503340657__15b1090a-a765-4fdd-83ec-7170f118a248-image-1",
+        "template--14653503340657__15b1090a-a765-4fdd-83ec-7170f118a248-image-2",
+        "template--14653503340657__15b1090a-a765-4fdd-83ec-7170f118a248-image-3"
+      ],
+      "settings": {
+        "wide_display": true,
+        "testimonial_text_animation": "fadeInDown",
+        "testimonial_speed": 6,
+        "activate_adaptiveHeight": false,
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "wide_display": false,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You may also <font color=\"#eb1676\">like<\/font>",
+        "products_per_row": 4,
+        "recommended_products_limit": 4
+      }
+    },
+    "1661286714f9d577ad": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "rv_title": "Recently <font color=\"#eb1676\">viewed<\/font>",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "productpage-nosto-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-2"
+      }
+    },
+    "productpage-nosto-3": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-3"
+      }
+    },
+    "productpage-nosto-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "productpage-nosto-1"
+      }
+    },
+    "productpage-nosto-dynamic-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "productpage-nosto-dynamic-1"
+      }
+    },
+    "productpage-nosto-dynamic-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "productpage-nosto-dynamic-2"
+      }
+    }
+  },
+  "order": [
+    "sidebar",
+    "main",
+    "165256137395660db5",
+    "d617049d-fe75-4713-a07e-5107325f9c21",
+    "cda9c50f-d7f3-469d-b586-dbe55a91133b",
+    "ae1bf49b-12e1-426f-9a44-6c3d4cb89c2d",
+    "bad04d09-d033-4b84-a3f7-cf34c953dc52",
+    "0aa36381-2d86-4648-9432-c6e1cc092bb4",
+    "1587fae9-7b29-4ef8-9bf7-a0259e39cf59",
+    "6ea06b9a-f4b1-4649-9d08-0cab34d05419",
+    "15b1090a-a765-4fdd-83ec-7170f118a248",
+    "recommendations",
+    "1661286714f9d577ad",
+    "productpage-nosto-2",
+    "productpage-nosto-3",
+    "productpage-nosto-1",
+    "productpage-nosto-dynamic-1",
+    "productpage-nosto-dynamic-2"
+  ]
+}

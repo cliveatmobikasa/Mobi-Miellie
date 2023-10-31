@@ -1,0 +1,398 @@
+{
+  "sections": {
+    "340d88ab-53b1-4249-8afc-4b01217fbde5": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/Corporate_ToolKit_-_Email_Footer6.jpg",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "166457973558b33742": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Mango & Tulsi Nourishing Botanical Blend Collection",
+        "heading_type": "h2",
+        "content": "<p>Excessive styling, use of heat tools, and low-quality products can weaken or even break hair.  The fatty acids, vitamins, and antioxidants in this formula deliver vital nutrients that help to prevent breakage and moisturize dry hair and scalp, nourishing it back to health.  <strong>Formulated for Wavy & Curly Hair.<\/strong><\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "c2fb1c04-5452-483b-a01d-9c4393ad18e7": {
+      "type": "video",
+      "settings": {
+        "wide_display": true,
+        "aspect_ratio": "16:9",
+        "autoplay": false,
+        "autoloop": true,
+        "mute_video": false,
+        "show_controls": true,
+        "video_dark_overlay": false,
+        "iframe_video": "https:\/\/youtu.be\/6xR2m0g8zm8",
+        "html5_video": "",
+        "display_text_over_video": false,
+        "preheading": "",
+        "heading": "",
+        "subheading": "",
+        "button1_label": "Play Video",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "471e43e1-7675-4054-9c04-6c4f528a8f7d": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Nourish Your Scalp Back To Health",
+        "heading_type": "h2",
+        "content": "<p>Our perfectly paired collection combines the king of fruits with the queen of herbs to create a nourishing botanical blend. Rich in antioxidants, vitamins A & C, the botanical mangifera indica, commonly known as mango, is associated with restoring and balancing moisture in hair. Tulsi, known for its aromatic, botanical leaves, is rich in vitamin C and zinc, and is said to help maintain moisture in the scalp and improve scalp health.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "36c514a1-3a9e-4124-953c-73349c15a741": {
+      "type": "image-text",
+      "blocks": {
+        "template--14729306439793__36c514a1-3a9e-4124-953c-73349c15a741-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230503-Mielle_StylizedPhotographyResize_MangoTulsi-F.jpg",
+            "image_crop": "none",
+            "title": "Mango & Tulsi Nourishing Shampoo",
+            "adaDescriptiveText": "Mango & Tulsi Nourishing Shampoo",
+            "text": "<p>Nourishes to improve the appearance of both hair and scalp. Gently cleanses to remove hair and scalp impurities, while moisturizing hair for softer and smoother looking strands.<\/p><p><strong>Key Benefits:<\/strong><\/p><ul><li>Nourishes & Moisturizes<\/li><li>Softens & Smooths<\/li><li>Leaves Healthier Hair and Scalp<\/li><li>Vegan and Cruelty Free<\/li><\/ul>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--14729306439793__36c514a1-3a9e-4124-953c-73349c15a741-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mango_tulsi_conditioner_lifestyle_1.png",
+            "image_crop": "none",
+            "title": "Mango & Tulsi Nourishing Conditioner",
+            "adaDescriptiveText": "Mango & Tulsi Nourishing Conditioner",
+            "text": "<p>Nourishes and moisturizes to improve the appearance of both hair and scalp. Helps strengthen and protect hair for stronger, shinier, and softer look.<\/p><p><strong>Key Benefits:<\/strong><\/p><ul><li>Nourishes & Strengthens<\/li><li>Moisturizes & Protects<\/li><li>Provides Scalp Protection<\/li><li>Vegan and Cruelty Free<\/li><\/ul><p><strong>Award Winner:<\/strong> 2022 Ebony Beauty & Grooming Awards<\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "1fe79796-69d4-4a84-8a51-0a0c16a00f56": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mango_tulsi_leave_in_conditioner_open.jpg",
+            "image_crop": "none",
+            "title": "Mango & Tulsi Nourishing Leave-In Conditioner",
+            "adaDescriptiveText": "Mango & Tulsi Nourishing Leave-In Conditioner",
+            "text": "<p>Nourishes to improve the appearance of both hair and scalp. Restores moisture, while reducing the appearance of breakage and frizz. Provides great detangling. Scalp maintains vital nourishment for roots.<\/p><p><strong>Key Benefits<\/strong>:<\/p><ul><li>Nourishes & Moisturizes<\/li><li>Breakage Protection<\/li><li>Scalp Nourishment<\/li><li>Vegan and Cruelty Free<\/li><\/ul>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "d8f80e59-f489-4d1c-b2f7-f037286a9d12": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230503-Mielle_StylizedPhotographyResize_MangoTulsi-N_e6158eff-6c2b-4df6-9f14-9bcac8e80171.jpg",
+            "image_crop": "none",
+            "title": "Mango & Tulsi Nourishing Instant 3-IN-1 Serum",
+            "adaDescriptiveText": "Mango & Tulsi Nourishing Instant 3-IN-1 Serum",
+            "text": "<p>A rich, velvety serum that nourishes to improve both hair and scalp health. Helps improve weakened, frizzy hair that has experienced excessive heat styling, hair color or mechanical stress. Strengthens and seals cuticles with nutrients for smoother, shinier hair.<\/p><p><strong>Key Benefits:<\/strong><\/p><ul><li>Rich, velvety serum<\/li><li>Nourishes and Repairs<\/li><li>Strengthens damaged hair and split ends<\/li><li>Vegan and Cruelty Free<\/li><\/ul>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "b6500aed-0b97-4cbf-b5c2-04fd7bf362cb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mango_Tulsi_Styling_Gel.png",
+            "image_crop": "none",
+            "title": "Mango & Tulsi Nourishing Styling Gel",
+            "adaDescriptiveText": "Mango & Tulsi Nourishing Styling Gel",
+            "text": "<p>Nourishes to improve the appearance of both hair and scalp.  Delivers long-lasting, flexible hold, while defining curls without crunch or flaking. Curls look soft and shiny. Great for various hair styles.<\/p><p><strong>Key Benefits:<\/strong><\/p><ul><li>Nourishes & Moisturizes<\/li><li>Holds & Softens Curls<\/li><li>No flaking. No alcohol.<\/li><li>Vegan & Cruelty Free<\/li><\/ul>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "0c53706a-818a-476c-8b5e-40d357dd8796": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mango_tulsi_whipping_creme_ingredient_1.jpg",
+            "image_crop": "none",
+            "title": "Mango & Tulsi Nourishing Whipping Crème",
+            "adaDescriptiveText": "Mango & Tulsi Nourishing Whipping Creme",
+            "text": "<p>Nourishes to improve the appearance of both hair and scalp. Replenishes dry, limp strands with moisture to enhance curl memory and shine, for frizz-free, smoother curls with definition.<\/p><p><strong>Key Benefits:<\/strong><\/p><ul><li>Provides Nutrition & Hydration<\/li><li>Enhances Defined Curls<\/li><li>Adds Shine<\/li><li>Vegan and Cruelty Free<\/li><\/ul>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14729306439793__36c514a1-3a9e-4124-953c-73349c15a741-image-1",
+        "template--14729306439793__36c514a1-3a9e-4124-953c-73349c15a741-image-2",
+        "1fe79796-69d4-4a84-8a51-0a0c16a00f56",
+        "d8f80e59-f489-4d1c-b2f7-f037286a9d12",
+        "b6500aed-0b97-4cbf-b5c2-04fd7bf362cb",
+        "0c53706a-818a-476c-8b5e-40d357dd8796"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "b0f18604-85fd-47d8-82d0-f88c44bb3264": {
+      "type": "testimonial",
+      "blocks": {
+        "template--14729306439793__b0f18604-85fd-47d8-82d0-f88c44bb3264-image-1": {
+          "type": "image",
+          "settings": {
+            "title": "It Smells Great!",
+            "testimonial": "<p>\"It works real well in my hair! I love that it doesn't feel heavy and lathers very well!\"<\/p>",
+            "name": "Khaliah",
+            "store_name": "Verified Buyer",
+            "link": "",
+            "text_position": "center",
+            "text_align": "center",
+            "mobile_image_crop": "none",
+            "caption_content_background": "original"
+          }
+        },
+        "template--14729306439793__b0f18604-85fd-47d8-82d0-f88c44bb3264-image-2": {
+          "type": "image",
+          "settings": {
+            "title": "BEST Conditioner",
+            "testimonial": "<p>\"The entire Mango & Tulsi line is phenomenal. The smell is great and the product feels great. The way the products make my hair feel is awesome!\"<\/p>",
+            "name": "Adrena",
+            "store_name": "Verified Buyer",
+            "link": "",
+            "text_position": "center",
+            "text_align": "center",
+            "mobile_image_crop": "none",
+            "caption_content_background": "original"
+          }
+        },
+        "template--14729306439793__b0f18604-85fd-47d8-82d0-f88c44bb3264-image-3": {
+          "type": "image",
+          "settings": {
+            "title": "Gave Me The Best Twist Out!",
+            "testimonial": "<p>\"This has given me the best twist out thatI've had in a while. It even held through rain and humidity. It left it feeling moisturized and gave it some shine. I really enjoyed this!\"<\/p>",
+            "name": "Jasmine",
+            "store_name": "Verified Buyer",
+            "link": "",
+            "text_position": "center",
+            "text_align": "center",
+            "mobile_image_crop": "none",
+            "caption_content_background": "original"
+          }
+        },
+        "fd43810d-939c-49bf-9a84-254c8c6b2f1f": {
+          "type": "image",
+          "settings": {
+            "title": "Light & Powerful!",
+            "testimonial": "<p>The lightest gel I have ever encountered. It leaves my curls soft & bouncy with no frizz!<\/p>",
+            "name": "Yoslaimy",
+            "store_name": "Verifid Buyer",
+            "link": "",
+            "text_position": "center",
+            "text_align": "center",
+            "mobile_image_crop": "none",
+            "caption_content_background": "original"
+          }
+        },
+        "5098aa8d-689f-4315-a1f7-7226d33cff85": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "title": "Customer Testimonial",
+            "testimonial": "<p>Include some of your favorite customer quotes and feedback here as social proof, to build credibility and trust for your services and products.<\/p>",
+            "name": "",
+            "store_name": "",
+            "link": "",
+            "text_position": "center",
+            "text_align": "center",
+            "mobile_image_crop": "none",
+            "caption_content_background": "original"
+          }
+        }
+      },
+      "block_order": [
+        "template--14729306439793__b0f18604-85fd-47d8-82d0-f88c44bb3264-image-1",
+        "template--14729306439793__b0f18604-85fd-47d8-82d0-f88c44bb3264-image-2",
+        "template--14729306439793__b0f18604-85fd-47d8-82d0-f88c44bb3264-image-3",
+        "fd43810d-939c-49bf-9a84-254c8c6b2f1f",
+        "5098aa8d-689f-4315-a1f7-7226d33cff85"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "testimonial_text_animation": "fadeInDown",
+        "testimonial_speed": 6,
+        "activate_adaptiveHeight": false,
+        "mobile_text_below_image": false,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "8ac55678-3bd1-4ffc-85e8-e30331824008": {
+      "type": "gallery",
+      "blocks": {
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mango_tulsi_conditioner_group.jpg"
+          }
+        },
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mango_TulsiModel3_85a31437-2c28-4d6d-a8cc-cae86af5f194.jpg"
+          }
+        },
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230503-Mielle_StylizedPhotographyResize_MangoTulsi-O_b461b52e-189c-4f38-8acd-9a80996978cc.jpg"
+          }
+        },
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230503-Mielle_StylizedPhotographyResize_MangoTulsi-L_0e5bffcd-37ce-493c-872e-8a56c80faade.jpg"
+          }
+        },
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230503-Mielle_StylizedPhotographyResize_MangoTulsi-J_e9e0f619-576f-40ff-a2b7-23950e382162.jpg"
+          }
+        },
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mango_tulsi_shampoo_texture_ba6c0500-65b8-4b77-9e59-babe2c89dccc.jpg"
+          }
+        },
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230503-Mielle_StylizedPhotographyResize_MangoTulsi-H.jpg"
+          }
+        },
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mango_TulsiModel_72224e3a-f38d-438f-b588-55f4231c6890.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-1",
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-7",
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-2",
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-3",
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-6",
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-8",
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-5",
+        "template--14729306439793__8ac55678-3bd1-4ffc-85e8-e30331824008-image-4"
+      ],
+      "settings": {
+        "wide_display": false,
+        "title": "Gallery",
+        "gallery_type": "classic",
+        "grid-size": 4,
+        "enable_lightbox": true,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "340d88ab-53b1-4249-8afc-4b01217fbde5",
+    "main",
+    "166457973558b33742",
+    "c2fb1c04-5452-483b-a01d-9c4393ad18e7",
+    "471e43e1-7675-4054-9c04-6c4f528a8f7d",
+    "36c514a1-3a9e-4124-953c-73349c15a741",
+    "b0f18604-85fd-47d8-82d0-f88c44bb3264",
+    "8ac55678-3bd1-4ffc-85e8-e30331824008"
+  ]
+}

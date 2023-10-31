@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "main": {
+      "type": "contact-template",
+      "settings": {
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "contact_heading": "Get in touch",
+        "contact_subheading": "Subheading",
+        "caption_content_background": "original",
+        "contact_text": "",
+        "show_map": false,
+        "map_wide_display": true,
+        "map_address": "",
+        "map_height": 400,
+        "zoom_level": 16,
+        "api_key": "",
+        "show_pin": true,
+        "map_style": "default"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": "",
+        "embed_script": "Embed script..."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}

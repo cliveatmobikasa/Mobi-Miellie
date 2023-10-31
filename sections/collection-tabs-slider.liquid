@@ -1,0 +1,114 @@
+  <section id="tab-products" class="section {{ section.settings.css_class }}">
+    <div class="container">
+        <div class="one-whole column center">
+        {% if section.settings.title != blank %}    
+        <h2 class="title"><span role="text">{{section.settings.title}}</span></h2>
+        <div class="feature-divider"></div>
+        {% endif %}
+        <div class="prod-tab-wr tab-products">
+            <div class="tab-title-wrapper automatic" role="tablist">
+                {% assign i = 1 %}
+                {% for block in section.blocks %}
+                    {% if block.settings.collection != blank %}
+                        {% assign collection = block.settings.collection %}                    
+                            {% if block.settings.title != blank %}
+                                <button id="tab-products-{% if block.settings.nosto_id != blank %}{{ block.settings.nosto_id }}{% else %}{{collection.handle}}{% endif %}" class="tab-title" type="button" role="tab" aria-selected="{% if i == 1 %}true{% else %}false{% endif %}" aria-controls="tabpanel-product-{% if block.settings.nosto_id != blank %}{{ block.settings.nosto_id }}{% else %}{{collection.handle}}{% endif %}" tabindex="{% if i == 1 %}0{% else %}-1{% endif %}">
+                                    <span class="focus">{{block.settings.title}}</span>
+                                </button>
+                            {% else %}
+                                <button id="tab-products-{% if block.settings.nosto_id != blank %}{{ block.settings.nosto_id }}{% else %}{{collection.handle}}{% endif %}" class="tab-title" type="button" role="tab" aria-selected="{% if i == 1 %}true{% else %}false{% endif %}" aria-controls="tabpanel-product-{% if block.settings.nosto_id != blank %}{{ block.settings.nosto_id }}{% else %}{{collection.handle}}{% endif %}" tabindex="{% if i == 1 %}0{% else %}-1{% endif %}">
+                                    <span class="focus">{{collection.title}}</span>
+                                </button>
+                            {% endif %}                                  
+                    {% endif %}
+                    {% assign i = i | plus:1 %}
+                {% endfor %}
+            </div>
+            <div class="collection-prod-wrapper tab-products--contents">
+                {% assign j = 1 %}
+                {% for block in section.blocks %}
+                    {% if block.settings.nosto_id != blank %}
+                        <section id="tabpanel-product-{% if block.settings.nosto_id != blank %}{{ block.settings.nosto_id }}{% else %}{{collection.handle}}{% endif %}" role="tabpanel" tabindex="-1" aria-labelledby="tab-products-{% if block.settings.nosto_id != blank %}{{ block.settings.nosto_id }}{% else %}{{collection.handle}}{% endif %}" class="{% if j != 1 %}is-hidden{% endif %} tab-slider-sec tab-products__panel">
+                            <div class="nosto_element" id="{{ block.settings.nosto_id }}"></div>
+                        </section>
+                    {% elsif block.settings.collection != blank %}
+                        {% assign collection = block.settings.collection %}  
+                            <section id="tabpanel-product-{% if block.settings.nosto_id != blank %}{{ block.settings.nosto_id }}{% else %}{{collection.handle}}{% endif %}" role="tabpanel" tabindex="-1" aria-labelledby="tab-products-{% if block.settings.nosto_id != blank %}{{ block.settings.nosto_id }}{% else %}{{collection.handle}}{% endif %}" class="{% if j != 1 %}is-hidden{% endif %} tab-slider-sec tab-products__panel">                       
+                                <div class="tab-slider">
+                                    <div class="one-whole column">
+                                        {%
+                                        render 'product-loop',
+                                        limit: 8,
+                                        products: collection.products,
+                                        collection: collection,
+                                        skip_product: nil,
+                                        products_per_row: 4,
+                                        %}
+                                    </div>
+                                </div> 
+                            </section> 
+                    {% endif %}
+                    {% assign j = j | plus:1 %}
+                {% endfor %}
+                </div>
+            </div>  
+        </div>
+    </div>
+  </section>
+
+  <style>
+  .tab-slider .tabs-drop:hover{
+        box-shadow: 0 4px 14px #0000001a;
+    border-radius: 6px;
+    transition: all .3s ease;
+    height: 390px;
+  }
+
+  .tab-products__panel .nosto_element .container .one-whole {
+    display: none;
+  }
+
+  </style>
+  
+  {% schema %}
+  {
+    "name": "Tab Products",
+    "class": "shopify-section--tab-products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+        {
+          "type": "tab-products",
+          "name": "Tab Products",
+          "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+              "type": "collection",
+              "id": "collection",
+              "label": "Select Collection"
+            },
+            {
+              "type": "text",
+              "id": "nosto_id",
+              "label": "Nosto element"
+            }
+          ]
+        }
+      ],
+    "presets": [
+      {
+        "name": "Tab Products"
+      }
+    ]
+  }
+  
+  {% endschema %}

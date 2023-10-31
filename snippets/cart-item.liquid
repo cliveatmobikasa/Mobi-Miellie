@@ -1,0 +1,192 @@
+{% assign isFreeProduct = false %}
+{% assign is_gift_card = item.gift_card | default: false %}
+{% if item.properties._smgift != blank %}
+  {% assign isFreeProduct = true %}
+{% endif %}
+
+{% if item.variant.compare_at_price > item.variant.price %}
+    {%- assign saving = item.variant.compare_at_price | minus: item.variant.price | times: item.quantity -%}
+    {%- assign total_saving = saving | plus: total_saving -%}
+{% endif %}
+
+<div class="cart__item" data-cart-item data-line-id="{{ forloopIndex }}" data-variant-id="{{ item.id }}">
+    {% comment %} :: Image :: {% endcomment %}
+    <div class="one-third column medium-down--one-whole cart__item--image">
+      {% if item.product.type == 'Free_Gift' %}
+        <a href="#" style="pointer-events: none;color:black !important">
+          <div class="cart_page_image">
+            {%
+              render 'image-element',
+              image: item.image,
+              alt: item.title,
+              object_fit: settings.align_height,
+              max_height: settings.collection_height
+            %}
+          </div>
+          </a>
+        {% else %}
+        <a href="{{ item.url }}">
+          <div class="cart_page_image">
+            {%
+              render 'image-element',
+              image: item.image,
+              alt: item.title,
+              object_fit: settings.align_height,
+              max_height: settings.collection_height
+            %}
+          </div>
+          </a>
+      {% endif %}
+    </div>
+
+    {% comment %} :: Info : Start : {% endcomment %}
+    <div class="two-thirds columns medium-down--one-whole cart_content_info cart__item--content">
+        {% comment %} : Price : Start : Top : {% endcomment %}
+        <div class="cart_title_price">
+            <p class="cart__item--title ada-p">
+              {% if item.product.type == 'Free_Gift' %}
+                <a href="/" style="pointer-events: none;color:black !important">{{ item.product.title }}
+                {% else %}
+                <a href="{{ item.url }}">{{ item.product.title }}
+              {% endif %}
+                  <span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
+                  <span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>
+                </a>
+            </p>
+            {% comment %}
+            {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
+                <p class="meta">
+                  {% for option in item.product.options %}
+                    <span class="label">{{ option }}:</span> <span>{{ item.variant.options[forloop.index0] }}</span><br />
+                  {% endfor %}
+                </p>
+            {% endunless %}
+            {% endcomment %}
+
+            {% if item.selling_plan_allocation.selling_plan %}
+                <p class="meta">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+            {% endif %}
+
+            <p class="modal_price">
+                {% if item.price > 0 %}
+                  <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
+                    <span class="saso-cart-item-price" data-key="{{item.key}}">
+                      {% render 'price-element', price: item.final_price %}
+                    </span>
+                  </span>
+
+                  {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
+                    <span class="money was_price compare-at-price-value-added">
+                      {% render 'price-element', price: item.variant.compare_at_price %}
+                    </span>
+                  {% endif %}
+                {% else %}
+                  {{ settings.free_price_text }}
+                {% endif %}
+            </p>
+        </div>
+        {% comment %} : Price : End : {% endcomment %}
+
+        {% comment %} :: Line Item Properties :: {% endcomment %}
+        {% if item.properties %}
+          {% for p in item.properties %}
+            {% unless p.first.first == "_" %}
+            {% if p.last != blank and p.first != '_smgift' %}
+              <div class="line-item line-item-property" {% if is_gift_card %}title="{{ p.last }}"{% endif %}>
+                <span class="line-item-property-key">{{ p.first }}:</span> 
+                <span class="line-item-property-value">{{ p.last }}</span>
+              </div>
+            {% endif %}
+            {%endunless%}
+          {% endfor %}
+        {% endif %}
+
+        {% comment %} : Unit Price & Discount : {% endcomment %}
+        {% render 'unit-price',
+            item: item,
+            variant: item.variant,
+            product: item.product,
+            class: 'cart__item-unit-price'
+        %}
+
+        {% if item.line_level_discount_allocations.size > 0 %}
+            {% for discount_allocation in item.line_level_discount_allocations %}
+                <p class="meta cart__item--discount">
+                    <span class="label">{{ 'cart.general.discount' | t }}:</span>
+                    {{ discount_allocation.discount_application.title }} 
+                    (
+                    -
+                    <span class="">
+                        {% render 'price-element', price: discount_allocation.amount %}
+                    </span>
+                    )
+                </p>
+            {% endfor %}
+        {% endif %}
+
+        {% comment %} : Quantity : Bottom : {% endcomment %}
+        {% unless isFreeProduct %}
+        <div class="qty-remove-container">
+            {% comment %} : Quantity : {% endcomment %}
+            {% unless isFreeProduct %}
+            <div class="cart-qty-container">
+                <span class="ss-icon product-minus js-change-quantity" data-func="minus">
+                    <button type="button" class="icon-minus" aria-label="decrease quantity by 1" aria-controls="cart-sr-only">
+                        <span class="visually-hidden">decrease quantity by 1</span>
+                    </button>
+                </span>
+                <label for="updates_{{ item.id }}" class="visually-hidden">Quantity</label>   
+                <input 
+                type="number" 
+                min="0" 
+                size="2" 
+                class="quantity" 
+                name="updates[]" 
+                id="updates_{{ item.id }}" 
+                readonly="readonly"
+                value="{{ item.quantity }}" 
+                data-cart-quantity-input="cart-template" 
+                {% if settings.limit_quantity and item.variant.inventory_management != blank and item.variant.inventory_quantity > 0 and item.variant.inventory_policy == "deny" %}max="{{ item.variant.inventory_quantity }}" {% endif %} 
+                />
+                <span class="ss-icon product-plus js-change-quantity" data-func="plus">
+                    <button type="button" class="icon-plus" aria-label="increase quantity by 1" aria-controls="cart-sr-only">
+                        <span class="visually-hidden">increase quantity by 1</span>
+                    </button>
+                </span>
+            </div>
+            {% endunless %}
+            {% comment %} : Price Total : {% endcomment %}
+            <p class="price_total">
+                <strong>{{ 'cart.general.total' | t }}:</strong>
+    
+                {% if item.line_level_discount_allocations.size > 0 %}
+                  <span class="">
+                    <span class="saso-cart-item-line-price" data-key="{{item.key}}">
+                      {% render 'price-element', price: item.final_line_price %}
+                    </span>
+                  </span>
+                {% endif %}
+    
+                <span class="money {% if item.line_level_discount_allocations.size > 0 %}was_price{% endif %}">
+                  {% render 'price-element', price: item.original_line_price %}
+                </span>
+            </p>
+            {% comment %} : Item Remove : {% endcomment %}
+            {% unless isFreeProduct %}
+            <a 
+              href="{{ routes.cart_change_url }}?line={{ forloopIndex }}&amp;quantity=0" 
+              class="cart__remove-btn" 
+              role="button" 
+              data-line-id="{{ forloopIndex }}" 
+              data-remove-item="cart-template"
+              aria-label="remove product from the cart"> 
+                <span class="remove-text">{{ 'cart.general.remove' | t }}</span> 
+                <span class="remove-icon"></span>
+            </a>
+            {% endunless %}
+        </div>
+        {% endunless %}
+
+    </div>
+    {% comment %} :: Info : End : {% endcomment %}
+</div>

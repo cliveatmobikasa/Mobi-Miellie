@@ -1,0 +1,515 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "collection_breadcrumb": true,
+        "display_collection_title": false,
+        "align_height": false,
+        "collection_height": 200,
+        "collections_per_row": 3,
+        "pagination_limit": 18,
+        "toggle": false
+      }
+    },
+    "16581840813d1ffdd3": {
+      "type": "featured-text",
+      "settings": {
+        "title": "SHOP BY <span class=\"visually-hidden\">HAIR <\/span> <span>COLLECTION<\/span>",
+        "heading_type": "h1",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1664459600a4aabdae": {
+      "type": "image-text",
+      "blocks": {
+        "16644596008063e4f2-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230613-Mielle_StylizedPhotographyResize-RM_H_1_7d3b3632-f5c7-4742-b712-46fdbe731d68.jpg",
+            "image_crop": "none",
+            "title": "Rosemary Mint",
+            "adaDescriptiveText": "Shop Now Rosemary Mint Hair Collection",
+            "text": "<p>Infused with Biotin, this collection takes a roots-to-results approach by transforming weak, brittle strands to longer, stronger, healthier-looking hair and scalp.<\/p><p><strong>Key Benefits: <\/strong>Strengthens, Supports Longer & Healthier Hair, Scalp Health<\/p><p><strong>Made For All Hair Types<\/strong> <\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/collections\/rosemary-mint-hair-products",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "16644596008063e4f2-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230531-Mielle_StylizedPhotographyResize_PH-E_64909643-568e-4700-88c5-57ae4bba447a.jpg",
+            "image_crop": "none",
+            "title": "Pomegranate & Honey",
+            "adaDescriptiveText": "Shop Now Pomegranate & Honey Hair Collection",
+            "text": "<p>Formulated for thick, curly Type 4 hair, but is perfect for all curls and coils looking to achieve definition. This collection features our Prime + Define™ styling system which helps you acheive superior curl definition without compromising softness and manageability.<\/p><p><strong>Key Benefits: <\/strong>Curl Definition, Style & Hold, Detangling<\/p><p><strong>Made For Curly and Coily Hair<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/collections\/pomegranate-honey",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "95887c17-0a5b-41f6-b06f-7ffb3b57f087": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mango_tulsi_conditioner_group.jpg",
+            "image_crop": "none",
+            "title": "Mango & Tulsi",
+            "adaDescriptiveText": "Shop Now Mango And Tulsi Hair Collection",
+            "text": "<p>Excessive styling, use of heat tools, and low-quality products can weaken or even break hair, exposing an unhealthy and  compromised scalp. The fatty acids, vitamins, and antioxidants in this formula deliver vital nutrients that help to prevent breakage and moisturize dry hair and scalp - nourishing it back to health.<\/p><p><strong>Key Benefits:<\/strong> Restores & Balances Moisture in Scalp & Hair,  Replenishes key nutrients<\/p><p><\/p><p><strong>Made For Wavy and Curly Hair<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "shopify:\/\/collections\/mango-tulsi-hair-products",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "a1e253af-0f94-4dec-8daa-6102bda1f8b3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Essentials_400x_e5f812bf-21e3-4dbe-be09-00f2ef4fbfda.png",
+            "image_crop": "none",
+            "title": "Essentials",
+            "adaDescriptiveText": "Shop Now Hair Essentials collection",
+            "text": "<p>Made up of products with various natural ingredients, we lovingly call this collection Essentials because it's got something for everyone. It's also the very first collection of products launch under Mielle. Featuring ingredients like Babassu Oil, Honey & Ginger, Almond Oil, and Avocado Oil, these products deliver solutions for every day hair care needs.<\/p><p><strong>Key Benefits:<\/strong> Moisture, Made with Natural Ingredients<\/p><p><strong>Made For All Hair Types<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/mielleorganics.com\/collections\/hair-essentials",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "d11a6e54-de89-46ef-9d8d-bf49c9f57aac": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Moisture_Rx_400x_b762c5b8-f3b7-4568-ac71-879692a157f5.png",
+            "image_crop": "none",
+            "title": "Moisture RX Hawaiian Ginger",
+            "adaDescriptiveText": "Shop Now Moisture RX Hawaiian Ginger Hair Collection",
+            "text": "<p>Infused with ingredients such as Avocado and Ginger, this collection transforms dry, thirsty hair into shiny, hydrated, healthier hair. With natural ingredients like avocado, almond, and ginger oil, these products lock moisture in from root to tip.<\/p><p><strong>Key Benefits<\/strong>: Moisture, Anti-Breakage, Restores Shine<\/p><p><strong>Made For Curly and Coily Hair<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/mielleorganics.com\/collections\/hawaiian-ginger",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "cb778b0e-0d51-4a0e-a0f8-6dbf3a78f890": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mobile_banner_mongongo_oil_400x_d842b614-9a0a-4647-908c-436ed0aaddd6.png",
+            "image_crop": "none",
+            "title": "Mongongo Oil",
+            "adaDescriptiveText": "Shop Now Mangongo Oil Collection",
+            "text": "<p>Formulated with Intense Heat Defense™ and Curl Pattern Protection™, these products help shield the hair from damage as you create your favorite heat styles.<\/p><p><strong>Key Benefits:<\/strong> Protect from Heat Damage, Repair, Hydrate<\/p><p><strong> Made for All Hair Types<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/mielleorganics.com\/collections\/mongongo",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "f699c716-7b89-4663-b045-4e2fd5b8340d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_400x_d79748e5-16d6-4dfe-93be-fa6287b0bec9.png",
+            "image_crop": "none",
+            "title": "Oats & Honey",
+            "adaDescriptiveText": "Shop Now Oats & Honey Hair Collection",
+            "text": "<p>Created with soothing and scalp-loving ingredients like Oats and Honey, these products use a gentle formulation to care for even the most sensitive scalp. No sensitivity? No problem. This collection works great on everyone.<\/p><p><strong>Key Benefits<\/strong>: Gentle, Sensitive Scalp, Hydrate, Lightweight<\/p><p><strong>Made For All Hair Types<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/mielleorganics.com\/collections\/oats-honey",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "a9565d3f-ed25-409c-9f57-efd96e2675d2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230607-Mielle_StylizedPhotographyResize_A_1.jpg",
+            "image_crop": "none",
+            "title": "Rice Water",
+            "adaDescriptiveText": "Shop Now Rice Water Products for Natural Hair Collection",
+            "text": "<p>Gain length, strength and a pristine protective style with our Rice Water collection. These products were created to help combat split ends and breakage as well as ease the maintenance of protective styling.<\/p><p><strong>Key Benefits:<\/strong> Length Retention, Anti-Breakage, Protective Styling<\/p><p><strong>Made For All Hair Types & Braids<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/mielleorganics.com\/collections\/rice-water-hair-products",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "270fd413-1e24-4b86-aca2-00368ce035b3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230529-Mielle_StylizedPhotographyResize_SM-O_0a4ab8b9-7d6f-46e0-95a1-7d6ea7708263.jpg",
+            "image_crop": "none",
+            "title": "Sea Moss",
+            "adaDescriptiveText": "Shop Now Sea Moss Hair Collections",
+            "text": "<p>Formulated for individuals looking to maximize hair retention, this collection helps reduce excessive shedding due to breakage. The two powerhouse ingredients - Sea Moss and Saw Palmetto - in this collection act as \"superfood\" for the hair and scalp.<\/p><p><strong>Key Benefits:<\/strong> Hair Retention, Anti-Breakage, Lightweight<\/p><p><strong>Made For All Hair Types<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/mielleorganics.com\/collections\/sea-moss-anti-shedding",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "faa91e6e-6ad5-4f03-beff-b365f5eff096": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/13-min_52bfa0e9-b9fe-416b-84d1-d46ac0341cb6.jpg",
+            "image_crop": "none",
+            "title": "Avocado & Tamanu",
+            "adaDescriptiveText": "Shop Now Avocado & Tamanu Hair collection",
+            "text": "<p>Specially formulated to target frizz triggered by dryness and humidity, this line features products to achieve both curly and straight frizz-free styles. To up the cool factor, the <a href=\"https:\/\/mielleorganics.com\/collections\/avocado-tamanu\/products\/avocado-tamanu-leave-in-conditioner\" title=\"Avocado & Tamanu Leave-In Conditioner\">Leave-In Conditioner<\/a>, <a href=\"https:\/\/mielleorganics.com\/collections\/avocado-tamanu\/products\/avocado-tamanu-anti-frizz-curl-perfector\" title=\"Avocado & Tamanu Curl Perfector\">Curl Perfector<\/a>, and <a href=\"https:\/\/mielleorganics.com\/collections\/avocado-tamanu\/products\/avocado-tamanu-anti-frizz-stay-straight-serum\" title=\"Avocado & Tamanu Stay-Straight Serum\">Stay Straight Serum <\/a>feature our proprietary refrigerate-to-activate Cold Application Technology which naturally closes hair cuticles tightly in place.<\/p><p><strong>Key Benefits:<\/strong> Anti-Frizz, For Curly & Straight Styles, Shine<\/p><p><strong>Made For All Hair Types<\/strong><\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "Shop Now",
+            "button_style": "global-button--primary-desktop",
+            "link": "https:\/\/mielleorganics.com\/collections\/avocado-tamanu",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16644596008063e4f2-0",
+        "16644596008063e4f2-1",
+        "95887c17-0a5b-41f6-b06f-7ffb3b57f087",
+        "a1e253af-0f94-4dec-8daa-6102bda1f8b3",
+        "d11a6e54-de89-46ef-9d8d-bf49c9f57aac",
+        "cb778b0e-0d51-4a0e-a0f8-6dbf3a78f890",
+        "f699c716-7b89-4663-b045-4e2fd5b8340d",
+        "a9565d3f-ed25-409c-9f57-efd96e2675d2",
+        "270fd413-1e24-4b86-aca2-00368ce035b3",
+        "faa91e6e-6ad5-4f03-beff-b365f5eff096"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row",
+        "css_class": "collection-list-grid",
+        "custom_css": ".collection-list-grid{\npadding-bottom:88px;\n}\n.collection-list-grid img{\nborder-radius:30px;\n}\n.collection-list-grid .icon-box-row {\n    display: none;\n}"
+      }
+    },
+    "3d9e92ff-dda3-43ed-8bf3-feae9cd4babc": {
+      "type": "featured-text",
+      "settings": {
+        "title": "SHOP BY <font color=\"#EB1676\">HAIR TYPE<\/font>",
+        "heading_type": "h2",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "hair",
+        "custom_css": ".hair h2.rich-text__heading.title{\nmargin-bottom:10px;\n}"
+      }
+    },
+    "1fd8bea6-43a4-4146-99ec-17b9cdad9355": {
+      "type": "featured-promotions",
+      "blocks": {
+        "template--14576482254961__1fd8bea6-43a4-4146-99ec-17b9cdad9355-1680788973a58e4517-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair_Type_Coily_3a.jpg",
+            "link": "shopify:\/\/collections\/type-4-coily-hair-products",
+            "title": "coily",
+            "text": "<p>Products made for Type 4 Hair<\/p>",
+            "button_label": "Shop Coily"
+          }
+        },
+        "template--14576482254961__1fd8bea6-43a4-4146-99ec-17b9cdad9355-1680788973a58e4517-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair_Type_curly_3A_3_1600x_43e2a69d-b60f-4559-b4fc-a86e3c60e36a.jpg",
+            "link": "shopify:\/\/collections\/type-3-curly-hair-products",
+            "title": "curly",
+            "text": "<p>Products made for Type 3 hair<\/p>",
+            "button_label": "Shop Curly"
+          }
+        },
+        "template--14576482254961__1fd8bea6-43a4-4146-99ec-17b9cdad9355-1680788973a58e4517-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair_Type_Wavy_1000x1000_10f2c86c-ba41-4808-9c07-75b359690d82.jpg",
+            "link": "shopify:\/\/collections\/type-2-wavy-hair-products",
+            "title": "wavy",
+            "text": "<p>Products made for Type 2 hair<\/p>",
+            "button_label": "Shop Wavy"
+          }
+        },
+        "7bf02e48-b0f3-45c2-a611-1fd838b2a1ea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SilkPress_Model_1000x1000_v2_1.jpg",
+            "link": "https:\/\/mielleorganics.com\/collections\/hair-straightening-products",
+            "title": "straightend",
+            "text": "<p>Products to help straighten hair<\/p>",
+            "button_label": "Shop Straightened"
+          }
+        }
+      },
+      "block_order": [
+        "template--14576482254961__1fd8bea6-43a4-4146-99ec-17b9cdad9355-1680788973a58e4517-0",
+        "template--14576482254961__1fd8bea6-43a4-4146-99ec-17b9cdad9355-1680788973a58e4517-1",
+        "template--14576482254961__1fd8bea6-43a4-4146-99ec-17b9cdad9355-1680788973a58e4517-2",
+        "7bf02e48-b0f3-45c2-a611-1fd838b2a1ea"
+      ],
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 4,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "square",
+        "css_class": "hair-type featured-promotions-hair-type-module",
+        "custom_css": ".hair-type{max-width: 1280px;}\n.slick-next.slick-arrow{\nright:auto;\n}"
+      }
+    },
+    "1658185147505b871c": {
+      "type": "collection-list",
+      "blocks": {
+        "1658185147ccf70781-0": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "skin-care",
+            "image": "shopify:\/\/shop_images\/skincare_promo_mobile_400x_86b5a51e-c1d7-4991-a45c-769f679964d6.png"
+          }
+        },
+        "1658185147ccf70781-1": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "hair-growth-vitamins",
+            "image": "shopify:\/\/shop_images\/2_400x_ed788ff6-a556-466d-8642-452e8be78360.png"
+          }
+        },
+        "1658185147ccf70781-2": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "accessories",
+            "image": "shopify:\/\/shop_images\/accessories_copy_400x_6ff9eae0-02a8-48b1-9b10-f9ff84215653.jpg"
+          }
+        },
+        "4277d178-ca72-40ca-b36d-c84969b73af0": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "bundles",
+            "image": "shopify:\/\/shop_images\/MT_BundleBox_1000x1000_400x_c5b7db6c-4b6b-45b8-bd90-eac3363a43b5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1658185147ccf70781-0",
+        "1658185147ccf70781-1",
+        "1658185147ccf70781-2",
+        "4277d178-ca72-40ca-b36d-c84969b73af0"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "You May Also Like",
+        "align_height": false,
+        "collection_height": 200,
+        "frontpage_collections_per_row": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "ff73e950-6598-4fdd-a37e-62ac899d28e3": {
+      "type": "featured-promotions",
+      "blocks": {
+        "template--14576482254961__ff73e950-6598-4fdd-a37e-62ac899d28e3-1680788973a58e4517-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_34.png",
+            "link": "",
+            "title": "Vitamins",
+            "text": "<p>Promotion description details.<\/p>",
+            "button_label": ""
+          }
+        },
+        "template--14576482254961__ff73e950-6598-4fdd-a37e-62ac899d28e3-1680788973a58e4517-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_32.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/skin-care",
+            "title": "Skincare",
+            "text": "",
+            "button_label": ""
+          }
+        },
+        "template--14576482254961__ff73e950-6598-4fdd-a37e-62ac899d28e3-1680788973a58e4517-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_35.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/accessories",
+            "title": "Accessories",
+            "text": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14576482254961__ff73e950-6598-4fdd-a37e-62ac899d28e3-1680788973a58e4517-0",
+        "template--14576482254961__ff73e950-6598-4fdd-a37e-62ac899d28e3-1680788973a58e4517-1",
+        "template--14576482254961__ff73e950-6598-4fdd-a37e-62ac899d28e3-1680788973a58e4517-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 3,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "square",
+        "css_class": "vitamins",
+        "custom_css": ".vitamins{\nmax-width:1280px;\n}"
+      }
+    },
+    "a227a7c4-5ef5-4690-b4ae-eb1e8f6a5bc2": {
+      "type": "featured-text",
+      "settings": {
+        "title": "SHOP BY <font color=\"#EB1676\">HAIR STYLE<\/font>",
+        "heading_type": "h2",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "collection-hair-style",
+        "custom_css": "#collection-list- .rich-text__heading.title{\nmargin-bottom:10px\n}\n.collection-hair-style h2.rich-text__heading.title {\n\tmargin-bottom: 0;\n}"
+      }
+    },
+    "6f9e24b8-467f-402b-a04f-17eaf055ec43": {
+      "type": "featured-promotions",
+      "blocks": {
+        "template--14576482254961__6f9e24b8-467f-402b-a04f-17eaf055ec43-16824182066c8eb615-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wash_N_Go.png",
+            "mobile_image": "shopify:\/\/shop_images\/Wash_N_Go.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/for-wash-go-styles",
+            "title": "Wash-N-Go Styles",
+            "text": "<p>Perfect Your Wash-N-Go<\/p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "template--14576482254961__6f9e24b8-467f-402b-a04f-17eaf055ec43-16824182066c8eb615-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Twist_1.png",
+            "mobile_image": "shopify:\/\/shop_images\/Twist_1.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/flat-twists-2-strand-twist",
+            "title": "Twist Styles",
+            "text": "<p>Master the 2 strand twist<\/p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "template--14576482254961__6f9e24b8-467f-402b-a04f-17eaf055ec43-16824182066c8eb615-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Locs.png",
+            "mobile_image": "shopify:\/\/shop_images\/Locs.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/locs-starter-locs-maintenance",
+            "title": "Loc Styles",
+            "text": "<p>Start or maintain your locs<\/p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "e0f325d6-9e67-4ffc-8921-0002b864c0dc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Braids.png",
+            "mobile_image": "shopify:\/\/shop_images\/Braids.png",
+            "link": "https:\/\/mielleorganics.com\/collections\/braids-braid-outs",
+            "title": "Braids",
+            "text": "<p>Get Frizz-Free Braids<\/p>",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "template--14576482254961__6f9e24b8-467f-402b-a04f-17eaf055ec43-16824182066c8eb615-0",
+        "template--14576482254961__6f9e24b8-467f-402b-a04f-17eaf055ec43-16824182066c8eb615-1",
+        "template--14576482254961__6f9e24b8-467f-402b-a04f-17eaf055ec43-16824182066c8eb615-2",
+        "e0f325d6-9e67-4ffc-8921-0002b864c0dc"
+      ],
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 4,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "square",
+        "css_class": "shop-by-type-wr",
+        "custom_css": ".shop-by-type-wr {\n\tmargin-bottom: 0;\n}\n.slick-next.slick-arrow{\nright:auto;\n}"
+      }
+    },
+    "f8e15097-dcff-4a33-a699-cbadc8a652ff": {
+      "type": "collection-list-banner",
+      "disabled": true,
+      "settings": {
+        "collection_desktop_banner": "shopify:\/\/shop_images\/Bundles_Desktop.png",
+        "collection_mobile_banner": "shopify:\/\/shop_images\/Bundles_Mobile.png",
+        "collection_title": "<span style=\"color:#ffffff;\">20% OFF<\/span>",
+        "collection_subHeading": "<span style=\"color:#ffffff;\">Bundles & Sets<\/span>",
+        "Button_text": "Shop Now",
+        "button_aria_text": "Shop Now Bundles and Sets collection",
+        "Buttion_link": "https:\/\/mielleorganics.com\/collections\/bundles"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16581840813d1ffdd3",
+    "1664459600a4aabdae",
+    "3d9e92ff-dda3-43ed-8bf3-feae9cd4babc",
+    "1fd8bea6-43a4-4146-99ec-17b9cdad9355",
+    "1658185147505b871c",
+    "ff73e950-6598-4fdd-a37e-62ac899d28e3",
+    "a227a7c4-5ef5-4690-b4ae-eb1e8f6a5bc2",
+    "6f9e24b8-467f-402b-a04f-17eaf055ec43",
+    "f8e15097-dcff-4a33-a699-cbadc8a652ff"
+  ]
+}

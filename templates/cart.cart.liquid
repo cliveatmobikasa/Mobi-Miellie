@@ -1,0 +1,36 @@
+{% layout none %}
+
+{% liquid
+    assign continue_url = routes.all_products_collection_url
+  
+    if section.settings.continue_shopping_url != blank
+      assign continue_url = section.settings.continue_shopping_url
+    endif
+%}
+
+{% if cart.item_count == 0 %}
+    <div data-cart-empty>
+        {% render 'cart-empty', cart_count: cart.item_count, continue_url: continue_url %}
+    </div>
+{% else %}
+    {%- assign total_saving = 0 -%}
+    <div data-cart-items>
+        {% for item in cart.items %}
+            {% render 'cart-item', 
+                item: item,
+                total_saving: total_saving,
+                forloopIndex: forloop.index,
+                cart: cart, 
+                section: section
+            %}
+        {% endfor %}
+    </div>
+{% endif %}
+
+<div data-cart-summary>
+    {% render 'cart-summary', 
+        cart: cart,
+        continue_url: continue_url,
+        section: section,
+    %}
+</div>

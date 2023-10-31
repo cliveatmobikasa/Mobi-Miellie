@@ -1,0 +1,93 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-faq-template",
+      "blocks": {
+        "block-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mielle and P&G FAQs"
+          }
+        },
+        "block-2": {
+          "type": "Content",
+          "settings": {
+            "title": "What does “join P&G Beauty” mean?",
+            "subtitle": "<p>Mielle Organics will join the P&G Beauty family, pending regulatory approval. We will operate as an independent subsidiary of P&G.<\/p><p>The operation of Mielle will fundamentally be business as usual. Monique will remain the CEO and Melvin, the COO.<\/p>"
+          }
+        },
+        "block-3": {
+          "type": "Content",
+          "settings": {
+            "title": "Why did Mielle decide to do this? Why now?",
+            "subtitle": "<p>The Mielle brand was built on a mission to serve Black women with a high-performance product and natural ingredients. Our entire purpose has been to address need states with effective and innovative solutions, and to build a genuine and supportive community around the natural hair movement.<\/p><p>The response and success of the brand has been beyond our wildest dreams, and we want to ensure that we can continue to meet the consumer demand and to offer her best-in-class innovation. This new partnership will accelerate resourcing and reach to ensure that we never let her down in being able to find and access her products. It will also amplify our ability to invest in our community initiatives, including our Mielle Cares charity aimed at providing resources and support to advance education and economic opportunities in Black and Brown communities. <\/p>"
+          }
+        },
+        "block-4": {
+          "type": "Content",
+          "settings": {
+            "title": "Why P&G Beauty?",
+            "subtitle": "<p>From the moment we stepped into P&G, we saw a diverse team of leaders who share our values and vision for innovation, education and community empowerment, including several Black leaders who play a key role in hair care and the Beauty business. This partnership gives Mielle an opportunity to serve more Black women with the great products and formulas that our community loves, in addition to making an even greater impact in how we give back to the community.<\/p>"
+          }
+        },
+        "block-5": {
+          "type": "heading",
+          "settings": {
+            "heading": "General FAQs"
+          }
+        },
+        "block-6": {
+          "type": "Content",
+          "settings": {
+            "title": "What are your products made with?",
+            "subtitle": "<p>We have conveniently provided the ingredients for each product on our website. Please visit www.MielleOrganics.com, click shop and as you click on a product, you will notice a box underneath the product image and to the right of customer reviews. If you click on the 'Ingredients' tab, there you will find the list of product ingredients.<\/p>"
+          }
+        },
+        "block-7": {
+          "type": "Content",
+          "settings": {
+            "title": "How should my Mielle Organics hair care regimen change for the fall\/winter?",
+            "subtitle": "<p>Our products nourish the hair through all three phases of growth. We recommend that you keep the same regimen throughout the year.<\/p>"
+          }
+        },
+        "block-8": {
+          "type": "Content",
+          "settings": {
+            "title": "Which products will make my hair grow?",
+            "subtitle": "<p>Our adult formula vitamins and children’s gummies promote healthy hair growth from the inside out while our line of hair care products help you with moisture and length retention.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3",
+        "block-4",
+        "block-5",
+        "block-6",
+        "block-7",
+        "block-8"
+      ],
+      "settings": {
+        "wide_display": true,
+        "show_banner": true,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "pretext": "",
+        "title": "Page FAQ Template",
+        "subtitle": "<p>Create an amazing FAQ page with a full-width banner<\/p>",
+        "text_position": "center",
+        "text_align": "center",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,205 @@
+<div class="skeleton-main-container" style="display:block;">
+    <span class="visually-hidden" role="alert">Please wait content loading.</span>
+    <div class="skeleton-breadcrumb">
+    <div class="ske-pla w-2"></div>
+    <div class="ske-pla w-2"></div>
+    <hr>
+    </div>
+<div class="skeleton-title">
+    <div class="ske-pla w-2 h-2"></div>
+    <div class="ske-pla w-2 h-2"></div>
+</div>
+<div class="skeleton-container">
+    <div class="skeletop-left-container">
+        <div class="skeletop-left-container-heading">
+        <div class="ske-pla w-2"></div><br>
+        <div class="ske-pla w-5"></div><br><br><br>
+        {% for i in (1..6) %}
+        <div class="ske-pla w-8"></div><br><br>
+        {%endfor%}
+    </div>
+    </div>
+    <div class="skeleton-right-container">
+<div class="skeleton-featured-button">
+<div class="glow_effect ske-pla w-2 h-3"></div>
+</div>
+<div class="skeletop-card">
+{% for i in (1..12) %}
+<div class="wrapper glow_effect">
+    <div class="ske-pla w-10 h-5"></div>
+    <div class="ske-pla w-8"></div>
+    <div class="ske-pla w-4"></div>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+
+<style>
+    {% comment %}  {% endcomment %}
+    .ske-pla {
+        display: inline-block;
+        min-height: 1em;
+        vertical-align: middle;
+        cursor: wait;
+        background-color: #A9A9A9;
+        opacity: 0.5;
+        border-radius: 3px;
+      }
+      
+      .glow_effect .ske-pla {
+        animation: placeholder-glow 2s ease-in-out infinite;
+      }
+      
+      .wrapper {
+        max-width: 300px;
+      }
+      
+      .w {
+        min-width: 10%;
+      }
+      .w-2 {
+        min-width: 20%;
+      }
+      .w-3 {
+        min-width: 30%;
+      }
+      .w-4 {
+        min-width: 40%;
+      }
+      .w-5 {
+        min-width: 50%;
+      }
+      .w-6 {
+        min-width: 60%;
+      }
+      .w-8 {
+        min-width: 70%;
+      }
+      .w-8 {
+        min-width: 80%;
+      }
+      .w-9 {
+        min-width: 90%;
+      }
+      .w-10 {
+        min-width: 100%;
+      }
+      
+      .h-2 {
+        min-height: 1.5em;
+      }
+      .h-3 {
+        min-height: 3em;
+      }
+      .h-5 {
+        min-height: 200px;
+      }
+      
+      @keyframes placeholder-glow {
+        50% {
+          opacity: 0.2;
+        }
+      }
+      .skeletop-card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 30px;
+        grid-column-gap: 15px;
+    }
+    .wrapper.glow_effect {
+        width: 100%;
+        text-align:center;
+    }
+    .skeleton-featured-button{
+    text-align:right;
+    margin-bottom:40px;
+    }
+    .skeleton-featured-button div{
+    border-radius:60px;
+    animation: placeholder-glow 2s ease-in-out infinite;
+    }
+    .skeleton-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .skeletop-left-container {
+        width: 20%;
+    }
+    .skeleton-right-container{
+    width:75%;
+    }
+    .skeletop-left-container-heading{
+    text-align:right;
+    }
+    .skeleton-title{
+        text-align: center;
+        width: 40%;
+        margin: auto;
+        margin-bottom: 40px;
+        margin-top:40px;
+    }
+    .skeleton-title div{
+    padding:15px 0;
+    animation: placeholder-glow 2s ease-in-out infinite;
+    }
+    .skeletop-left-container .w-8{
+    padding:15px 0;
+    }
+    .skeleton-main-container{
+    display:none;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 10px;
+    }
+    .skeleton-breadcrumb{
+        border-bottom: 1px solid #D3D3D3;
+        padding-left: 80px;
+    }
+    .skeleton-breadcrumb .ske-pla{
+    min-width:80px;
+    animation: placeholder-glow 2s ease-in-out infinite;
+    }
+    .skeletop-left-container-heading div{
+        animation: placeholder-glow 2s ease-in-out infinite;
+    }
+    @media screen and (max-width:767px){
+        .skeleton-right-container {
+            width: 100%;
+        }
+        .skeletop-left-container {
+            display: none;
+        }
+        .skeleton-featured-button {
+            display:none;
+        }
+        .skeleton-title div {
+            padding: 15px 45px;
+        }
+        .skeletop-card {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 0px;
+        }
+        .wrapper.glow_effect {
+            width: 100%;
+            padding-inline: 10px;
+        }
+        .skeleton-title {
+            display: flex;
+            justify-content: center;
+            gap:10px;
+        }
+        .skeleton-title .ske-pla{
+            width: 60%;
+        }
+        .skeleton-breadcrumb {
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        .skeleton-breadcrumb .ske-pla{
+            min-width:50px;
+            }
+    }
+      {% comment %}  {% endcomment %}
+</style>

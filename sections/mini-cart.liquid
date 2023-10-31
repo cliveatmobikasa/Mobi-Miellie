@@ -1,0 +1,11 @@
+{% render 'side-cart', is_view_request: true %}
+<script data-cartjson type="application/json">
+    {{- cart | json -}}
+</script>
+
+{% schema %}
+{
+    "name": "Mini cart",
+    "settings": []
+}
+{% endschema %}

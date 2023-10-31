@@ -1,0 +1,77 @@
+<div class="product-characteristics-container">
+    {% for i in (1..3) %}
+        {% liquid 
+            assign image_id = "image_" | append: forloop.index
+            assign title_id = "title_" | append: forloop.index
+            assign desc_id = "copy_" | append: forloop.index
+        %}
+
+        {% unless block.settings[image_id] == blank %}
+            <div class="product-characteristics-block">
+                {{ block.settings[image_id] | image_url: width: 1500 | image_tag }}
+                <div class="product-characteristics-text">
+                    <h2>{{ block.settings[title_id] }}</h2>
+                    <p>{{ block.settings[desc_id] }}</p>
+                </div>
+            </div>
+        {% endunless %}
+    {% endfor %}
+</div>
+  
+<style>
+    .product-characteristics-container{
+      display:flex;
+      max-width: 1280px;
+      margin: auto;
+      column-gap: calc(100vw*62/1440);
+      padding: calc(100vw*75/1440) 0;
+      width: 95%;
+    }
+    .product-characteristics-block{
+      display:flex;
+      width:auto;
+    }
+    .product-characteristics-block img{
+      width: calc(100vw*120/1440);
+      height: fit-content;
+      align-self: center;
+    }
+    .product-characteristics-text{
+      align-self: center;
+      margin-left: calc(100vw*30/1440);
+    }
+    .product-characteristics-text h2{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      color: #17130F;
+      font-family: Futura,sans-serif;
+      margin: 10px 0;
+    }
+    .product-characteristics-text p{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.04em;
+      color: #17130F;
+      font-family: Futura,sans-serif;
+    }
+    @media screen and (max-width:768px){
+      .product-characteristics-text p{
+        display:none;
+      }
+      .product-characteristics-text h2{
+        font-size: 12px !important;
+        line-height: 14px !important;
+      }
+      .product-characteristics-container{
+        margin-top: 2rem;
+      }
+      .product-characteristics-block img{
+        width: calc(100vw*43/375) !important;
+      }
+    }
+</style>

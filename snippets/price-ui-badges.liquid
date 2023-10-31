@@ -1,0 +1,141 @@
+{% if settings.sale_banner_enabled %}
+  <div class="price-ui-badges price-ui-badges--{{ settings.sticker_style }} {% if is_pdp_page %} price-ui-badge__sticker_pdp{% endif %}">
+    {% comment %}Inject @pixelunion/shopify-price-ui/price-ui-badge begin{% endcomment %}
+    {%- assign locale_badge_sold_out = 'product.badge.sold_out' | t -%}
+    {% assign badge = '' %}
+    {%- for tag in product.tags -%}
+      {%- if tag contains 'product-grid_Exclusive' -%}
+        {% assign badge = 'Exclusive' %}
+        {%- break  -%}
+      {%- elsif tag contains 'product-grid_Best Seller' -%}
+        {% assign badge = 'Best Seller' %}
+      {%- break  -%}
+      {%- elsif tag contains 'product-grid_New' -%}
+        {% assign badge = 'New' %}
+      {%- break  -%}
+      {%- elsif tag contains 'product-grid_15% Off' -%}
+        {% assign badge = '15% Off' %}
+        {%- break  -%}
+      {%- elsif tag contains 'product-grid_20% Off' -%}
+        {% assign badge = '20% Off' %}
+        {%- break  -%}
+      {%- elsif tag contains 'product-grid_30% Off' -%}
+        {% assign badge = '30% Off' %}
+        {%- break  -%}
+      {%- elsif tag contains 'product-grid_40% Off' -%}
+        {% assign badge = '40% Off' %}
+        {%- break  -%}
+      {%- elsif tag contains 'product-grid_Award Winner' -%}
+        {% assign badge = 'Award Winner' %}
+        {%- break  -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+   
+    <div class="price-ui-badge price-ui-badge--loading {% if bundle %} bundle{% endif %}" {% if badge == '' %}data-price-ui-badge {% endif %}>
+      <noscript>
+        <style>
+          .price-ui-badge--loading {
+            display: block !important;
+            opacity: 1 !important;
+          }
+        </style>
+      </noscript>
+
+      {% assign sold_out = false %}
+  
+      {% if product.available == false %}
+        {% assign sold_out = true %}
+        {%-
+          render 'price-ui-templates',
+          template: 'price-ui-badge',
+          badge: locale_badge_sold_out,
+        -%}
+      {%- endif -%}
+    </div>
+
+    
+      <!--  CUSTOM -->
+    
+    {%- if template contains 'collection' or template contains 'search' or template contains 'index' -%}
+      
+
+        {%- if badge != '' and sold_out == false -%}
+          {% assign badge_class = 'price-ui-badge--pink' %}
+          {%- assign badge_title = badge | strip | downcase -%}
+          {%- if badge_title == 'new' -%}
+            {% assign badge_class = 'price-ui-badge--green' %}
+          {%- endif -%}
+          <div class="price-ui-badge price-ui-badge--custom {{badge_class}}">
+            <div class="price-ui-badge__sticker custom-badge">
+              <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+            </div>
+          </div>
+  
+        {%- endif -%}
+
+      {%- else -%}
+        {%- for tag in product.tags -%}
+          {%- if tag contains 'product-grid_Exclusive' -%}
+            {% assign badge = 'Exclusive' %}
+            <div class="price-ui-badge price-ui-badge--custom price-ui-badge--pink">
+              <div class="price-ui-badge__sticker custom-badge">
+                <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+              </div>
+            </div>
+          {%- elsif tag contains 'product-grid_Best Seller' -%}
+            {% assign badge = 'Best Seller' %}
+            <div class="price-ui-badge price-ui-badge--custom price-ui-badge--pink">
+              <div class="price-ui-badge__sticker custom-badge">
+                <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+              </div>
+            </div>
+          {%- elsif tag contains 'product-grid_New' -%}
+            {% assign badge = 'New' %}
+            <div class="price-ui-badge price-ui-badge--custom price-ui-badge--green">
+              <div class="price-ui-badge__sticker custom-badge">
+                <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+              </div>
+            </div>
+          {%- elsif tag contains 'product-grid_15% Off' -%}
+            {% assign badge = '15% Off' %}
+            <div class="price-ui-badge price-ui-badge--custom price-ui-badge--pink">
+              <div class="price-ui-badge__sticker custom-badge">
+                <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+              </div>
+            </div>
+          {%- elsif tag contains 'product-grid_20% Off' -%}
+            {% assign badge = '20% Off' %}
+            <div class="price-ui-badge price-ui-badge--custom price-ui-badge--pink">
+              <div class="price-ui-badge__sticker custom-badge">
+                <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+              </div>
+            </div>
+          {%- elsif tag contains 'product-grid_30% Off' -%}
+            {% assign badge = '30% Off' %}
+            <div class="price-ui-badge price-ui-badge--custom price-ui-badge--pink">
+              <div class="price-ui-badge__sticker custom-badge">
+                <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+              </div>
+            </div>
+          {%- elsif tag contains 'product-grid_40% Off' -%}
+            {% assign badge = '40% Off' %}
+            <div class="price-ui-badge price-ui-badge--custom price-ui-badge--pink">
+              <div class="price-ui-badge__sticker custom-badge">
+                <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+              </div>
+            </div>
+          {%- elsif tag contains 'product-grid_Award Winner' -%}
+            {% assign badge = 'Award Winner' %}
+            <div class="price-ui-badge price-ui-badge--custom price-ui-badge--pink">
+              <div class="price-ui-badge__sticker custom-badge">
+                <span class="price-ui-badge__sticker-text price-ui-badge__sticker-text--pre-order">{{ badge }}</span>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+    
+      {%- endif -%}
+
+  </div>
+{% endif %}

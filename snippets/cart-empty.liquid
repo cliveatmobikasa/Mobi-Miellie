@@ -1,0 +1,35 @@
+{% if cart_count == 0 %}
+<div
+    class="
+      three-eighths
+      columns
+      medium-down--one-whole
+      offset-by-five
+      is-hidden-offset-mobile-only
+    "
+  >
+    <p class="quote">
+      {{ 'cart.general.continue_browsing_html' | t }}
+    </p>
+    <a
+      class="
+        cart__continue-shopping
+        global-button
+        global-button--text
+      "
+      href="{{ continue_url }}" 
+    >
+      {{ 'cart.general.continue_shopping' | t }}
+    </a>
+</div>
+{% endif %}
+
+{% comment %} :::: {% endcomment %}
+{% if cart_count > 0 %}
+    <div class="three-eighths columns medium-down--one-whole offset-by-five is-hidden-offset-mobile-only hidden js-empty-cart__message">
+        <p class="quote" role="alert" aria-live="assertive">{{ 'cart.general.continue_browsing_html' | t }}</p>
+        <a class="cart__continue-shopping global-button global-button--text" href="{{ continue_url }}">
+          {{ 'cart.general.continue_shopping' | t }}
+        </a>
+    </div>
+{% endif %}

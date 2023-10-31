@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "main": {
+      "type": "404-template",
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": "",
+        "embed_script": "Embed script..."
+      }
+    },
+    "notfound-nosto-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "notfound-nosto-1"
+      }
+    },
+    "notfound-nosto-2": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "notfound-nosto-2"
+      }
+    },
+    "notfound-nosto-3": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "notfound-nosto-3"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter",
+    "notfound-nosto-1",
+    "notfound-nosto-2",
+    "notfound-nosto-3"
+  ]
+}

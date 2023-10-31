@@ -1,0 +1,401 @@
+<style>
+    :root {
+        --search-container: 1420px;
+    }
+    .scroller::-webkit-scrollbar {
+        width: 5px;
+    }
+    .scroller::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    .scroller::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+    .scroller::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+    header-search {
+        width: 100%;
+    }
+    [data-ajax-search] .loading-overlay__spinner {
+        position: absolute;
+        right: 8px;
+        top: calc(50%);
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 1.2rem;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    [data-ajax-search] form[data-loading] .loading-overlay__spinner {
+        display: block;
+    }
+    [data-ajax-search] form[data-loading] .search-ic {
+        display: none;
+    }
+    [data-ajax-search] .loading-overlay__spinner .spinner {
+        animation: spinRotator 1.4s linear infinite;
+        /* stroke: #000; */
+    }
+    [data-ajax-search] .loading-overlay__spinner .spinner .path {
+        stroke-dasharray: 280;
+        stroke-dashoffset: 0;
+        transform-origin: center;
+        stroke: rgb(18,18,18);
+        animation: dash 1.4s ease-in-out infinite;
+    }
+    .header-search__form {
+        padding: 20px 0px;
+        position: relative;
+    }
+    .header-search__form .search-ic, .header-search__form .loading-overlay__spinner {
+        position: absolute;
+        top: 45%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor:pointer;
+    }
+    .header-search__form .header-search__input {
+        border: 1px solid #5C575C;
+        height: 60px;
+        border-radius: 60px;
+        padding-left: 30px;
+        padding-right: 60px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.06em;
+        color: #17130F;
+        box-sizing: inherit;
+    }
+    .header-search__form .header-search__input::placeholder {
+        color: #858585;
+    }
+    .header-seach-wrap {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        background: #ffffff;
+        z-index: 9999;
+        padding: 10px 80px;
+        border-top: 1px solid #D3D3D3;
+    }
+    
+    .search-active .header-seach-wrap {
+        display: block;
+    }
+    .search-active .smile-launcher-frame {
+        display: none;
+    }
+    .overflow-hidden {
+        overflow: hidden;
+    }
+    header-search[data-result="false"] [data-result-row],
+    header-search[data-result="true"] [data-noresult-row]
+    {
+        display: none;
+    }
+    header-search[open] [data-ajax-search-results],
+    header-search[data-result="true"] [data-result-row],
+    header-search[data-result="false"] [data-noresult-row],
+    header-search[data-empty] [data-noresult-block] {
+        display: block;
+    }
+    .search-result-col-main-row .search-result-col-row {
+        padding-bottom: 30px;
+    }
+    .search-result-col-header .col--header {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.06em;
+        font-weight: 500;
+        padding:10px 0;
+    }
+    [data-list-trending-searches] ul, [data-list-collections] ul, [data-list-blogs] ul {
+        list-style: none;
+        padding: 0px;
+    }
+    [data-list-trending-searches] ul li a, [data-list-collections] ul li a, [data-list-blogs] ul li a {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.04em;
+        text-decoration-line: underline;
+        color: #17130F;
+    }
+    [data-list-trending-searches] ul li a:hover, [data-list-collections] ul li a:hover, [data-list-blogs] ul li a:hover {
+        color : #d9055f;
+    }
+    .header-search-scroller {
+        height: 400px;
+        overflow-y: auto;
+        margin-top: 30px;
+    }
+    .header-search-right .header-result-all {
+        font-size: 14px;
+        padding: 10px 10px;
+        line-height: 17px;
+        text-decoration: underline;
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+    }
+    header-search[data-result="false"] .header-search-right .header-result-all[data-noresult-row] {
+        display: inline-block !important;
+    }
+    header-search[data-result="true"] .header-search-right .header-result-all[data-result-row] {
+        display: inline-block !important;
+    }
+    .search-tab-title-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0 30px;
+        border-top: 1px solid #D3D3D3;
+    }
+    .search-header-tab {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.06em;
+        background: #ffffff;
+        border: 1px solid #D3D3D3;
+        padding: 10px 20px;
+    }
+    .search-header-tab[aria-selected="true"] {
+        color: #D9055F;
+        border: 1px solid #D9055F;
+    }
+    
+    .header-search-scroller .product-details .title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .header-search-right .search-result-col-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .snize-ac-results {
+        display: none !important;
+    }
+    .container.search-page-container {
+        align-items: baseline;
+    }
+    .search-result-products{
+    margin-top:0;
+    }
+    .search-result-products .column{
+        margin-left: 0;
+    }
+
+    @keyframes dash {
+        0% {
+          stroke-dashoffset: 280;
+        }
+        50% {
+          stroke-dashoffset: 75;
+          transform: rotate(135deg);
+        }
+        100% {
+          stroke-dashoffset: 280;
+          transform: rotate(450deg);
+        }
+    }
+
+    @keyframes spinRotator {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(270deg);
+        }
+    }
+
+    @media (max-width: 1079px) {
+        .header-seach-wrap {
+            padding: 20px 20px 120px;
+        }
+        .header-search__form .header-search__input {
+            height: 40px;
+            font-size: 12px;
+            line-height: 14px;
+            padding-left: 20px;
+            padding-right: 40px;
+        }
+        .header-search__form {
+            padding: 0px;
+        }
+        .header-search__form .search-ic, .header-search__form .loading-overlay__spinner {
+            top : 55%;
+        }
+        .header-search__form .search-ic svg {
+            width: 20px;
+        }
+
+        header-search[data-result="true"] .header-search-left.is-hidden {
+            display: block !important;
+        }
+    }
+    
+
+    @media (min-width: 799px) {
+        .header-search-scroller .product-list .column.thumbnail .purchase-details__buttons .add_to_cart {
+            opacity: 0;
+        }
+        .header-search-scroller .product-list .column.thumbnail:hover .purchase-details__buttons .add_to_cart, .header-search-scroller .product-list .column.thumbnail .purchase-details__buttons .add_to_cart:focus {
+            opacity: 1;
+        }
+        .header-search-scroller .product-list .column.thumbnail:hover {
+            background: #FFFFFF;
+            box-shadow: 0 4px 14px #0000001a;
+            border-radius: 6px;
+        }
+    }
+
+    @media (max-width: 798px) {
+        header-search[data-result="true"] [data-noresult-row].hidden-ipadup {
+            display: none !important;
+        }
+
+        header-search[data-result="false"] [data-result-row].hidden-ipadup {
+            display: none !important;
+        }
+
+        .header-search-right .header-result-all {
+            padding: 10px;
+        }
+        .search-result-col-header .col--header{
+            font-size: 12px;
+        }
+        .header-search-right .header-result-all{
+        font-size:12px;
+        }
+    }
+
+</style>
+
+{% assign dsr_list_items = settings.dsr_list_items | strip | split: ';' | compact %}
+{% assign dsr_products = settings.dsr_collection.products %}
+
+    <header-search data-result="false" role="search">
+        <div class="one-whole column">
+            {% render 'search-bar' %}
+            <span class="visually-hidden" id="header-search-sr-only" role="region" aria-live="polite" data-aria-live="" aria-label="Site Search"></span>
+        </div>
+
+        <div class="one-whole column hidden-ipadup" data-noresult-row>
+            <div class="search-tab-title-wrapper automatic" role="tablist">
+                <button id="search-tab-trending" class="search-header-tab" type="button" role="tab" aria-selected="true" aria-controls="search-tabpanel-trending" tabindex="0">
+                    <span class="focus">Trending Products</span>
+                </button>
+                <button id="search-tab-searches" class="search-header-tab" type="button" role="tab" aria-selected="false" aria-controls="search-tabpanel-searches" tabindex="-1">
+                    <span class="focus">{{- settings.dsr_list_title -}}</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="one-whole column" data-noresult-row>
+            <div class="container search-page-container">
+                <div id="search-tabpanel-searches" class="header-search-left one-fourth column medium-down--one-whole">
+                    <div class="search-result-col-main-row">
+                        <div class="search-result-col-row" data-view-desktop>
+                            <div class="search-result-col-header">
+                                <div role="heading" aria-level="2" class="col--header">{{- settings.dsr_list_title -}}</div>
+                            </div>
+                            <div data-list-trending-searches>
+                                <ul role="list">
+                                    {% for item in dsr_list_items %}
+                                        <li role="listitem"><a href="/search?q={{- item | url_encode -}}*">{{- item -}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="search-tabpanel-trending" class="header-search-right three-fourths column medium-down--one-whole">
+                    <div class="search-result-col-row">
+                        <div class="search-result-col-header">
+                            <div role="heading" aria-level="2" class="col--header">Trending Products</div>
+                            <a href="{{ settings.dsr_collection.url }}" class="header-result-all" aria-label="View all products">View All</a>
+                        </div>
+                        <div class="default-products header-search-scroller scroller">
+                            <div class="one-whole column">
+                                {%
+                                    render 'product-loop',
+                                    limit: 8,
+                                    products: settings.dsr_collection.products,
+                                    collection: settings.dsr_collection,
+                                    skip_product: nil,
+                                    products_per_row: 4,
+                                    hide_atc_method:true
+                                %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="one-whole column hidden-ipadup" data-result-row>
+            <div class="search-tab-title-wrapper automatic" role="tablist">
+                <button id="search-tab-products" class="search-header-tab" type="button" role="tab" aria-selected="true" aria-controls="search-tabpanel-products" tabindex="0">
+                    <span class="focus">Products</span>
+                </button>
+                <button id="search-tab-collections" class="search-header-tab" type="button" role="tab" aria-selected="false" aria-controls="search-tabpanel-collections" tabindex="-1" style="display:none;">
+                    <span class="focus">Collections</span>
+                </button>
+                <button id="search-tab-blogs" class="search-header-tab" type="button" role="tab" aria-selected="false" aria-controls="search-tabpanel-blogs" tabindex="-1">
+                    <span class="focus">Blogs</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="one-whole column" data-result-row>
+            <div class="container">
+                <div class="header-search-left one-fourth column medium-down--one-whole">
+                    <div class="search-result-col-main-row">
+                        <div id="search-tabpanel-collections" class="search-result-col-row">
+                            <div class="search-result-col-header">
+                                <div role="heading" aria-level="2" class="col--header">Collections</div>
+                            </div>
+                            <div data-list-collections></div>
+                        </div>
+                        <div id="search-tabpanel-blogs" class="search-result-col-row">
+                            <div class="search-result-col-header">
+                                <div  role="heading" aria-level="2" class="col--header">Blogs</div>
+                            </div>
+                            <div data-list-blogs></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="search-tabpanel-products" class="header-search-right three-fourths column medium-down--one-whole">
+                    <div class="search-result-col-row">
+                        <div class="search-result-col-header">
+                            <div role="heading" aria-level="2" class="col--header">Search Results</div>
+                            <a href="#" class="header-result-all search-result-count-btn">View</a>
+                        </div>
+                        <div class="search-result-products header-search-scroller scroller">
+                            <div class="one-whole column search-result-data">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header-search>

@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "searchpage-nosto-1": {
+      "type": "nosto-placement",
+      "settings": {
+        "placement": "searchpage-nosto-1"
+      }
+    },
+    "c62dc9c3-76ac-49ac-806a-25c47c90e2c8": {
+      "type": "search-result",
+      "settings": {
+        "no_result_msg": "No products found, Please check back later",
+        "title": "Trending Products",
+        "view_All_url": "shopify:\/\/collections\/all",
+        "collection": "hair-care-products"
+      }
+    },
+    "main": {
+      "type": "search-template",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "search_breadcrumb": true,
+        "search_term": "Search...",
+        "products_per_row": 4,
+        "pagination_limit": 48,
+        "blog_author": false,
+        "read_more_link": true,
+        "blog_date": true,
+        "toggle": false
+      }
+    },
+    "searchpage-nosto-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "searchpage-nosto-2"
+      }
+    },
+    "searchpage-nosto-dynamic-1": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "searchpage-nosto-dynamic-1"
+      }
+    },
+    "searchpage-nosto-dynamic-2": {
+      "type": "nosto-placement",
+      "disabled": true,
+      "settings": {
+        "placement": "searchpage-nosto-dynamic-2"
+      }
+    },
+    "4051ea7c-a326-4195-83bf-86929e47fcdf": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Recently <font color=\"#EB1676\">viewed <\/font>",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "searchpage-nosto-1",
+    "c62dc9c3-76ac-49ac-806a-25c47c90e2c8",
+    "main",
+    "searchpage-nosto-2",
+    "searchpage-nosto-dynamic-1",
+    "searchpage-nosto-dynamic-2",
+    "4051ea7c-a326-4195-83bf-86929e47fcdf"
+  ]
+}

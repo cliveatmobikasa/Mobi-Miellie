@@ -1,0 +1,4 @@
+<div class="icartShopifyCartContent{% if template.name contains 'collection' %} collection-temp{% endif %}"   {% if template.name contains 'list-collections' %}id="collection-list-{{list-collection.id}}"{% endif %}>
+{{ content_for_layout }}
+</div>
+<style>.icartShopifyCartContent{width: 100%;}</style>

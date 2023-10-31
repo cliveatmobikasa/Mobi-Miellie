@@ -1,0 +1,331 @@
+{
+  "sections": {
+    "e18fd546-d72a-4172-9bfc-a01f5fd4326b": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/Press_1800x320_1.png",
+        "pretext": "",
+        "title": "PRESS",
+        "subtitle": "<p>CONTACT US DIRECTLY:<\/p><p><strong> media@mielleorganics.com<\/strong><\/p>",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "right",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify:\/\/shop_images\/Press_840x840_1.png",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page-sidebar-template",
+      "disabled": true,
+      "blocks": {
+        "9701cef3-9287-446d-bcd4-c7e5fdf90737": {
+          "type": "recently_viewed",
+          "settings": {
+            "sidebar_rv_title": "Recently Viewed",
+            "sidebar_rv_per": 3
+          }
+        }
+      },
+      "block_order": [
+        "9701cef3-9287-446d-bcd4-c7e5fdf90737"
+      ],
+      "settings": {
+        "toggle": false
+      }
+    },
+    "f0f6e4ee-7c4a-4d47-b718-dc7ed2a80916": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Featured Press",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "cad2355b-7cbb-4728-bfb7-a2b25f20ee5c": {
+      "type": "featured-promotions",
+      "blocks": {
+        "5c94841b-56ea-49bb-9429-c889197c2160": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "shopify:\/\/pages\/mielle-x-p-g-press-release",
+            "title": "Press Release",
+            "text": "<p><strong>January 2023<\/strong><\/p><p>Mielle Organics Joins P&G Beauty In A Major Move For Black Entrepreneurs Serving Black Women <\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "6ea75834-237f-405a-a552-44d2bda154de": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.essence.com\/beauty\/mielle-organics-pg-beauty-join-forces\/",
+            "title": "Essence",
+            "text": "<p><strong>January 2023<\/strong><\/p><p>Mielle Organics And P&G Beauty Join Forces With Historic Partnership<\/p><p><em>Featuring Monique Rodriguez, Mielle CEO<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "de498ba3-9ce1-48db-b6b3-2054d4202f04": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/archive.ph\/IrpkO",
+            "title": "WWD",
+            "text": "<p><strong>January 2023<\/strong><\/p><p>P&G Beauty Acquires Mielle Organics<\/p><p><em>Featuring Monique Rodriguez, Mielle CEO<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "template--14554149224561__cad2355b-7cbb-4728-bfb7-a2b25f20ee5c-16733095433a089b93-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.glamour.com\/story\/natural-hair-masks",
+            "title": "Glamour",
+            "text": "<p><em><strong>January 2023<\/strong><\/em><\/p><p>The Best Natural Hair Masks, According to the Pros<\/p><p><em>Featured Product: Rosemary Mint Strengthening Hair Mask<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "template--14554149224561__cad2355b-7cbb-4728-bfb7-a2b25f20ee5c-16733095433a089b93-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.byrdie.com\/best-heat-protectants-for-hair-4588775#toc-best-for-curly-hair-mielle-organics-mongongo-oil-thermal--heat-protectant-spray",
+            "title": "Byrdie",
+            "text": "<p><strong>January 2023<\/strong><\/p><p>The 13 Best Heat Protectants for Hair in 2023<\/p><p><em>Featured Product: Mielle Organics Mongongo Oil Thermal & Heat Protectant Spray<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "template--14554149224561__cad2355b-7cbb-4728-bfb7-a2b25f20ee5c-16733095433a089b93-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.inc.com\/xintian-tina-wang\/this-entrepreneur-started-her-hair-care-brand-in-kitchen-now-multi-million-company-sells-in-87-countries.html",
+            "title": "Inc.",
+            "text": "<p><strong>December 2022<\/strong><\/p><p>This Entrepreneur Started Her Hair Care Brand in the Kitchen. Now She Sells Products in 87 Countries.<\/p><p><em>Featuring Monique Rodriguez, Mielle CEO<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "d346ebb2-8200-4258-a191-a8b6a1ad18a0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.elle.com\/beauty\/hair\/g42349591\/best-curly-hair-products\/",
+            "title": "ELLE",
+            "text": "<p><strong>December 2022<\/strong><\/p><p>25 Hair Products You ﻿Need To Revive Your Curls<\/p><p><em>Featured Product: Rosemary Mint Strengthening Hair Masque<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "6dd96200-d1c8-488c-884a-285f226dbb4b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.cnbc.com\/2022\/12\/28\/self-made-millionaire-success-isnt-owned-its-rented-and-rent-is-due-every-day.html",
+            "title": "CNBC",
+            "text": "<p><strong>December 2022<\/strong><\/p><p>39-year-old millionaire on the best advice she received: ‘Success isn’t owned, it’s rented. And rent is due every day’<\/p><p><em>Featuring Monique Rodriguez, Mielle CEO<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "5283acb1-df64-4461-95bb-3559302810cb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/rollingout.com\/2022\/12\/27\/mielle-organics-ceo-monique-rodriguez-is-breaking-barriers-in-the-beauty-world\/",
+            "title": "Rolling Out",
+            "text": "<p><strong>December 2022<\/strong><\/p><p>Mielle Organics CEO Monique Rodriguez is breaking barriers in the beauty world<\/p><p><em>Featuring Monique Rodriguez, Mielle CEO<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "cc6cafb7-2e42-4150-b26d-9b5ed8bf21ec": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/madamenoire.com\/melanin-awards\/",
+            "title": "Madam Noire",
+            "text": "<p><strong>November 2022<\/strong><\/p><p>2022 Melanin Awards - Best Scalp Oil in Hair Category<\/p><p><em>Featured Product: Rosemary Mint Scalp & Hair Strengthening Oil<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "07c32024-e2a7-4387-8473-a4ca5502dba7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.marieclaire.com\/beauty\/hair\/news\/g5006\/best-natural-hair-products\/",
+            "title": "Marie Claire",
+            "text": "<p><strong>Novemeber 2022<\/strong><\/p><p>The 18 Best Natural Hair Products in 2023<\/p><p><em>Featured Product: Oats & Honey Soothing Shampoo<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "b29a67d8-1a8f-4a20-b8e0-411109040041": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.instyle.com\/mielle-rosemary-mint-strengthening-edge-gel-review-6825876",
+            "title": "InStyle",
+            "text": "<p><strong>November 2022<\/strong><\/p><p>This $7 Edge Control Is Actually Good For Your Hair<\/p><p><em>Featured Product: Rosemary Mint Strengthening Edge Gel<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        }
+      },
+      "block_order": [
+        "5c94841b-56ea-49bb-9429-c889197c2160",
+        "6ea75834-237f-405a-a552-44d2bda154de",
+        "de498ba3-9ce1-48db-b6b3-2054d4202f04",
+        "template--14554149224561__cad2355b-7cbb-4728-bfb7-a2b25f20ee5c-16733095433a089b93-0",
+        "template--14554149224561__cad2355b-7cbb-4728-bfb7-a2b25f20ee5c-16733095433a089b93-1",
+        "template--14554149224561__cad2355b-7cbb-4728-bfb7-a2b25f20ee5c-16733095433a089b93-2",
+        "d346ebb2-8200-4258-a191-a8b6a1ad18a0",
+        "6dd96200-d1c8-488c-884a-285f226dbb4b",
+        "5283acb1-df64-4461-95bb-3559302810cb",
+        "cc6cafb7-2e42-4150-b26d-9b5ed8bf21ec",
+        "07c32024-e2a7-4387-8473-a4ca5502dba7",
+        "b29a67d8-1a8f-4a20-b8e0-411109040041"
+      ],
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 3,
+        "featured_links_animation": "",
+        "feature_style": "square",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "19116b1a-3720-4015-8cc0-e9abfaa20194": {
+      "type": "featured-promotions",
+      "blocks": {
+        "template--14554149224561__19116b1a-3720-4015-8cc0-e9abfaa20194-167396474023208b39-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.cosmopolitan.com\/style-beauty\/beauty\/g25019634\/best-drugstore-shampoo-brands\/",
+            "title": "Cosmopolitan",
+            "text": "<p><strong>October 2022<\/strong><\/p><p>Behold: The Best Drugstore Shampoos and Conditioners for Your Hair Type<\/p><p><em>Featured Product: Rosemary Mint Strengthening Shampoo<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "template--14554149224561__19116b1a-3720-4015-8cc0-e9abfaa20194-167396474023208b39-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.elle.com\/beauty\/hair\/g41821867\/best-hair-thickening-products\/",
+            "title": "ELLE",
+            "text": "<p><strong>October 2022<\/strong><\/p><p>18 Best Hair Thickening Products For Thin, Weak Hair<\/p><p><em>Featured Product: Rosemary Mint Scalp & Hair Strengthening Oil<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "template--14554149224561__19116b1a-3720-4015-8cc0-e9abfaa20194-167396474023208b39-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.theroot.com\/mielle-organics-founder-tells-how-she-built-a-global-be-1849639944",
+            "title": "The Root",
+            "text": "<p><strong>October 2022<\/strong><\/p><p>Mielle Organics Founder Tells How She Built A Global Beauty Brand<\/p><p>Featuring Monique Rodriguez, Mielle CEO<\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "06105d01-2f35-4dfa-835d-5c810f54c43b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.buzzfeed.com\/atbm\/hair-products-from-walmart-with-reviews-thatll-make-you",
+            "title": "BuzzFeed",
+            "text": "<p><strong>October 2022<\/strong><\/p><p>31 Hair Products From Walmart With Reviews That’ll Make You Immediately “Add To Cart”<\/p><p><em>Featured Product: Pomegranate & Honey Leave-In Conditioner<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "a54f0c4e-14b3-4841-b9d6-74f60dad92dd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.cnn.com\/cnn-underscored\/beauty\/black-owned-beauty-brands",
+            "title": "CNN",
+            "text": "<p><strong>September 2022<\/strong><\/p><p>These are the Black-owned beauty brands you should try ASAP<\/p><p><em>Featuring Mielle Organics<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "b250be01-4d97-4f75-8cc7-80add5e8ab50": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.allure.com\/best-of-beauty-2022-winners",
+            "title": "Allure",
+            "text": "<p><strong>September 2022<\/strong><\/p><p>2022 Best of Beauty Award Winners<\/p><p><em>Featured Product: Pomegranate & Honey Twisting Soufflé<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "8c9eda63-429b-4f7b-af1a-b97e07b50469": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.harpersbazaar.com\/beauty\/hair\/g5620\/best-leave-in-conditioners\/",
+            "title": "Harper's Bazaar",
+            "text": "<p><strong>September 2022<\/strong><\/p><p>The 20 Best Leave-In Conditioners for Every Hair Type<\/p><p><em>Featured Product: White Peony Leave-In Conditioner<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "c86117dd-9ec0-4b13-87f3-ffd3cb3fab30": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/www.bustle.com\/life\/tiktok-trending-products-to-shop-at-target",
+            "title": "Bustle",
+            "text": "<p><strong>September 2022<\/strong><\/p><p>11 TikTok-Famous Products You Can Buy At Target In 2022 - Bustle<\/p><p><em>Featured Product: Sea Moss Anti Shedding Shampoo<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        },
+        "c163414f-b57a-413a-b356-3c808acce4b0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/840x840.png",
+            "link": "https:\/\/21ninety.com\/deep-conditioners-for-textured-hair",
+            "title": "21Ninety",
+            "text": "<p><strong>September 2022<\/strong><\/p><p>The BEST Deep Conditioners For Textured Hair, Hands-Down<\/p><p><em>Featured Product:  Babassu Oil & Mint Deep Conditioner<\/em><\/p>",
+            "button_label": "View Full Article"
+          }
+        }
+      },
+      "block_order": [
+        "template--14554149224561__19116b1a-3720-4015-8cc0-e9abfaa20194-167396474023208b39-2",
+        "template--14554149224561__19116b1a-3720-4015-8cc0-e9abfaa20194-167396474023208b39-1",
+        "template--14554149224561__19116b1a-3720-4015-8cc0-e9abfaa20194-167396474023208b39-0",
+        "06105d01-2f35-4dfa-835d-5c810f54c43b",
+        "a54f0c4e-14b3-4841-b9d6-74f60dad92dd",
+        "b250be01-4d97-4f75-8cc7-80add5e8ab50",
+        "8c9eda63-429b-4f7b-af1a-b97e07b50469",
+        "c86117dd-9ec0-4b13-87f3-ffd3cb3fab30",
+        "c163414f-b57a-413a-b356-3c808acce4b0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 3,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "square",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "e18fd546-d72a-4172-9bfc-a01f5fd4326b",
+    "main",
+    "f0f6e4ee-7c4a-4d47-b718-dc7ed2a80916",
+    "cad2355b-7cbb-4728-bfb7-a2b25f20ee5c",
+    "19116b1a-3720-4015-8cc0-e9abfaa20194"
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner-template",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/AppPromo_1440x432_e2a92e72-ecbe-4287-a113-a91c5a0cdb7f.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Harlem_Teaser_V2_1000x1000_0dba36fe-cb47-489e-922d-a47710f0c843.jpg",
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "text_position": "center",
+        "text_align": "center",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner"
+      }
+    },
+    "62280161-fadf-4cd4-b388-14832fab1aa5": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": false,
+        "image": "shopify:\/\/shop_images\/ezgif.com-optimize.gif",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "e210d85e-722f-44e1-bd69-f30e5ae4d3e0": {
+      "type": "image-text",
+      "blocks": {
+        "template--14652659531889__e210d85e-722f-44e1-bd69-f30e5ae4d3e0-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MO.jpg",
+            "image_crop": "center",
+            "title": "A Note From Our <font color=\"#EB1676\">Founder & CEO<\/font>",
+            "adaDescriptiveText": "A Note From Our Founder & CEO",
+            "text": "<p>Mielle is more than just a haircare brand; it's a movement. And, Queen - we see you. Our community is rooted in support, passion, and sisterhood. <\/p><p><strong>No gatekeeping. All love.<\/strong><\/p><p>That's exactly how our coveted Pomegranate & Honey Collection came to be. We set out to create a curated selection of products for Type 4 hair to nourish your strands and give you the confidence to go wherever you want to go and do whatever you want to do. <\/p><p><strong>Because, sis - you deserve. <\/strong><\/p><p>So, whether you want those curls to pop, to get those edges laid, or have that twist out looking bomb all day... we've got your back. <\/p><p><strong>From One Queen To Another.<\/strong><\/p><p>XO, <\/p><p>Monique Rodriquez<\/p><p>Founder & CEO<\/p>",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "button_label": "",
+            "button_style": "global-button--primary-desktop",
+            "link": "",
+            "bg_color": "#f5f5f5",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14652659531889__e210d85e-722f-44e1-bd69-f30e5ae4d3e0-image-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "center",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "b405c36f-2dd2-43d5-9ac3-49783fad0b6e": {
+      "type": "video",
+      "settings": {
+        "wide_display": false,
+        "aspect_ratio": "16:9",
+        "autoplay": true,
+        "autoloop": true,
+        "mute_video": true,
+        "show_controls": true,
+        "video_dark_overlay": false,
+        "iframe_video": "https:\/\/youtu.be\/Ua9v4eEmpoM",
+        "html5_video": "",
+        "display_text_over_video": false,
+        "preheading": "",
+        "heading": "",
+        "subheading": "",
+        "button1_label": "Play Video",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "left",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165673614571dc9754": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "title": "SHOP BY <font color=\"#EB1676\">HAIR TEXTURE<\/font>",
+        "heading_type": "h2",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "8d7accd0-183d-4855-b8a2-8bc5cd89cb47": {
+      "type": "collection-list",
+      "blocks": {
+        "template--14652659531889__8d7accd0-183d-4855-b8a2-8bc5cd89cb47-collection-1": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "hair-straightening-products",
+            "image": "shopify:\/\/shop_images\/ANGEL.jpg"
+          }
+        },
+        "template--14652659531889__8d7accd0-183d-4855-b8a2-8bc5cd89cb47-collection-2": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "type-3-curly-hair-products",
+            "image": "shopify:\/\/shop_images\/AISHA.jpg"
+          }
+        },
+        "template--14652659531889__8d7accd0-183d-4855-b8a2-8bc5cd89cb47-collection-3": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "type-4-coily-hair-products",
+            "image": "shopify:\/\/shop_images\/SHIRLEY.jpg"
+          }
+        },
+        "9d47e3fe-0627-43d1-bbce-81f91885b1d7": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "protective-styling-products",
+            "image": "shopify:\/\/shop_images\/Protective_Style.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--14652659531889__8d7accd0-183d-4855-b8a2-8bc5cd89cb47-collection-1",
+        "template--14652659531889__8d7accd0-183d-4855-b8a2-8bc5cd89cb47-collection-2",
+        "template--14652659531889__8d7accd0-183d-4855-b8a2-8bc5cd89cb47-collection-3",
+        "9d47e3fe-0627-43d1-bbce-81f91885b1d7"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_height": false,
+        "collection_height": 200,
+        "frontpage_collections_per_row": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "68240915-8563-4885-86f5-0d4c43ef1ea0": {
+      "type": "featured-promotions",
+      "blocks": {
+        "template--14652659531889__68240915-8563-4885-86f5-0d4c43ef1ea0-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ANGEL.jpg",
+            "link": "shopify:\/\/collections\/hair-straightening-products",
+            "title": "Straightened",
+            "text": "<p>Products to help straighten hair<\/p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "template--14652659531889__68240915-8563-4885-86f5-0d4c43ef1ea0-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/edges_laid.jpg",
+            "link": "",
+            "title": "",
+            "text": "",
+            "button_label": ""
+          }
+        },
+        "template--14652659531889__68240915-8563-4885-86f5-0d4c43ef1ea0-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/AISHA.jpg",
+            "link": "shopify:\/\/collections\/type-3-curly-hair-products",
+            "title": "CURLY",
+            "text": "<p>Products made for Type 3 Hair<\/p>",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "fca20c1a-ef43-4fa6-8dd9-cae52a09d6b6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CURLS_2.jpg",
+            "link": "",
+            "title": "",
+            "text": "",
+            "button_label": ""
+          }
+        },
+        "08380486-f147-49e3-a596-224dbec3e354": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SHINE.jpg",
+            "link": "",
+            "title": "",
+            "text": "",
+            "button_label": ""
+          }
+        },
+        "7a1cfda1-88e3-4288-9596-0d9a9c3e198a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SHIRLEY.jpg",
+            "link": "shopify:\/\/collections\/type-4-coily-hair-products",
+            "title": "COILY",
+            "text": "<p>Products made for Type 4 Hair<\/p>",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "923a580d-3ba9-4cb3-b807-13422c917985": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/THIS_DEFINITON.jpg",
+            "link": "",
+            "title": "",
+            "text": "",
+            "button_label": ""
+          }
+        },
+        "a7990e48-57b6-4740-b7bd-d3106d210f38": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Protective_Style.png",
+            "link": "shopify:\/\/collections\/protective-styling-products",
+            "title": "PROTECTIVE",
+            "text": "<p>Products made for braids, locs, and twist<\/p>",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "template--14652659531889__68240915-8563-4885-86f5-0d4c43ef1ea0-image-1",
+        "template--14652659531889__68240915-8563-4885-86f5-0d4c43ef1ea0-image-2",
+        "template--14652659531889__68240915-8563-4885-86f5-0d4c43ef1ea0-image-3",
+        "fca20c1a-ef43-4fa6-8dd9-cae52a09d6b6",
+        "08380486-f147-49e3-a596-224dbec3e354",
+        "7a1cfda1-88e3-4288-9596-0d9a9c3e198a",
+        "923a580d-3ba9-4cb3-b807-13422c917985",
+        "a7990e48-57b6-4740-b7bd-d3106d210f38"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 4,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "square",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "9cfcd1a2-aeea-41b5-bec1-a3d45993d195": {
+      "type": "featured-text",
+      "settings": {
+        "title": "FROM ONE QUEEN <font color=\"#EB1676\">TO ANOTHER<\/font>",
+        "heading_type": "h2",
+        "content": "<p>We provide the products and hair wisdom to boost your confidence, helping you conquer each day. It all began with one woman's hair journey, and from it, a sisterhood founded on support and shared advice was born. From one Queen to another, we pass on the products, hair tips and tricks that truly reign supreme.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "a71e06c5-a486-4dff-9dec-5e8363784c54": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": false,
+        "image": "shopify:\/\/shop_images\/Gallery_Graphic.png",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify:\/\/shop_images\/Mobile_Gallery.png",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "eab70d9e-bf5a-483b-8dbc-986e8f07c97b": {
+      "type": "featured-text",
+      "settings": {
+        "title": "DEFINE YOUR COILS <font color=\"#EB1676\">YOUR WAY<\/font>",
+        "heading_type": "h2",
+        "content": "<p>Curated with gels, stylers, conditioners and more, our Pomegranate & Honey Collection is specifically chosen for you to achieve <strong>easy detangling<\/strong>, <strong>increased curl elasticity <\/strong>and <strong>definition<\/strong> for more beautiful, natural styles.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "88d48df6-77eb-4d81-9805-84a81bea9a09": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "image": "shopify:\/\/shop_images\/Pom_Honey_Collection.png",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "c32ddf40-1470-42f3-a3b5-896ff5cb3c98": {
+      "type": "shoppable-image",
+      "blocks": {
+        "template--14652659531889__c32ddf40-1470-42f3-a3b5-896ff5cb3c98-shoppable-image-1": {
+          "type": "shoppable-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pom_Honey_Collection.png",
+            "card_styling": "square",
+            "elements_outline": true,
+            "hotspot_color": "rgba(0,0,0,0)",
+            "product_1": "pomegranate-honey-curl-refreshing-spray",
+            "image_alignment_1": "center-center",
+            "x_axis_1": 11,
+            "y_axis_1": 50,
+            "button_label_1": "View product",
+            "product_2": "pomegranate-honey-moisturizing-and-detangling-shampoo",
+            "image_alignment_2": "center-center",
+            "x_axis_2": 38,
+            "y_axis_2": 25,
+            "button_label_2": "View product",
+            "product_3": "pomegranate-honey-moisturizing-and-detangling-conditioner",
+            "image_alignment_3": "center-center",
+            "x_axis_3": 48,
+            "y_axis_3": 67,
+            "button_label_3": "View product",
+            "product_4": "pomegranate-honey-curl-sculpting-custard",
+            "image_alignment_4": "center-center",
+            "x_axis_4": 66,
+            "y_axis_4": 8,
+            "button_label_4": "View product",
+            "call_to_action": "Pomegranate & Honey",
+            "subtitle": "<p>#1 For Type 4, Coily Hair<\/p>",
+            "text_align": "center",
+            "button_label": "View collection",
+            "button_link": "shopify:\/\/collections\/pomegranate-honey",
+            "button_style": "global-button--banner-text-highlighted",
+            "cta_bg_color": "#f2f2f2"
+          }
+        }
+      },
+      "block_order": [
+        "template--14652659531889__c32ddf40-1470-42f3-a3b5-896ff5cb3c98-shoppable-image-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "slideshow_text_animation": "fadeInDown",
+        "slideshow_animation": "fade",
+        "slideshow_speed": 2,
+        "title": "",
+        "quick_view": true,
+        "bottom_bar": true,
+        "product_thumbnails": true,
+        "cta": true,
+        "bottom_bar_image_style": "natural",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "30003fae-5b51-4cc4-a4db-f83fd230d4c8": {
+      "type": "featured-text",
+      "settings": {
+        "title": "PRIME + DEFINE™ <font color=\"#EB1676\">STYLING SYSTEM<\/font>",
+        "heading_type": "h2",
+        "content": "<p>Our Pomegranate & Honey Collection is a <strong>Prime + Define™ Styling System <\/strong>formulated for thick, curly, Type 4 hair. But don’t get it twisted, it’s perfect for all coils and curls looking to achieve definition. Featuring hero ingredients like pomegranate seed oil and honey, these products deeply condition your strands for added moisture and softer, more manageable curls.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "444d3da7-329b-4314-8838-3b94b702b61e": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/ph-slider_copy.jpg",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify:\/\/shop_images\/ph-slider_mobile_copy.jpg",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "3f6438c7-2d23-4b52-afb8-8ce8ff9394fb": {
+      "type": "search",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "search_title": "TELL US YOUR HAIR NEEDS",
+        "search_text": "<p>WE'LL FIND A PRODUCT THAT WORKS FOR YOU!<\/p>",
+        "search_section_text_align": "center",
+        "search_term": "Search...",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "add39003-bafe-4ccc-aff6-3306bfaf5033": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Best Sellers",
+        "collection_description": true,
+        "collection": "best-selling-hair-care-products",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "d7afdf58-c71f-4602-a413-02c916d40041": {
+      "type": "featured-text",
+      "settings": {
+        "title": "TEXTURE <font color=\"#EB1676\">TOOLKIT<\/font>",
+        "heading_type": "h2",
+        "content": "<p>Join our community of Mielle Mavens and you’ve got yourself a throne at our table – discover tips and advice from a community of women with textured hair just like you, so you’ll always show up as your best.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "0e4be8cf-14f8-4805-995c-406ca763c75a": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--14652659531889__0e4be8cf-14f8-4805-995c-406ca763c75a-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/texture_hair_c3f59406-9db0-460e-aa92-69546b866a87.png",
+            "title": "Your Guide To Hair Texture Types",
+            "heading_size": "regular_text",
+            "text": "<p>In this short guide, we’ll go over different natural hair types and textures. We’ll also provide a short summary of hair care tips for each kind of coiff so that you can start customizing your routine and embracing your natural texture with full confidence. <\/p>",
+            "button_label": "Read More",
+            "button_link": "shopify:\/\/blogs\/mi-university\/different-types-of-hair-textures",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "template--14652659531889__0e4be8cf-14f8-4805-995c-406ca763c75a-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Coily_Type_4_e648019f-4dda-4117-ae31-f978d7a26073.png",
+            "title": "Best Products For Coily (Type 4) Hair",
+            "heading_size": "regular_text",
+            "text": "<p>Finding the best products for 4c natural hair starts with understanding your<em> <\/em>hair and what it takes to make your locks feel positively divine.<\/p>",
+            "button_label": "Read More",
+            "button_link": "shopify:\/\/blogs\/mi-university\/the-best-products-for-type-4-natural-hair",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "51b5cad6-fbe4-4ad1-86ed-a9a4c5aed427": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Porosity.png",
+            "title": "What is Hair Porosity?",
+            "heading_size": "regular_text",
+            "text": "<p>There are three general levels of hair porosity: high porosity hair, medium porosity hair, and low porosity hair. Knowing your hair’s porosity level will help you understand why your hair looks, feels, and acts a certain way and how to take care of it.<\/p>",
+            "button_label": "Read More",
+            "button_link": "shopify:\/\/blogs\/mi-university\/what-is-hair-porosity",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--14652659531889__0e4be8cf-14f8-4805-995c-406ca763c75a-text_block-1",
+        "template--14652659531889__0e4be8cf-14f8-4805-995c-406ca763c75a-text_block-2",
+        "51b5cad6-fbe4-4ad1-86ed-a9a4c5aed427"
+      ],
+      "settings": {
+        "title": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "085768fe-e7de-435c-b0c0-d11b5fe963f6": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "title": "YOU DESERVE THE <font color=\"#EB1676\">ROYAL TREATMENT<\/font>",
+        "heading_type": "h2",
+        "content": "<p>As a part of the Mielle queendom, you’ll always feel supported wherever you are in your hair journey. Be the first to know about exclusive offers by downloading our app and get automatic deliveries to your door with our subscription program.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "fd7a7c19-1fbf-46e1-8c5d-96a955bdff71": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--14652659531889__fd7a7c19-1fbf-46e1-8c5d-96a955bdff71-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/SubscribeandSave_1000x1000_f67cafe0-b913-4dc2-b9a9-a8983af594b0.jpg",
+            "title": "SUBSCRIBE & SAVE",
+            "heading_size": "regular_text",
+            "text": "<p><strong>Save 15%<\/strong> on automatic deliveries of everyday essentials. No fees, cancel anytime. Shop from our assortment of products, Select the quantity and monthly schedule that works for you. Create your subscription and enjoy the convenience of your products delivered right to your home.<\/p>",
+            "button_label": "LEARN MORE",
+            "button_link": "shopify:\/\/pages\/subscribe-save",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "template--14652659531889__fd7a7c19-1fbf-46e1-8c5d-96a955bdff71-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/DOWNLOAD_APP.png",
+            "title": "DOWNLOAD OUR APP",
+            "heading_size": "regular_text",
+            "text": "<p>Available on both the <a href=\"https:\/\/apps.apple.com\/us\/app\/mielle\/id1480274327\" title=\"https:\/\/apps.apple.com\/us\/app\/mielle\/id1480274327\">Apple App Store <\/a>and <a href=\"https:\/\/play.google.com\/store\/apps\/details?id=co.tapcart.app.id_Mzs7EWhcxT&hl=en_US&gl=US\" title=\"https:\/\/play.google.com\/store\/apps\/details?id=co.tapcart.app.id_Mzs7EWhcxT&hl=en_US&gl=US\">Google Play<\/a>, the Mielle mobile app allows you to shop our hair products, get exclusive app-only offers, and get VIP access to sales and promotions! Get <strong>20% off <\/strong> first order through the app!<\/p>",
+            "button_label": "LEARN MORE",
+            "button_link": "shopify:\/\/pages\/download-our-app",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--14652659531889__fd7a7c19-1fbf-46e1-8c5d-96a955bdff71-text_block-1",
+        "template--14652659531889__fd7a7c19-1fbf-46e1-8c5d-96a955bdff71-text_block-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656736161c7dea08e": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "62280161-fadf-4cd4-b388-14832fab1aa5",
+    "e210d85e-722f-44e1-bd69-f30e5ae4d3e0",
+    "b405c36f-2dd2-43d5-9ac3-49783fad0b6e",
+    "165673614571dc9754",
+    "8d7accd0-183d-4855-b8a2-8bc5cd89cb47",
+    "68240915-8563-4885-86f5-0d4c43ef1ea0",
+    "9cfcd1a2-aeea-41b5-bec1-a3d45993d195",
+    "a71e06c5-a486-4dff-9dec-5e8363784c54",
+    "eab70d9e-bf5a-483b-8dbc-986e8f07c97b",
+    "88d48df6-77eb-4d81-9805-84a81bea9a09",
+    "c32ddf40-1470-42f3-a3b5-896ff5cb3c98",
+    "30003fae-5b51-4cc4-a4db-f83fd230d4c8",
+    "444d3da7-329b-4314-8838-3b94b702b61e",
+    "3f6438c7-2d23-4b52-afb8-8ce8ff9394fb",
+    "add39003-bafe-4ccc-aff6-3306bfaf5033",
+    "d7afdf58-c71f-4602-a413-02c916d40041",
+    "0e4be8cf-14f8-4805-995c-406ca763c75a",
+    "085768fe-e7de-435c-b0c0-d11b5fe963f6",
+    "fd7a7c19-1fbf-46e1-8c5d-96a955bdff71",
+    "1656736161c7dea08e"
+  ]
+}

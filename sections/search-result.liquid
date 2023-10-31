@@ -1,0 +1,1387 @@
+<script
+    type="application/json"
+    data-section-type="search-template"
+    data-section-id="{{ section.id }}"
+>
+</script>
+
+<style>
+    [data-filter-items] button.search-filter-title {
+        border-top: 1px solid rgba(0,0,0,.5);
+        padding-top: 21px;
+        font-size: 17px;
+        color: #17130f;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: .04em;
+        padding-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: transparent;
+    }
+
+    [data-filter-items] .filter-list {
+        display: none;
+    }
+
+    [data-filter-items] .filter-list.open {
+        display: block;
+    }
+
+    [data-filter-items] .sidebar-block-toggle-icon {
+        padding: 0 !important;
+        font-size: 12px !important;
+    }
+
+    [data-filter-items] .scroll-list {
+        list-style: none;
+        padding: 0;
+        max-height:180px;
+        overflow-x: hidden;
+        position: relative;
+        overflow-y: auto;
+        scrollbar-color:#888;
+    }
+
+    [data-filter-items] .scroll-list::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    /* Track */
+    [data-filter-items] .scroll-list::-webkit-scrollbar-track {
+        background: #CECECE;
+    }
+
+    /* Handle */
+    [data-filter-items] .scroll-list::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius:10px;
+    }
+
+    [data-filter-items] .filter-group-display__list-item-label {
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+    }
+
+    [data-result-container] .product-list .column.thumbnail:hover {
+        background: #FFFFFF;
+        box-shadow: 0 4px 14px #0000001a;
+        border-radius: 6px;
+    }
+    
+    [data-result-pagination] .pagination{
+        list-style: none;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    [data-result-pagination] .pagination .page {
+        margin: 0;
+    }
+
+    [data-result-pagination] .pagination .page a, [data-result-pagination] .pagination .page.current {
+        margin: 0;
+        border-radius: 50%;
+        color: #17130f;
+    }
+
+    [data-result-pagination] .pagination .page.current {
+        color: #ffffff;
+    }
+
+    [data-result-pagination] .pagination .next {
+        background: #FFFFFF;
+        border: 1px solid #EDEDED;
+        border-radius: 60px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin: 0 !important;
+    }
+
+    [data-result-pagination] .pagination .disabled {
+        cursor: not-allowed;
+        pointer-events: inherit;
+    }
+
+    .search-page-title-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0 20px;
+        border-top: 1px solid #D3D3D3;
+    }
+
+    .ml-0 {
+        margin-left: 0px;
+    }
+    
+    .plp-filter-model {
+        --color-pink: #DD136E;
+        --color-border: #D6D6D6;
+        --color-text: #17130F;
+        --color-filter-gray: #F5F5F5;
+        --color-filter-count: #717171;
+        --color-white: #fff;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        --filter-body-height: calc(100%);
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        background: var(--color-white);
+        z-index: 1100;
+        display: none;
+    }
+    
+    _::-webkit-full-page-media,
+    _:future,
+    :root .plp-filter-model {
+        height: 92vh;
+        max-height: 92vh;
+    }
+    
+    .plp-filter-model .plp-filter-header {
+        height: 62px;
+        border-bottom: 1px solid var(--color-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 26px 20px 16px 20px;
+    }
+    
+    .plp-filter-model .plp-filter-header-text {
+        font-size: 17px;
+        font-weight: 650;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+        color: var(--color-text);
+        text-transform: uppercase;
+    }
+    
+    .plp-filter-model .plp-filter-header-text,
+    .plp-filter-model .plp-filter-header-text button {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+    }
+    
+    .plp-filter-model .plp-filter-header-text button {
+        justify-content: center;
+        margin-right: 8px;
+    }
+    
+    .plp-filter-model .plp-filter-header svg {
+        width: 20px;
+    }
+    
+    .plp-filter-model .plp-filter-header .btn {
+        background: none;
+        color: var(--color-pink);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+    }
+    
+    /* Model Body */
+    .plp-filter-model .plp-filter-body {
+        position: relative;
+    }
+    
+    .plp-filter-model .plp-filter-body {
+        height: var(--filter-body-height);
+        max-height: var(--filter-body-height);
+    }
+    
+    .plp-filter-model .plp-filter-body form {
+        height: inherit;
+    }
+    
+    .plp-filter-model .plp-filter-values {
+        max-height: 99%;
+    }
+    
+    .plp-filter-model .plp-filter-values,
+    .plp-filter-model .plp-filter-items {
+        overflow: hidden;
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .plp-filter-model .plp-filter-values li,
+    .plp-filter-model .plp-filter-items li {
+        margin: 0;
+    }
+    
+    .plp-filter-model .plp-filter-value {
+        padding: 2px;
+    }
+    
+    .plp-filter-model .plp-filter-value label {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 34px;
+        letter-spacing: 0.02em;
+        position: relative;
+        padding-left: 28px;
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+    }
+    
+    .plp-filter-model .plp-filter-value label span {
+        color: var(--color-filter-count);
+        font-weight: 400;
+        margin-left: 8px;
+    }
+    
+    .plp-filter-model .plp-filter-value label::before,
+    .plp-filter-model .plp-filter-value label::after {
+        content: '';
+        display: block;
+    }
+    
+    .plp-filter-model .plp-filter-value label::before {
+        width: 16px;
+        height: 16px;
+        {% comment %} border-radius: 50%; {% endcomment %}
+        border: 1px solid #CFCFCF;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .plp-filter-model .plp-filter-value label::after {
+        width: 5px;
+        height: 9px;
+        border: 1.5px solid transparent;
+        position: absolute;
+        left: 1.5px;
+        transform: rotate(35deg) translateY(-50%) scale(0, 1);
+        top: calc(50% - 3px);
+        border-radius: 0;
+        transition: border-color 100ms ease-in, transform 150ms ease-in-out 100ms;
+    }
+    
+    .plp-filter-model .plp-filter-value input:checked+label::after {
+        border-right-color: var(--color-pink);
+        border-bottom-color: var(--color-pink);
+        transform: rotate(35deg) translateY(-50%) scale(1, 1);
+    }
+    
+    .plp-filter-model .plp-filter-value input:focus-visible+label,
+    .plp-filter-model .plp-filter-value input:focus-visible+label {
+        outline: 1px solid #000;
+    }
+    
+    .plp-filter-model .plp-filter-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+    }
+    
+    .plp-filter-model .plp-filter-body .plp-filter-items {
+        width: 40.5%;
+        max-width: 40.5%;
+        background: var(--color-filter-gray);
+        height: inherit;
+    }
+    
+    .plp-filter-model .plp-filter-body .filter-title-content {
+        width: 63.5%;
+        max-width: 63.5%;
+        position: absolute;
+        left: calc(37.5% + 4px);
+        top: 0;
+        padding: 0.5rem 1rem;
+        height: 100%;
+        display: none;
+    }
+    
+    .plp-filter-model .plp-filter-body .btn-filter-title.active+.filter-title-content {
+        display: block;
+    }
+    
+    .plp-filter-model .btn-filter-title {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 44px;
+        letter-spacing: 0.02em;
+        color: var(--color-text);
+        background: none;
+        padding: 0 20px;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border-left: 5px solid transparent;
+    }
+    
+    .plp-filter-model .btn-filter-title.active {
+        border-left-color: var(--color-pink);
+    }
+    
+    /* Model Footer  */
+    .plp-filter-model .plp-filter-footer {
+        display: flex;
+    }
+    
+    .plp-filter-model .plp-filter-footer {
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px -4px 14px 0px #0000001C;
+        height: 66px;
+        margin-top: auto;
+        padding: 20px;
+    }
+    
+    .plp-filter-model .plp-filter-footer .btn {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .plp-filter-model .plp-filter-footer .btn:not(.btn-outlined) {
+        background: var(--color-pink);
+        height: 44px;
+        border-radius: 80px;
+        flex: 1;
+        color: var(--color-white);
+    }
+    
+    .plp-filter-model .plp-filter-footer .btn-outlined {
+        color: var(--color-pink);
+        background: none;
+        margin-right: 20px;
+    }
+
+    [data-result-container] .product-details .title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .device--ipadandup .plp-filter-model .plp-filter-footer {
+        height: 30px;
+    }
+
+    .device--ipadandup .plp-filter-model .plp-filter-header {
+        height: 30px;
+        padding: 10px;
+    }
+
+    .device--ipadandup .plp-filter-model .plp-filter-footer .btn:not(.btn-outlined) {
+        height: 22px;
+        font-size: 10px;
+        max-width: 100px;
+    }
+
+    .device--ipadandup .plp-filter-model {
+        --filter-body-height: calc(92vh - 30px - 30px);
+    }
+
+    .device--ipadandup .plp-filter-model .plp-filter-header-text {
+        font-size: 12px;
+    }
+
+    .device--ipadandup .plp-filter-model .plp-filter-header svg {
+        width: 12px;
+    }
+
+    [data-searchpage-blogs] .blog-single-data {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+    }
+
+    [data-searchpage-blogs] .blog-single-data .blog-single-image {
+        width: 190px;
+    }
+
+    [data-searchpage-blogs] .blog-single-data .blog-single-details {
+        width: calc(100% - 190px);
+    }
+
+    [data-searchpage-blogs] .blog-single-data .blog-single-image img {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+    }
+
+    [data-searchpage-blogs] .blog-single-data .blog-single-image img.place-img {
+        object-fit: contain;
+    }
+
+    [data-searchpage-blogs] .blog-single-data .blog-single-title {
+        margin-top: 0;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    [data-searchpage-blogs] .blog-single-data .blog-single-content p {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+        color: #565656;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    [data-searchpage-blogs] .blog-single-data .blog-single-content .read-more {
+        text-decoration : underline;
+    }
+
+    .search-result-tab-count {
+        margin-bottom: 40px;
+    }
+    {% comment %}  {% endcomment %}
+
+    .data_cate_count {
+        width: 100%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.06em;
+        color: #000000;
+        margin-bottom: 60px;
+    }
+    div#search-pagepanel-collections {
+        justify-content: space-between;
+        margin-bottom: 65px;
+    }
+    #search-pagepanel-collections .one-third.medium-down--one-whole.column{
+        background: #FFFFFF;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        margin: 0;
+        width: 32.1%;
+        margin-bottom: 40px;
+    }
+    .search-coll-list-img-with-content{
+        text-align: center;
+        padding: 0 22px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .search-result-coll-title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #000000;
+        margin: 40px 0 24px 0;
+    }
+    .search-result-coll-desc {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #17130F;
+    }
+    #search-pagepanel-collections .search-coll-list {
+        height: 100%;
+    }
+    .search-result-coll-button {
+        margin-bottom: 45px;
+        margin-top: 35px;
+    }
+    .search-result-coll-button a{
+        color: #FFFFFF;
+        background: #EB1676;
+        border-radius: 80px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 9px 32px;
+        max-width: 160px;
+    }
+
+    .search-result-coll-desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .search-result-coll-desc p:nth-child(2){
+    margin:0;
+    }
+    .showfirst{
+    display:none;
+    }
+
+
+    {% comment %} no result css starts here {% endcomment %}
+
+    #noResultFound .header-search-scroller.scroller {
+        height: auto;
+        margin-bottom: 100px;
+    }
+    #noResultFound .thumbnail-hover-enabled--false.medium-down--one-half.quick-shop-style--inline.product__details {
+        background: #FFFFFF;
+        box-shadow: 0 4px 14px #0000001a;
+        border-radius: 6px;
+    }
+    #noResultFound .product-list{
+        justify-content: space-between;
+    }
+    .noResultHeading{
+    text-align:center;
+    }
+    .noResultTitle {
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.84px;
+        margin-top: 61px;
+        margin-bottom:19px;
+        padding:0;
+    }
+    #noResultFound {
+        padding: 0 50px;
+    }
+    .noREsultSubTitle {
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 1.56px;
+        margin-top: 20px;
+        color: #17130F;
+        margin-bottom: 33px;
+    }
+    .noResultShoppingBTn a{
+        background: #dd136e;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.96px;
+        text-transform: uppercase;
+        padding: 11px 37px;
+        border-radius: 66px;
+    }
+    .noResultShoppingBTn {
+        margin-bottom: 80px;
+    }
+    .section .noResulthomepage_content{
+        display: flex;
+        align-items: center;
+        width: 60%;
+        margin-left: auto;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .noResulthomepage_content h2.title{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.96px;
+        text-transform: capitalize;
+    }
+    .noResulthomepage_content a{
+        font-size: 14px;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.84px;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+    }
+    .noResultMobileImage{
+    display:none;
+    }
+    .view-button-desktop-hidden{
+    display:none;
+    }
+    .noResultContainer .column.one-whole{
+    text-align:center;
+    }
+    {% comment %}  {% endcomment %}
+    .containerHeight{
+    height:100vh;
+    }
+    {% comment %}  {% endcomment %}
+
+    {% comment %} no result css ends here {% endcomment %}
+    {% comment %} .search-result-coll-desc p{
+    margin-bottom:0;
+    }
+    .search-result-coll-desc{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .search-result-coll-desc h2{
+        display:none;
+    } {% endcomment %}
+
+    {% comment %}  {% endcomment %}
+    
+    @media screen and (min-width: 768px) {
+        .plp-filter-model {
+            display: none;
+        }
+    }
+
+    @media (min-width: 798px) {
+        [data-result-container] .product-list .column.thumbnail .purchase-details__buttons .add_to_cart {
+            opacity: 0;
+        }
+        [data-result-container] .product-list .column.thumbnail:hover .purchase-details__buttons .add_to_cart, [data-result-container] .product-list .column.thumbnail .purchase-details__buttons .add_to_cart:focus {
+            opacity: 1;
+        }
+        {% comment %} css for filter sidebar as per design starts here {% endcomment %}
+      .faceted-filter-group-display__list-item-input:focus ~ .faceted-filter-group-display__checkmark {
+        box-shadow: 0 0 0 0 #000, 0 0 0 1px #333333;
+      }
+      .faceted-filter-group-display__list-item-input:checked:focus ~ .faceted-filter-group-display__checkmark {
+        box-shadow: 0 0 0 0 #dd136e, 0 0 0 1px #dd136e;
+      }
+      .faceted-filter-group-display__checkmark {
+        min-width: 14px;
+        min-height: 14px;
+        border-radius: 2px;
+      }
+      .faceted-filter-group-display__list-item-label-text{
+        font-size: 12px;
+      }
+      span.filter_value_count{
+        font-size: 12px;
+      }
+      body [data-filter-items] button.search-filter-title{
+        font-size: 13px;
+        font-weight: 500;
+        padding-bottom: 14px;
+      }
+      .faceted-filter-group-display__list-item-label{
+        padding-bottom: 10px;
+      }
+      [data-filter-items] .filter-group-display__list-item-label{
+        margin-bottom: 0;
+      }
+      [data-filter-items] .scroll-list{
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+      [data-filter-items] .filter-list{
+        padding-right: 12px;
+      }
+      .one-whole.column.section_select {
+        margin-bottom: 20px;
+    }
+    .one-whole.column.section_select .filter_heading{
+      margin: 0;
+      padding-top: 32px;
+      text-align: left;
+      font-size: 15px;
+    }
+    .faceted-filter-group-display__list-item-input:checked ~ .faceted-filter-group-display__list-item-label-text{
+      color: #dd136e;
+      font-weight: 600;
+    }
+    .faceted-filter-group-display__list-item-input:checked ~ .faceted-filter-group-display__checkmark {
+      stroke: #dd136e;
+      background: transparent;
+      border-color: #dd136e;
+    }
+    .collection-result-main .container.content{
+      padding-top: 30px;
+    }
+    #search-pagepanel-products .search-result-query-key{
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.84px;
+    }
+    .icon-cart[class^="icon-"]::before, [class*=" icon-"]::before{
+      font-weight: normal;
+    }
+    .subFlter_clear_container {
+      min-height: 80px;
+    }
+    .subFlter_clear_container{
+      letter-spacing:0.98;
+      background: transparent;
+      font-weight: 600;
+      
+    }
+      {% comment %} css for filter sidebar as per design ends here {% endcomment %}
+    }
+
+
+    @media screen and (max-width: 1000px) {
+        #search-pagepanel-collections .one-third.medium-down--one-whole.column{
+            width:48%;
+        }
+    }
+
+    @media (max-width: 798px) {
+        .plp-filter-model .btn-filter-title{
+            font-size:14px;
+          }
+        [data-result-container] {
+            margin-top: 20px;
+        }
+        [data-filter-items-desktop] {
+            display: none;
+        }
+
+        .sort_filter_mobile, .custome_sort_by {
+            left: 0px;
+        }
+        
+    }
+
+    @media (max-width: 767px) {
+        [data-searchpage-blogs] .blog-single-data {
+            gap: 20px;
+        }
+
+        [data-searchpage-blogs] .blog-single-data .blog-single-image {
+            width: 110px;
+        }
+
+        [data-searchpage-blogs] .blog-single-data .blog-single-details {
+            width: calc(100% - 110px);
+        }
+
+        [data-searchpage-blogs] .blog-single-data .blog-single-image img {
+            width: 110px;
+            height: 110px;
+        }
+
+        [data-searchpage-blogs] .blog-single-data .blog-single-title {
+            font-size: 14px !important;
+            line-height: 20px !important;
+        }
+
+        [data-searchpage-blogs] .blog-single-data .blog-single-content p {
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            margin-bottom: 0px;
+        }
+        .search-result-tab-count {
+            margin-bottom: 10px;
+        }
+        {% comment %}  {% endcomment %}
+        #search-pagepanel-collections .one-third.medium-down--one-whole.column {
+            width: 100%;
+            margin-bottom:20px;
+        }
+        .data_cate_count {
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 20px;
+        }
+        .search-result-coll-title {
+            font-size: 18px;
+            line-height: 32px;
+            margin: 13px 0 20px 0;
+        }
+        .search-result-coll-desc {
+            font-size: 12px;
+            line-height: 24px;
+        }
+        .search-coll-list-img-with-content{
+            padding:0 26px;
+        }
+        .search-result-coll-button {
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .search-result-coll-button a{
+            font-size: 14px;
+            line-height: 17px;
+            padding: 6px 22.5px;
+        }
+        div#search-pagepanel-collections {
+            margin-bottom: 25px;
+            padding: 0 11px;
+        }
+        {% comment %}  {% endcomment %}
+        {% comment %} no result css starts here {% endcomment %}
+        .noResultContainer {
+            padding: 60px 0 0 0;
+        }
+        .noResultContainer h2.noResultTitle {
+            font-size: 12px !important;
+            font-weight: 500;
+            letter-spacing: 0.72px;
+            margin: 0;
+        }
+        .noResultDesktopImage{
+        display:none;
+        }
+        .noResultMobileImage{
+        display:block;
+        margin-top:23px;
+        }
+        .noREsultSubTitle {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            margin: 22px 0 20px 0;
+        }
+        .noResultShoppingBTn a {
+            font-size: 14px;
+            padding: 8px 16px;
+            letter-spacing: 0.84px;
+        }
+        .noResultShoppingBTn {
+            margin-bottom: 60px;
+        }
+        .section .noResulthomepage_content{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .noResulthomepage_content h2.title{
+            text-align: center;
+            width: 100%;
+            font-size: 14px !important;
+            letter-spacing: 0.84px;
+        }
+        .view-button-mobile-hidden{
+        display:none;
+        }
+        .view-button-desktop-hidden {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        .view-button-desktop-hidden a {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.84px;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+        }
+        .view-button-desktop-hidden{
+            display:block;
+            }
+        {% comment %} no result css ends here {% endcomment %}
+    }
+      {% comment %}  {% endcomment %}
+      .ske-pla {
+        display: inline-block;
+        min-height: 1em;
+        vertical-align: middle;
+        cursor: wait;
+        background-color: #A9A9A9;
+        opacity: 0.5;
+        border-radius: 3px;
+      }
+      
+      .glow_effect .ske-pla {
+        animation: placeholder-glow 2s ease-in-out infinite;
+      }
+      
+      .wrapper {
+        max-width: 300px;
+      }
+      
+      .w {
+        min-width: 10%;
+      }
+      .w-2 {
+        min-width: 20%;
+      }
+      .w-3 {
+        min-width: 30%;
+      }
+      .w-4 {
+        min-width: 40%;
+      }
+      .w-5 {
+        min-width: 50%;
+      }
+      .w-6 {
+        min-width: 60%;
+      }
+      .w-8 {
+        min-width: 70%;
+      }
+      .w-8 {
+        min-width: 80%;
+      }
+      .w-9 {
+        min-width: 90%;
+      }
+      .w-10 {
+        min-width: 100%;
+      }
+      
+      .h-2 {
+        min-height: 1.5em;
+      }
+      .h-3 {
+        min-height: 3em;
+      }
+      .h-5 {
+        min-height: 200px;
+      }
+      
+      @keyframes placeholder-glow {
+        50% {
+          opacity: 0.2;
+        }
+      }
+      .skeletop-card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 30px;
+        grid-column-gap: 15px;
+    }
+    .wrapper.glow_effect {
+        width: 100%;
+        text-align:center;
+    }
+    .skeleton-featured-button{
+    text-align:right;
+    margin-bottom:40px;
+    }
+    .skeleton-featured-button div{
+    border-radius:60px;
+    animation: placeholder-glow 2s ease-in-out infinite;
+    }
+    .skeleton-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .skeletop-left-container {
+        width: 20%;
+    }
+    .skeleton-right-container{
+    width:75%;
+    }
+    .skeletop-left-container-heading{
+    text-align:right;
+    }
+    .skeleton-title{
+        text-align: center;
+        width: 40%;
+        margin: auto;
+        margin-bottom: 40px;
+        margin-top:40px;
+    }
+    .skeleton-title div{
+    padding:15px 0;
+    animation: placeholder-glow 2s ease-in-out infinite;
+    }
+    .skeletop-left-container .w-8{
+    padding:15px 0;
+    }
+    .skeleton-main-container{
+    display:none;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 10px;
+    }
+    .skeleton-breadcrumb{
+        border-bottom: 1px solid #D3D3D3;
+        padding-left: 80px;
+    }
+    .skeleton-breadcrumb .ske-pla{
+    min-width:80px;
+    animation: placeholder-glow 2s ease-in-out infinite;
+    }
+    .skeletop-left-container-heading div{
+        animation: placeholder-glow 2s ease-in-out infinite;
+    }
+    @media screen and (max-width:767px){
+        .skeleton-right-container {
+            width: 100%;
+        }
+        .skeletop-left-container {
+            display: none;
+        }
+        .skeleton-featured-button {
+            display:none;
+        }
+        .skeleton-title div {
+            padding: 15px 45px;
+        }
+        .skeletop-card {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 0px;
+        }
+        .wrapper.glow_effect {
+            width: 100%;
+            padding-inline: 10px;
+        }
+        .skeleton-title {
+            display: flex;
+            justify-content: center;
+            gap:10px;
+        }
+        .skeleton-title .ske-pla{
+            width: 60%;
+        }
+        .skeleton-breadcrumb {
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        .skeleton-breadcrumb .ske-pla{
+            min-width:50px;
+            }
+    }
+      {% comment %}  {% endcomment %}
+</style>
+
+<!-- skeleton... -->
+{% render 'search-skeleton' %}
+<!-- ...skeleton -->
+
+<section id="search-result-hide" class="section search-result-main" style="display:none;">
+    <span class="visually-hidden" role="alert"><span data-result-count>0</span> Results found for your search <span data-result-query-key></span></span>
+    <h1 class="visually-hidden">Search Results</h1> 
+    <div class="container content">
+        <div class="one-whole column">
+            <div class="breadcrumb-collection">
+                <nav class="breadcrumb_text" aria-label="breadcrumb">
+                    <ul>
+                        <li>
+                            <a href="{{ routes.root_url }}" title="{{ shop.name | escape }}" class="breadcrumb_link">
+                                <span>{{ 'general.breadcrumbs.home' | t }}</span>
+                            </a>
+                            <span class="breadcrumb-divider">/</span>
+                        </li>
+                        <li>
+                            <a href="/search" class="breadcrumb_link" aria-current="page">
+                                <span>{{ 'general.search.title' | t }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="one-whole column">
+            <div class="search-page-title-wrapper automatic" role="tablist">
+                <button id="search-page-products" class="search-header-tab" type="button" role="tab" aria-selected="true" aria-controls="search-pagepanel-products" tabindex="0">
+                    <span class="focus">Products</span>
+                </button>
+                {%comment%}
+                <button style="display:none" id="search-page-collections" class="search-header-tab" type="button" role="tab" aria-selected="false" aria-controls="search-pagepanel-collections" tabindex="-1">
+                    <span class="focus">Collections</span>
+                </button>
+                {%endcomment%}
+                <button id="search-page-blogs" class="search-header-tab" type="button" role="tab" aria-selected="false" aria-controls="search-pagepanel-blogs" tabindex="-1">
+                    <span class="focus">Blogs</span>
+                </button>
+            </div>
+        </div>
+
+        
+        <div id="search-pagepanel-products" class="container one-whole column">
+            
+            <div class="sort_filter_container">
+                <div class="sort_filter_mobile">
+                    <div class="sort_filter_mb sort_filter_mb_sort">
+                        <div class="filter_sort_icon">
+                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.625 8.375V14.875C9.625 15.0408 9.55915 15.1997 9.44194 15.3169C9.32473 15.4342 9.16576 15.5 9 15.5C8.83424 15.5 8.67527 15.4342 8.55806 15.3169C8.44085 15.1997 8.375 15.0408 8.375 14.875V7.375C8.375 8.20924 8.44085 8.05027 8.55806 6.93306C8.67527 6.81585 8.83424 6.75 9 6.75C9.16576 6.75 9.32473 6.81585 9.44194 6.93306C9.55915 8.05027 9.625 8.20924 9.625 8.375ZM14.625 13C14.4592 13 14.3003 13.0658 14.1831 13.1831C14.0658 13.3003 14 13.4592 14 13.625V14.875C14 15.0408 14.0658 15.1997 14.1831 15.3169C14.3003 15.4342 14.4592 15.5 14.625 15.5C14.7908 15.5 14.9497 15.4342 15.0669 15.3169C15.1842 15.1997 15.25 15.0408 15.25 14.875V13.625C15.25 13.4592 15.1842 13.3003 15.0669 13.1831C14.9497 13.0658 14.7908 13 14.625 13ZM16.5 10.5H15.25V1.125C15.25 0.95924 15.1842 0.800269 15.0669 0.683058C14.9497 0.565848 14.7908 0.5 14.625 0.5C14.4592 0.5 14.3003 0.565848 14.1831 0.683058C14.0658 0.800269 14 0.95924 14 1.125V10.5H12.75C12.5842 10.5 12.4253 10.5658 12.3081 10.6831C12.1908 10.8003 12.125 10.9592 12.125 11.125C12.125 11.2908 12.1908 11.4497 12.3081 11.5669C12.4253 11.6842 12.5842 11.75 12.75 11.75H16.5C16.6658 11.75 16.8247 11.6842 16.9419 11.5669C17.0592 11.4497 17.125 11.2908 17.125 11.125C17.125 10.9592 17.0592 10.8003 16.9419 10.6831C16.8247 10.5658 16.6658 10.5 16.5 10.5ZM3.375 10.5C3.20924 10.5 3.05027 10.5658 2.93306 10.6831C2.81585 10.8003 2.75 10.9592 2.75 11.125V14.875C2.75 15.0408 2.81585 15.1997 2.93306 15.3169C3.05027 15.4342 3.20924 15.5 3.375 15.5C3.54076 15.5 3.69973 15.4342 3.81694 15.3169C3.93415 15.1997 4 15.0408 4 14.875V11.125C4 10.9592 3.93415 10.8003 3.81694 10.6831C3.69973 10.5658 3.54076 10.5 3.375 10.5ZM5.25 8H4V1.125C4 0.95924 3.93415 0.800269 3.81694 0.683058C3.69973 0.565848 3.54076 0.5 3.375 0.5C3.20924 0.5 3.05027 0.565848 2.93306 0.683058C2.81585 0.800269 2.75 0.95924 2.75 1.125V8H1.5C1.33424 8 1.17527 8.06585 1.05806 8.18306C0.940848 8.30027 0.875 8.45924 0.875 8.625C0.875 8.79076 0.940848 8.94973 1.05806 9.06694C1.17527 9.18415 1.33424 9.25 1.5 9.25H5.25C5.41576 9.25 5.57473 9.18415 5.69194 9.06694C5.80915 8.94973 5.875 8.79076 5.875 8.625C5.875 8.45924 5.80915 8.30027 5.69194 8.18306C5.57473 8.06585 5.41576 8 5.25 8ZM10.875 4.25H9.625V1.125C9.625 0.95924 9.55915 0.800269 9.44194 0.683058C9.32473 0.565848 9.16576 0.5 9 0.5C8.83424 0.5 8.67527 0.565848 8.55806 0.683058C8.44085 0.800269 8.375 0.95924 8.375 1.125V4.25H7.125C6.95924 4.25 6.80027 4.31585 6.68306 4.43306C6.56585 4.55027 6.5 4.70924 6.5 4.875C6.5 5.04076 6.56585 5.19973 6.68306 5.31694C6.80027 5.43415 6.95924 5.5 8.125 5.5H10.875C11.0408 5.5 11.1997 5.43415 11.3169 5.31694C11.4342 5.19973 11.5 5.04076 11.5 4.875C11.5 4.70924 11.4342 4.55027 11.3169 4.43306C11.1997 4.31585 11.0408 4.25 10.875 4.25Z" fill="#17130F"></path>
+                            </svg>
+                        </div>
+                        <button type="button" aria-expanded="false">Sort by <span class="mobileSortBy_dot"></span></button>
+                    </div>
+                    <div class="sort_filter_mb sort_filter_mb_filter">
+                        <div class="filter_sort_icon">
+                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.0156 0.869529C16.9194 0.647272 16.76 0.458197 16.5572 0.325821C16.3544 0.193445 16.1172 0.123609 15.875 0.124997H2.12498C1.88305 0.125474 1.64646 0.196146 1.4439 0.32844C1.24135 0.460734 1.08154 0.648965 0.98386 0.870297C0.886179 1.09163 0.854826 1.33655 0.893604 1.57535C0.932382 1.81415 1.03963 2.03657 1.20232 2.21562L1.20857 2.22265L6.49998 8.87265V13.875C6.49993 14.1012 6.56127 14.3232 6.67747 14.5173C6.79368 14.7115 6.96038 14.8704 8.15981 14.9772C7.35924 15.084 8.58392 15.1347 8.8099 15.1239C8.03587 15.113 8.25466 15.041 8.44295 14.9156L10.9429 13.2484C11.1143 13.1343 11.2548 12.9796 11.352 12.798C11.4492 12.6165 11.5 12.4137 11.5 12.2078V7.87265L16.7922 2.22265L16.7984 2.21562C16.9628 2.03739 17.0711 1.81468 17.1097 1.57528C17.1484 1.33589 17.1156 1.09043 17.0156 0.869529ZM10.589 8.02187C10.3719 8.25202 10.2507 8.55626 10.25 8.87265V12.2078L7.74998 13.875V7.87265C7.75071 8.55512 8.62996 8.24933 8.41248 8.01797L2.12498 1.375H15.875L10.589 8.02187Z" fill="#17130F"></path>
+                            </svg>
+                        </div>
+                        <button type="button" aria-expanded="false" data-filter-open="">Filters <span class="mobile_dot"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custome_sort_by" style="display: none;">
+                <div class="sort_by_heading">
+                    <button type="button" class="sort_by_close_button">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.33154 1.16519L14.051 14.215" stroke="#040404"></path>
+                            <path d="M13.7194 1L1 14.215" stroke="#040404"></path>
+                        </svg>
+                        <span class="visually-hidden">Close sort by</span>
+                    </button>
+                    <label for="sort-by-mobile" class="sortby-label">Sort by</label>
+                    <ul class="sort_by sort_by_mobile" id="sort-by-mobile_search" role="list">
+                        <li role="listitem">
+                            <button class="selected" data-value="relevance&sortOrder=desc" type="button" aria-selected="true">
+                                Featured
+                            </button>
+                        </li>
+                        <li role="listitem">
+                            <button data-value="sales_amount&sortOrder=desc" type="button" aria-selected="false">
+                            Best selling
+                            </button>
+                        </li>
+                        <li role="listitem">
+                            <button data-value="title&sortOrder=asc" type="button" aria-selected="false">
+                            Alphabetically, A-Z
+                            </button>
+                        </li>
+                        <li role="listitem">
+                            <button data-value="title&sortOrder=desc" type="button" aria-selected="false">
+                            Alphabetically, Z-A
+                            </button>
+                        </li>
+                        <li role="listitem">
+                            <button data-value="price&sortOrder=asc" type="button" aria-selected="false">
+                            Price, low to high
+                            </button>
+                        </li>
+                        <li role="listitem">
+                            <button data-value="price&sortOrder=desc" type="button" aria-selected="false">
+                            Price, high to low
+                            </button>
+                        </li>
+                        <li role="listitem">
+                            <button data-value="created&sortOrder=asc" type="button" aria-selected="false">
+                            Date, old to new
+                            </button>
+                        </li>
+                        <li role="listitem">
+                            <button data-value="created&sortOrder=desc" type="button" aria-selected="false">
+                            Date, new to old
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <facet-filters-form>
+                <div class="plp-filter-model" style="display: none;">
+                    <div class="plp-filter-wrapper">
+                        <div class="plp-filter-header">
+                            <div class="plp-filter-header-text">
+                                <button type="button" aria-label="Close filter" data-filter-close="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-8.5M3 12h18"></path>
+                                    </svg>
+                                </button>
+                                Filters
+                            </div>
+                            {% comment %}  {% endcomment %}
+                    <div class="clear_all_button clear_mobile hide">
+                        <a href="#" aria-label="clear all selected filters">Clear All</a> 
+                        </div>
+                      {% comment %}  {% endcomment %}
+                        </div>
+                        <div class="plp-filter-body">
+                            <ul class="plp-filter-items" role="list" data-filter-mobile-items>
+                            </ul>
+                        </div>
+                        <div class="plp-filter-footer">
+                            <button type="button" class="btn btn-outlined" aria-label="Close filter" data-filter-close="">Close</button>
+                            <button type="button" class="btn" data-filter-apply="" aria-label="Apply filter">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </facet-filters-form>
+
+            <div class="one-whole column section_select">
+                <div>
+                    <div class="search-result-query-key">
+                        <span data-result-count>0</span> Results found for "<span data-result-query-key></span>":
+                      </div>
+                    <h2 class="filter_heading">FILTERS</h2>
+                    <span class="search-result-status visually-hidden" role="status" aria-hidden="true"></span>
+                </div>
+                <div class="sort_by_heading" data-sortby>
+                    <label for="sort-by-search" class="sortby-label">Sort by  :</label>
+                    <select name="sort-by-search" class="sort_by" id="sort-by-search" data-sortby-search>
+                        <option value="relevance&sortOrder=desc" selected>Featured</option>
+                        <option value="sales_amount&sortOrder=desc" >Best Selling</option>
+                        <option value="title&sortOrder=asc">Alphabetically, A-Z</option>
+                        <option value="title&sortOrder=desc">Alphabetically, Z-A</option>
+                        <option value="price&sortOrder=asc">Price, low to high</option>
+                        <option value="price&sortOrder=desc">Price, high to low</option>
+                        <option value="created&sortOrder=asc">Date, old to new</option>
+                        <option value="created&sortOrder=desc">Date, new to old</option>
+                    </select>
+                </div>
+            </div>
+            <div class="one-fourth column medium-down--one-whole">
+                <div class="subFlter_clear_container">
+                {% comment %}  {% endcomment %}
+                <div id="FilterSubBtn"></div>
+                {% comment %}  {% endcomment %}
+                <div class="clear_all_button hide">
+                    <button aria-label="clear all selected filters" role="button">Clear All</button>
+                    </div>
+                </div>
+                <div class="filter-sidebar">
+                    <div data-filter-items data-filter-items-desktop>
+                    </div>
+                </div>
+            </div>
+            <div id="FilterSubBtn"></div>
+            <div class="three-fourths column medium-down--one-whole mob_style">
+                <div class="container">
+                    <div class="one-whole column hidden-ipadup search-result-query-key total_result_found"><span data-result-count>0</span> Results found for "<span data-result-query-key></span>"</div>
+                    {% comment %}  {% endcomment %}
+                    <div class="mobile_filter_container">
+                        <div id="mobFBtn"></div>
+                    </div>
+                    {% comment %}  {% endcomment %}
+                    <div class="one-whole column" data-result-container></div>
+                    <p class="no-result hidden">{{- section.settings.no_result_msg -}}</p>
+                    <div class="one-whole column" data-result-pagination></div>
+                </div>
+            </div>
+        </div>
+        <div id="search-pagepanel-collections" class="container is-hidden ml-0" data-searchpage-collections>
+        </div>
+
+        <div id="search-pagepanel-blogs" class="container is-hidden ml-0" data-searchpage-blogs>
+        </div>
+        
+    </div>
+    {% comment %}  {% endcomment %}
+  <div class="closeFilterContainer" style="display:none;">
+    <div class="closeFilterBody">
+      <h2>Discard Changes?</h2>
+      <p>You modified some filters. Would you like to apply the changes or
+      discard them?</p>
+      <button type="button" class="btn apply_btn apply" data-filter-apply="" aria-label="Apply filter">APPLY</button>
+      <button class="discard">DISCARD</button>
+    </div>
+  </div>
+  {% comment %}  {% endcomment %}
+</section>
+
+{% assign no_res_collection = collections[section.settings.collection] %}
+<section class="section noResultContainer" style="display: none">
+    <div class="visually-hidden" role="alert">
+<span>We couldn’t find any matches!</span>
+    </div>
+    <div class="container">
+        <div class="column one-whole">
+            <h1 class="noResultTitle">You searched for "<span No-result-title></span>"</h1>
+            <div class="noResultDesktopImage">
+                    <svg width="73" height="89" viewBox="0 0 73 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group">
+                    <path id="Vector" d="M15.2545 79.0728L10.5819 85.7517C8.91519 88.1344 5.63087 88.7157 3.24817 87.049C0.865459 85.3806 0.284225 82.098 1.95089 79.7135L15.4296 60.4488M23.9432 66.6533L18.7681 74.05M33.4228 60.5381L30.5311 64.6678C28.8662 67.0453 25.5924 67.623 23.2149 65.9581L16.7023 61.3975C14.3266 59.7343 13.7489 56.4605 15.4138 54.0831L18.0768 50.28" stroke="#EB1676" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="Vector_2" d="M71.0214 23.0136C73.4322 31.4888 72.1454 40.9356 66.699 48.7157C57.0928 62.4325 38.187 65.7658 24.4703 56.1614C10.7517 46.5553 8.41841 27.6495 17.0228 13.9327C26.6289 0.21423 45.5347 -3.11911 59.2515 6.487C63.3814 9.37741 66.5694 13.1117 68.7455 17.2941" stroke="#EB1676" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="Vector_3" d="M21.8713 41.4694C23.4819 44.6504 25.8787 47.4935 29.0054 49.6819C39.1437 56.781 53.1196 54.3178 60.2187 44.1777C67.3178 34.0394 64.8528 20.0653 54.7145 12.9662C44.5762 5.86708 30.6003 8.33032 23.5012 18.4686C19.8685 23.6577 18.7393 29.8517 19.8615 35.6133" stroke="#EB1676" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="Vector_4" d="M46.4992 33.4667C45.3716 31.8457 43.7126 30.8199 41.8614 30.8199C40.0102 30.8199 38.3513 31.8457 37.2236 33.4667M27.564 27.3716C28.2893 28.2039 29.3563 28.7305 30.547 28.7305C31.7376 28.7305 32.8047 28.2039 33.53 27.3716M56.1587 27.3716C55.4334 28.2039 54.3663 28.7305 53.1757 28.7305C51.985 28.7305 50.918 28.2039 50.1927 27.3716" stroke="#EB1676" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    </svg>
+            </div>
+            <div class="noResultMobileImage">
+                <svg width="91" height="111" viewBox="0 0 91 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group-one">
+                    <path id="Vector-one" d="M19.1148 98.5474L13.2968 106.863C11.2216 109.83 8.13223 110.554 4.16546 108.479C1.19869 106.401 0.474982 102.314 2.55019 99.3452L19.3328 75.3582M29.9334 83.0835L23.4898 92.2934M41.7366 75.4694L38.1361 80.6114C36.0631 83.5716 31.9868 84.291 29.0266 82.2179L20.9176 76.5394C17.9595 74.4686 17.2402 70.3923 19.3132 67.4321L22.629 62.6968" stroke="#EB1676" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="Vector-two" d="M88.5513 28.7469C91.5529 39.2995 89.9507 51.062 83.1692 60.7492C71.2084 77.8283 47.6683 81.9787 30.5892 70.0201C13.508 58.0593 9.35754 34.5191 21.3162 17.44C33.277 0.358776 56.8171 -3.79165 73.8962 8.16916C79.0384 11.7681 83.0079 16.4177 85.7175 21.6253" stroke="#EB1676" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="Vector-three" d="M27.3535 51.7263C29.359 55.6871 32.3432 59.2272 36.2364 61.952C48.8599 70.7913 66.2616 67.7242 75.1008 55.0986C83.9401 42.4751 80.8709 25.0756 68.2474 16.2363C55.6239 8.39703 38.2222 10.4641 29.383 23.0875C24.8598 29.5486 23.4538 37.2609 24.8511 44.4348" stroke="#EB1676" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="Vector-four" d="M58.0182 41.7622C56.6141 39.7439 54.5485 38.4667 52.2435 38.4667C49.9386 38.4667 47.873 39.7439 46.4689 41.7622M34.4414 34.1731C35.3445 35.2094 36.6731 35.8651 38.1556 35.8651C39.6382 35.8651 40.9668 35.2094 41.8699 34.1731M70.0454 34.1731C69.1423 35.2094 67.8137 35.8651 66.3312 35.8651C64.8487 35.8651 63.5201 35.2094 62.617 34.1731" stroke="#EB1676" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    </svg>        
+            </div>
+            <p class="noREsultSubTitle">We couldn’t find any matches!</p>
+            <div class="noResultShoppingBTn">
+                <a href="/collections/all" class="button">Continue Shopping</a>
+            </div>
+        </div>
+        <div class="one-whole column one-column-container">
+            <div class="noResulthomepage_content">
+           
+            <h2 class="title">{{ section.settings.title }}</h2>
+            
+            <div class="view-button-mobile-hidden">
+            <a href="{{ section.settings.view_All_url }}">View All</a>
+            </div>
+            </div>
+            <div class="js-product-slider homepage-product-slider full-width--true  featured-collection__products">
+                {% if no_res_collection.products.size > 0 %}
+                    {%
+                      render 'product-loop',
+                      limit: 8,
+                      products: no_res_collection.products,
+                      collection: no_res_collection,
+                      skip_product: nil,
+                      products_per_row: 4,
+                    %}
+                {% endif %}
+            </div>
+
+            <div class="view-button-desktop-hidden">
+                <a href="{{ section.settings.view_All_url }}"> View All</a>
+                </div>
+          </div>
+    </div>
+</section>
+
+{% comment %}  {% endcomment %}
+
+{% schema %}
+    {
+        "name": "Searchanize Search Page",
+        "class": "section-search-result",
+        "tag": "section",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "no_result_msg",
+            "label": "No result message",
+            "default": "No products found, Please check back later"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Trending Products"
+          },
+          {
+            "type":"url",
+            "id":"view_All_url",
+            "label": "View All Text",
+            "default":"/collections/all"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ],
+        "presets": [
+            {
+                "name": "Searchanize Search Page",
+                "category": "Search"
+            }
+        ]
+    }
+{% endschema %}
