@@ -2,6 +2,213 @@
 <!DOCTYPE html>
 <html class="no-js no-touch" lang="{{ request.locale.iso_code }}">
     <head>
+        {% if template contains 'collection' or template contains 'product' or template == 'index' %}
+          <script mobi-async-script>
+            document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js');
+            (function() {
+              let sections_lazy_loaded = false;
+              async function lazy_load_section(section_ids) {
+                const result = await fetch(`${window.location.pathname}?sections=${section_ids}&section_lazy_loading=true`);
+                const response = await result.json();
+                for(let key in response) {
+                  const html = new DOMParser().parseFromString(response[key], 'text/html');
+                  const renders = html.querySelectorAll('[data-lazy-render]');
+                  if(renders.length > 0) {
+                    renders.forEach((render, index) => {
+                      document.querySelectorAll(`#shopify-section-${key} [data-lazy-render]`)[index].appendChild(render.querySelector('[data-lazy-target]'));
+                    })
+                  } else {
+                    $(`#shopify-section-${key}`).empty().append($(response[key]).children());
+                  }
+                  
+                  $(`#shopify-section-${key}`).removeClass('lazy_section_scroll');
+                  console.log(`%c Lazy loaded ${key}`, 'background: black; color: white; padding: 0 10px; font-weight: bold;');
+                }
+                  
+                return 1;
+              }
+
+              async function triggerLazySection() {
+                if (!sections_lazy_loaded) {
+                  sections_lazy_loaded = true;
+                  var section_ids = [];
+                  $('.lazy_section_scroll').each(function () {
+                    var section_id = $(this).attr('id').split('-section-')[1];
+                    section_ids.push(section_id);
+                  });
+                  let i = 0;
+                  while(i < section_ids.length) {
+                    let end = (i + 5 < section_ids.length) ? i + 5: section_ids.length + 1;
+                    let temp = section_ids.slice(i, end).join(',');
+                    let result = await lazy_load_section(temp);
+                    i += 5;
+                  }
+                  window.productPage.init();
+                  console.log('lazy loading completed');
+                }
+              }
+
+              let blockScript = window.localStorage.getItem('miellevisited');
+
+              if(!blockScript) {
+                window.localStorage.setItem('miellevisited', true);
+                const config = { childList: true, subtree: true };
+                const passList = [
+                  'jquery.min.js',
+                  'jquery.ba-throttle-debounce.js',
+                ];
+  
+                const blockStyleList = [
+                  'cdn.shopify.com/shopifycloud/shopify/assets/admin/style',
+                ];
+                const scriptStack = [];
+          
+                const scriptCallback = (mutationList, observer) => {
+                  for (const mutation of mutationList) {
+                    if (mutation.type == 'childList' && mutation.addedNodes.length > 0 ) {
+                      for ( const node of mutation.addedNodes ) {
+                        if (node.tagName === 'SCRIPT' && (!node.hasAttribute('mobi-async-script'))) {
+                          let passable = passList.findIndex(block => node.src.includes(block));
+  
+                          if(passable == -1) {
+                            const nodeAttributes = node.attributes;
+                            const attributes = [];
+                            for(let key in nodeAttributes) {
+                              if(nodeAttributes[key].nodeName != undefined && nodeAttributes[key].nodeValue != undefined) {
+                                  attributes.push({
+                                  name: nodeAttributes[key].nodeName,
+                                  value: nodeAttributes[key].nodeValue
+                                  });
+                              }
+                            }
+                            scriptStack.push({
+                              tagName: 'SCRIPT',
+                              parentElement: node.parentElement,
+                              innerText: node.textContent,
+                              attributes: attributes,
+                            });
+                            node.parentNode.removeChild(node);
+                          }
+      
+                        } else if(node.tagName === 'LINK' && (node.getAttribute('rel') == 'preload' || node.getAttribute('rel') == 'preconnect') && node.getAttribute('as') == 'script') {
+                          const nodeAttributes = node.attributes;
+                          const attributes = [];
+                          for(let key in nodeAttributes) {
+                            if(nodeAttributes[key].nodeName != undefined && nodeAttributes[key].nodeValue != undefined) {
+                              attributes.push({
+                                name: nodeAttributes[key].nodeName,
+                                value: nodeAttributes[key].nodeValue
+                              });
+                            }
+                          }
+                          scriptStack.push({
+                            tagName: 'LINK',
+                            parentElement: node.parentElement,
+                            innerText: node.textContent,
+                            attributes: attributes,
+                          });
+                          node.parentNode.removeChild(node);
+                        } else if (node.tagName === 'LINK' && node.getAttribute('rel') === 'stylesheet' && node.getAttribute('href')) {
+                          let blockable = blockStyleList.findIndex(block => node.href.includes(block));
+  
+                          if (blockable >= 0) {
+                            const nodeAttributes = node.attributes;
+                            const attributes = [];
+                            for(let key in nodeAttributes) {
+                              if(nodeAttributes[key].nodeName != undefined && nodeAttributes[key].nodeValue != undefined) {
+                                attributes.push({
+                                  name: nodeAttributes[key].nodeName,
+                                  value: nodeAttributes[key].nodeValue
+                                });
+                              }
+                            }
+                            scriptStack.push({
+                              tagName: 'LINK',
+                              parentElement: node.parentElement,
+                              innerText: node.textContent,
+                              attributes: attributes,
+                            });
+                            node.parentNode.removeChild(node);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+          
+                const scriptObserver = new MutationObserver(scriptCallback);
+                scriptObserver.observe(document.querySelector('html'), config);
+          
+                document.addEventListener('loadscript', async () => {
+                  scriptObserver.disconnect();
+                  {% unless request.design_mode %}
+                    await triggerLazySection();
+                  {% endunless %}
+                  while(scriptStack.length) {
+                    const item = scriptStack.shift();
+                    
+                    if(item.tagName === 'SCRIPT') {
+                      const script = document.createElement("script");
+                      item.innerText != undefined ? script.innerHTML = item.innerText : null;
+                      
+                      item.attributes.forEach(attr => {
+                        if (attr.name != undefined && attr.value != undefined) {
+                          if(attr.name == 'src') {
+                            script[attr.name] = attr.value;
+                          } else {
+                            script.setAttribute(attr.name, attr.value);
+                          }
+                        } 
+                      });
+                      if(script.src.includes('vendors.js')) {
+                        script.removeAttribute('defer');
+                        script.setAttribute('async', 'async');
+                      }
+                      try {
+                        script.onload = function() {
+                          console.log('External script loaded successfully');
+                        };
+      
+                        script.onerror = function() {
+                          console.log('Error loading external script');
+                        };
+                        document.body.appendChild(script);
+                      } catch(err) {
+                        console.log('append Error:', err);
+                      }
+                      
+                    } else if (item.tagName === 'LINK') {
+                      const link = document.createElement('link');
+          
+                      item.innerText ? link.innerHTML = item.innerText : null;
+                      item.attributes.forEach(attr => {
+                        if (attr.name != undefined && attr.value != undefined) {
+                          link.setAttribute(attr.name, attr.value);
+                        }
+                      });
+                      item.parentElement.appendChild(link);
+                    } 
+                  }
+                  setTimeout(() => {
+                    window.dispatchEvent(new Event('load'));
+                    window.dispatchEvent(new Event('DOMContentLoaded'));
+                  }, 1000);
+      
+                }, {once: true});
+              } else {
+                {% unless request.design_mode %}
+                  window.addEventListener('click', triggerLazySection, {once: true});
+                  window.addEventListener('touchstart', triggerLazySection, {once: true});
+                  window.addEventListener('keydown', triggerLazySection, {once: true});
+                  window.addEventListener('scroll', triggerLazySection, {once: true});
+                  setTimeout(() => {
+                    triggerLazySection();
+                  }, 7000);
+                {% endunless %}
+              }
+            })();
+          </script> 
+        {% endif %}
         <meta charset="utf-8">
         <meta http-equiv="cleartype" content="on">
         <meta name="robots" content="index,follow">
@@ -101,7 +308,7 @@
             <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
         {%- endif -%}
 
-        <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+        <script src="{{ 'jquery.min.js' | asset_url }}" async></script>
         <script src="{{- 'slick.min.js' | asset_url -}}" defer></script> 
         <script src="{{- 'util.js' | asset_url -}}" defer></script> 
         <script src="{{ 'site.js' | asset_url }}" defer></script>
@@ -492,7 +699,7 @@
         {%- render 'js-afterpay' -%}
     {%- endif -%}
 
-    <script src="{{ 'jquery.ba-throttle-debounce.js' | asset_url }}" defer></script>
+    <script src="{{ 'jquery.ba-throttle-debounce.js' | asset_url }}" async></script>
     
     {% if request.page_type == 'customers/register' %}
         <script src="{{ 'customer-form.js' | asset_url }}" defer></script>
@@ -526,6 +733,33 @@
     {%- endcomment -%}      
     {% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
     {% assign oneclickupsellapp = true %}
+    {% if template contains 'collection' or template contains 'product' or template == 'index' %}
+      <script mobi-async-script>
+        (function() {
+          let loadedScript = false;
+
+          const triggerLoading = () => {
+            if(!loadedScript) {
+              loadedScript = true;
+              document.dispatchEvent(new Event('loadscript'));
+            }
+          }
+          window.addEventListener('click', triggerLoading, {once: true});
+          window.addEventListener('touchstart', triggerLoading, {once: true});
+          window.addEventListener('keydown', triggerLoading, {once: true});
+          window.addEventListener('scroll', triggerLoading, {once: true});
+          
+          if(!loadedScript) {
+            setTimeout(() => {
+              loadedScript = true;
+    
+              document.dispatchEvent(new Event('loadscript'));
+            }, 7000);
+          }
+        })();
+
+      </script>
+    {% endif %}
   </body>
 </html>
 {%- endcapture -%}

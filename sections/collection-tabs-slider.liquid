@@ -1,3 +1,7 @@
+{%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
+
+{% if request.design_mode or page_url contains 'section_lazy_loading' or template contains '404' %}
+  {%- capture section_content -%}
   <section id="tab-products" class="section {{ section.settings.css_class }}">
     <div class="container">
         <div class="one-whole column center">
@@ -69,11 +73,22 @@
   }
 
   </style>
+  {%- endcapture -%}
+  {{- section_content -}}
+  <script>
+    var $collectionInputTab = document.querySelector('#shopify-section-{{ section.id }} .tab-title-wrapper.automatic');
+    new TabsAutomatic($collectionInputTab);
+  </script>
+{% else %}
+<script>
+    console.log('%c Lazy loading {{ section.id }}', 'background: green; color: white; padding: 10px;');
+</script>
+{% endif %}
   
   {% schema %}
   {
     "name": "Tab Products",
-    "class": "shopify-section--tab-products",
+    "class": "shopify-section--tab-products lazy_section_scroll",
     "settings": [
       {
         "type": "text",
