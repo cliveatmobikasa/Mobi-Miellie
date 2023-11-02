@@ -760,6 +760,7 @@
     "mega_menu_3": true,
     "mega_menu_4": true,
     "mega_menu_5": true,
+    "page_layout": "mango-tulsi-nourishing-botanical-blend",
     "product_form_style": "select",
     "display_product_quantity": true,
     "limit_quantity": true,
@@ -1486,7 +1487,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_text": "<p>BOGO 50% Off on Oats & Honey <strong>Use Code: BOGO50%<\/strong> + Free Shipping On U.S. Orders $60+<\/p>",
+          "promo_text": "<p>Free Shipping On U.S. Orders $75+<\/p>",
           "social_icons_header": false,
           "phone_number": "",
           "top_bar_menu": "",

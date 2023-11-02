@@ -4341,7 +4341,7 @@ body .price.price--sale {
   }
 }
 
-/* footer new privacy code ends here */
+  /* footer new privacy code ends here */
 
 .line-item.line-item-property {
   white-space: normal;
@@ -4480,3 +4480,21 @@ body.cart [data-cart-items] .cart__item--content .qty-remove-container {
     min-height: 400px !important;
   }
   /*  */
+
+/* notify me for product variants starts here */
+  .soldout .purchase-details{
+    display: none;
+  }
+  .soldout .purchase-details__quantity-label{
+    display: none;
+  }
+  .var-soldout{
+    display: block !important;
+  }
+  .outOfStock.variant {
+    display: none;
+  }
+  .soldout .outOfStock.variant {
+    display: block;
+  }
+  /* notify me for peoducts variants ends here */

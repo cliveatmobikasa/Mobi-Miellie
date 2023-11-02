@@ -38,13 +38,17 @@
   data-product-id="{{ product.id }}"
 >
   {% comment %}  {% endcomment %}
-{% if product.available %}
-  {%else%}
-  <div class="outOfStock">
- <span class="outOfStock_title">Currently Out Of Stock</span><br>
- <span class="outOfStock_subtitle">You’ll get an email if this item comes back in stock.</span>
-  </div>
-  {%endif%}
+  {% if product.available == false %}
+    <div class="outOfStock">
+   <span class="outOfStock_title">Currently Out Of Stock</span><br>
+   <span class="outOfStock_subtitle">You’ll get an email if this item comes back in stock.</span>
+    </div>
+    {% else %}
+    <div class="outOfStock variant">
+      <span class="outOfStock_title">Currently Out Of Stock</span><br>
+      <span class="outOfStock_subtitle">You’ll get an email if this item comes back in stock.</span>
+       </div>
+  {% endif %}
 {% comment %}  {% endcomment %}
   
   {% form 'product', product, data-productid: product.id %}

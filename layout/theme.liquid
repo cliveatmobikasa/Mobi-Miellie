@@ -481,18 +481,6 @@
             </script>
             {% endif %}
         {% comment %} redirection new gift to original gift code ends here {% endcomment %}
-        {%- if template == 'index' -%}
-        {% render 'artsai-lead-event' %}
-        {% endif %}
-        {%- if template == 'product' -%}
-        {% render 'artsai-content-pixel' %}
-        {% endif %}
-        {%- if request.path contains '/blogs' -%}
-        {% render 'artsai-misc-pixel' %}
-        {% endif %}
-        {%- if request.path == '/account' -%}
-        {% render 'artsai-registration-pixel' %}
-        {% endif %}
     </head>
     <!--  post_head    -->
     {%- if template contains "index" -%}
@@ -547,6 +535,7 @@
             {{- shop.money_format | strip_html -}}
           {%- endif -%}"
         >
+            {% render 'artsai-pixel' %}
     <script>
         document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js');
         if(window.Shopify&&window.Shopify.designMode)document.documentElement.className+=' in-theme-editor';
@@ -580,7 +569,9 @@
     </a>
     </div>
     <span class="visually-hidden" id="cart-sr-only" role="alert" aria-live="assertive" data-aria-live=""></span>
+    {%- unless page.url contains settings.page_layout -%}
     {%- section 'header' -%}
+    {%- endunless -%}
     {% render 'side-cart' %}
 
 <div class="wrapper-overlay"></div>
@@ -612,8 +603,9 @@
         {%- capture ICART_FULL_PAGE_LAYOUT -%}{{ content_for_layout }}{%- endcapture -%}
         {%- include 'icart-variables', ICART_FULL_PAGE_LAYOUT: ICART_FULL_PAGE_LAYOUT -%}
     </div>
-
+    {%- unless page.url contains settings.page_layout -%}
     {%- section 'footer' -%}
+    {%- endunless -%}
 
     {%- if settings.quick_shop_enabled -%}
         {%- render 'quick-shop' -%}
