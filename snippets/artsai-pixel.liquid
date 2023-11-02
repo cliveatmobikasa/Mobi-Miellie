@@ -1,0 +1,13 @@
+{% case template %}
+    {% when 'index' %}
+        <img src="https://arttrk.com/pixel/?ad_log=referer&action=lead&pixid=83ba9211-e491-47eb-bbcd-acbe9dd46e02" width="1" height="1" border="0">
+    {% when 'product' %}
+        <img src="https://arttrk.com/pixel/?ad_log=referer&action=content&pixid=83ba9211-e491-47eb-bbcd-acbe9dd46e02" width="1" height="1" border="0">
+  {% endcase %}
+
+  {%- if request.path == '/account' -%}
+    <img src="https://arttrk.com/pixel/?ad_log=referer&action=registration&pixid=83ba9211-e491-47eb-bbcd-acbe9dd46e02" width="1" height="1" border="0">
+  {%- endif -%}
+  {%- if request.path contains '/blogs' -%}
+    <img src="https://arttrk.com/pixel/?ad_log=referer&action=misc&pixid=83ba9211-e491-47eb-bbcd-acbe9dd46e02" width="1" height="1" border="0">
+  {% endif %}

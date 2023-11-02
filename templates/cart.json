@@ -5,7 +5,7 @@
       "settings": {
         "display_special_instructions": false,
         "display_savings": true,
-        "cart_message": "<p>Limited Time Only! Free Shipping On All US $60+<\/p>",
+        "cart_message": "",
         "continue_shopping_url": "shopify:\/\/collections\/all",
         "cart_title": "Shopping <span style=\"color:#eb1676\">Cart<\/span>",
         "pay_with": "or pay with"

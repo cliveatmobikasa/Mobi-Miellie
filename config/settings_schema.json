@@ -1203,6 +1203,17 @@
     ]
   },
   {
+    "name": "Page Layout",
+    "settings": [
+      {
+        "type": "text",
+        "id": "page_layout",
+        "label": "Page Handle",
+        "info": "Enter the page handle from page url"
+      }
+    ]
+  },
+  {
     "name": "Products",
     "settings": [
       {

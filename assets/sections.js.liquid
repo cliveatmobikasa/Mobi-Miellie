@@ -855,6 +855,8 @@ window.selectCallback = function (variant, selector, $element) {
       .text($('.add_to_cart', $product).data('label'));
     $('.shopify-payment-button', $product).removeClass('disabled');
     $('.purchase-details__buttons', $product).removeClass('product-is-unavailable');
+    $('.product_form').removeClass('soldout');
+    $('.outOfStock').removeClass('var-soldout');
     $('.product_form').addClass('product_available');
     $('.modal_price', $product).removeClass('variant-unavailable');
     $product.find($notifyForm).hide();
@@ -874,6 +876,8 @@ window.selectCallback = function (variant, selector, $element) {
     $('.quantity', $product).removeAttr('max');
     $('.sold_out', $product).text(message);
     $('.purchase-details__buttons', $product).addClass('product-is-unavailable');
+    $('.product_form').addClass('soldout');
+    $('.outOfStock').addClass('var-soldout');
     $('.product_form').removeClass('product_available');
     $('.add_to_cart', $product).addClass('disabled').attr('disabled', 'disabled').find('span')
       .text(message);

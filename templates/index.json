@@ -3,16 +3,16 @@
     "165456568060eafab8": {
       "type": "slideshow",
       "blocks": {
-        "311637a5-2e2c-4167-a056-80f2dffdd609": {
+        "17dd9b5c-ff0d-4f36-a27a-463ce36b54ad": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SusanGKomen_OatsandHoney_BOGO_1800x540_a25eac90-f078-49cf-9fe3-b35f650be154.jpg",
+            "image": "shopify:\/\/shop_images\/MangoTulsi_CollectionBannerSpring2023_1.jpg",
             "pretext": "",
             "title": "",
-            "adaDescriptive": "Oats & Honey BOGO50% OFF",
+            "adaDescriptive": "Mango & Tulsi Collection",
             "subtitle": "",
             "button1": "",
-            "button1_link": "shopify:\/\/collections\/oats-honey",
+            "button1_link": "shopify:\/\/collections\/mango-tulsi-hair-products",
             "button1_style": "global-button--banner",
             "button2": "",
             "button2_link": "",
@@ -20,7 +20,49 @@
             "text_position": "center",
             "text_align": "center",
             "caption_content_background": "original",
-            "mobile_image": "shopify:\/\/shop_images\/New_Mobile_742x814_2.png",
+            "mobile_image": "shopify:\/\/shop_images\/MangoTulsi_CollectionBannerSpring2023_Mobile_2.jpg",
+            "mobile_image_crop": "none"
+          }
+        },
+        "26b5da3f-4d1d-44f0-b8f1-deff5223f85f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/RM_Extensions_1440x432_2.jpg",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "New Rosemary Mint Products",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/collections\/rosemary-mint-hair-products",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/RM_Extensions_375x390_2.jpg",
+            "mobile_image_crop": "none"
+          }
+        },
+        "946b6c91-c10c-4d17-9d90-a08715bd88c9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FOQTA-Desktop-Banner_1_1.png",
+            "pretext": "",
+            "title": "",
+            "adaDescriptive": "From One Queen To Another",
+            "subtitle": "",
+            "button1": "",
+            "button1_link": "shopify:\/\/collections\/pomegranate-honey",
+            "button1_style": "global-button--banner",
+            "button2": "",
+            "button2_link": "",
+            "button2_style": "global-button--banner",
+            "text_position": "center",
+            "text_align": "center",
+            "caption_content_background": "original",
+            "mobile_image": "shopify:\/\/shop_images\/FOQTA_mobile.png",
             "mobile_image_crop": "none"
           }
         },
@@ -48,6 +90,7 @@
         },
         "518c6a93-42a5-40c9-82e8-6317e99d8f4d": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/UpdatedAngelReese_1080x540px_v1.png",
             "pretext": "",
@@ -64,49 +107,6 @@
             "text_align": "center",
             "caption_content_background": "original",
             "mobile_image": "shopify:\/\/shop_images\/New_Mobile_742x814_1.png",
-            "mobile_image_crop": "none"
-          }
-        },
-        "26b5da3f-4d1d-44f0-b8f1-deff5223f85f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/RM_Extensions_1440x432_2.jpg",
-            "pretext": "",
-            "title": "",
-            "adaDescriptive": "New Rosemary Mint Products",
-            "subtitle": "",
-            "button1": "",
-            "button1_link": "shopify:\/\/collections\/rosemary-mint-hair-products",
-            "button1_style": "global-button--banner",
-            "button2": "",
-            "button2_link": "",
-            "button2_style": "global-button--banner",
-            "text_position": "center",
-            "text_align": "center",
-            "caption_content_background": "original",
-            "mobile_image": "shopify:\/\/shop_images\/RM_Extensions_375x390_2.jpg",
-            "mobile_image_crop": "none"
-          }
-        },
-        "946b6c91-c10c-4d17-9d90-a08715bd88c9": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/FOQTA-Desktop-Banner_1_1.png",
-            "pretext": "",
-            "title": "",
-            "adaDescriptive": "From One Queen To Another",
-            "subtitle": "",
-            "button1": "",
-            "button1_link": "shopify:\/\/collections\/pomegranate-honey",
-            "button1_style": "global-button--banner",
-            "button2": "",
-            "button2_link": "",
-            "button2_style": "global-button--banner",
-            "text_position": "center",
-            "text_align": "center",
-            "caption_content_background": "original",
-            "mobile_image": "shopify:\/\/shop_images\/FOQTA_mobile.png",
             "mobile_image_crop": "none"
           }
         },
@@ -154,28 +154,6 @@
             "mobile_image_crop": "none"
           }
         },
-        "17dd9b5c-ff0d-4f36-a27a-463ce36b54ad": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/MangoTulsi_CollectionBannerSpring2023_1.jpg",
-            "pretext": "",
-            "title": "",
-            "adaDescriptive": "Mango & Tulsi Collection",
-            "subtitle": "",
-            "button1": "",
-            "button1_link": "shopify:\/\/collections\/mango-tulsi-hair-products",
-            "button1_style": "global-button--banner",
-            "button2": "",
-            "button2_link": "",
-            "button2_style": "global-button--banner",
-            "text_position": "center",
-            "text_align": "center",
-            "caption_content_background": "original",
-            "mobile_image": "shopify:\/\/shop_images\/MangoTulsi_CollectionBannerSpring2023_Mobile_2.jpg",
-            "mobile_image_crop": "none"
-          }
-        },
         "561dd44c-f1ff-483b-b7f5-59a6dd2d5228": {
           "type": "image",
           "disabled": true,
@@ -200,14 +178,13 @@
         }
       },
       "block_order": [
-        "311637a5-2e2c-4167-a056-80f2dffdd609",
-        "6caffde4-109b-414d-96c0-08d36668de11",
-        "518c6a93-42a5-40c9-82e8-6317e99d8f4d",
+        "17dd9b5c-ff0d-4f36-a27a-463ce36b54ad",
         "26b5da3f-4d1d-44f0-b8f1-deff5223f85f",
         "946b6c91-c10c-4d17-9d90-a08715bd88c9",
+        "6caffde4-109b-414d-96c0-08d36668de11",
+        "518c6a93-42a5-40c9-82e8-6317e99d8f4d",
         "534340bd-ceca-43cf-9d67-8fe561aa62d1",
         "3acf3203-93c0-4493-87ca-406d389e18e5",
-        "17dd9b5c-ff0d-4f36-a27a-463ce36b54ad",
         "561dd44c-f1ff-483b-b7f5-59a6dd2d5228"
       ],
       "settings": {

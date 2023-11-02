@@ -1105,17 +1105,6 @@ $(() => {
           
           updateAccessibilityStatus('ATC-success',cart);
           if(_theme.recipientForm) _theme.recipientForm._resetRecipientForm();
-          
-          // ttq add to cart
-          ttq.track('AddToCart', {
-            product_id: cart.items[0].id,
-            product_title: cart.items[0].product_title,
-            product_quantity: cart.items[0].quantity,
-            product_price: cart.items[0].price/100,
-            product_value: cart.items[0].price/100,
-            product_sku: cart.items[0].sku,
-            product_currency: 'USD' 
-          });
 
         },
         error(XMLHttpRequest) {
